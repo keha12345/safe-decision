@@ -274,12 +274,10 @@
 
 
 
-  <script defer>
-    const origin = document.location.origin;
-    body.innerHTML=body.innerHTML.split('safedecision.ru/').join(origin+'/');
-  </script>
-
-
-
 </body>
+<script defer>
+  const origin = document.location.origin;
+  const body = document.querySelector('body');
+  body.innerHTML=body.innerHTML.split('safedecision.ru/').join(origin+'/');
+</script>
 </html>
