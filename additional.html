@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <!-- Prevues -->
+  <meta property="og:title" content="AI-M.io">
+  <meta property="og:site_name" content="ai-m.io">
+  <meta property="og:url" content="https://ai-m.io">
+  <meta property="og:description" content="AI-M Creating the intelligent solutions for your business">
+  <meta property="og:image" content="media/prevue.png" />
+  <meta property="og:image:width" content="548">
+  <meta property="og:image:height" content="321">
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <meta name="yandex-verification" content="e6975b592db4313e" />
+
+  <!-- Yandex.Metrika counter
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(100751436, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/100751436" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  /Yandex.Metrika counter -->
+
+  <!-- utm links 
+  <script>
+    async function sendUtm() {
+      const usp = new URLSearchParams(window.location.search);
+      const utm = usp.get('_utm')
+      console.log('UTM', utm)
+      if(!utm) return 
+      const data = {
+        'entry.288027570': utm,
+        'entry.1520944186': new Date().toLocaleString('ru-RU')
+      }
+      await fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfzRa3btKoaW5l0s3pzOAPD4E440d2ySyTwKZDL0y6QEG5JFw/formResponse', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+          body: new URLSearchParams(data).toString()
+      })
+    }
+    sendUtm();
+  </script> -->
+
+
+  <link rel="stylesheet" href="index.css">
+
+  <title>Safe decision</title>
+  <link rel="icon" type="image/x-icon" href="media/logo.png">
+</head>
+<body>
+  
+
+  <!-- <div id="loader" class="w-screen h-full bg-white fixed top-0 left-0 z-50">
+    <img src="media/hourglass_8721072.gif" class="w-32 h-32 mx-auto mt-64" alt="Icon" />
+  </div> -->
+
+
+  <header class="py-2 md:py-6 fixed top-0 left-0 w-screen z-20">
+    <div class="mx-auto flex justify-evenly md:justify-between items-center px-2">
+      <div class="logo text-lg" style="line-height: 25px;">
+        <a href="https://safedecision.ru/" style="color: inherit">
+          <span style="font-weight: 700;">Safe</span> Decision
+        </a>
+      </div>
+      <div style="min-width: 340px;">
+        <nav>
+          <ul class="flex justify-evenly md:items-center gap-2 md:gap-8 pl-2 flex-wrap text-sm md:text-base">
+            <!-- <li class="hidden md:block"><a href="#about" class="hover:text-gray-400">{{header_about}}</a></li> -->
+            <li><a href="/delivery.html" class="hover:text-gray-400">Доставка</a></li>
+            <li><a href="/additional.html" class="hover:text-gray-400">Доп услуги</a></li>
+            <li><a href="/faq.html" class="hover:text-gray-400">F.A.Q.</a></li>
+            <li class="hidden md:block"><a href="/cooperation" class="hover:text-gray-400">Сотрудничество</a></li>
+            <li><a href="/info.html" class="hover:text-gray-400">О нас</a></li>
+            <li><a href="/contacts.html" class="hover:text-gray-400">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex justify-end relative" style="width: 155px;">
+        <a class="tn-atom" href="tel: +74955653845"> 
+          <img src="media/phone_ico.png" alt="" style="width: 30px;"> 
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div style="height: 78px; width: 100vw; background: #000;"></div>
+
+
+  
+  <section class="hero w-full relative overflow-hidden flex justify-center items-center" style="height: 500px; background-image: url('media/hero_addit.png');">
+    <div class="hdarky p-8 md:p-24 flex justify-between items-end md:items-center">
+      <!-- <img class="w-12 h-12 cursor-pointer" src="media/slider_left.png"></img>
+      <img class="w-12 h-12 cursor-pointer" src="media/slider_right.png"></img> -->
+    </div>
+    <div class="hcard w-5/7 md:w-97 flex flex-col justify-around p-8 rounded-2xl text-center text-xl" style="height: 245px;">
+      <div><h1 class="text-5xl" style="font-weight: 700; line-height: 63px;">
+        Дополнительные услуги
+      </h1></div>   
+    </div>
+  </section>
+
+ 
+  
+
+
+  <section class="w-full md:mx-auto my-16 text-black font-semibold">
+  
+    <div class="flex items-center w-full mb-16">
+      <div style="width: calc(50vw - 310px); min-width: 85px; height: 1px; background: #333333;"></div>
+      <div class="p-6 md:p-8" style="min-width: 270px; max-width: 620px;">
+        <h1 class="text-center text-2xl md:text-4xl font-semibold">
+          Выездная проверка поставщика
+        </h1>
+      </div>
+      <div style="width: calc(50vw - 310px); min-width: 85px; height: 1px; background: #333333;"></div>
+    </div>
+
+    <div class="p-8 md:px-14 mx-auto" style="width: 85vw; max-width: 885px; background: #c0c0c0; border-radius: 20px; color: #000;">
+      <p class="text-lg md:text-xl font-medium text-center">
+        Мы осуществляем проверку различных видов продукции, образцов, а также контроль погрузки. Наши специалисты выезжают к поставщикам и проверяют качество товара, а также составляют все соответствующие отчеты и анализы. Данные документы предоставляются клиенту в электронном виде.
+      </p>
+      <p class="mt-16 text-lg md:text-xl font-semibold text-center">
+        Стоимость: от 100$
+      </p>
+      <a class="btn blue block text-center font-semibold my-4 mx-auto" open-modal data-name="check">Подробнее</a>
+    </div>
+    
+  </section>
+
+
+
+
+
+
+
+  <section class="w-full md:mx-auto my-16 text-black font-semibold">
+  
+    <div class="flex items-center w-full mb-16">
+      <div style="width: calc(50vw - 310px); min-width: 85px; height: 1px; background: #333333;"></div>
+      <div class="p-6 md:p-8" style="min-width: 270px; max-width: 620px;">
+        <h1 class="text-center text-2xl md:text-4xl font-semibold">
+          Выездная проверка поставщика
+        </h1>
+      </div>
+      <div style="width: calc(50vw - 310px); min-width: 85px; height: 1px; background: #333333;"></div>
+    </div>
+
+    <div class="py-16 mx-auto flex flex-wrap justify-center md:justify-between gap-4" style="max-width: 1180px;">
+      <div class="p-8 flex flex-col" style=" min-width: 380px; width: 28%; background: #c0c0c0; border-radius: 20px; color: #000;">
+        <p class="text-2xl text-center">
+          «Базовый»
+        </p>
+        <div class="m-4" style="height: 2px; background: #10528f;"></div>
+        <p class="font-light text-base text-center">
+          В данном разборе мы с вами проанализируем все ваши действия. Мы сможем понять почему товар не продается, почему вы не попадаете в нужные вам категории и теряете прибыль. Полный анализ вашего бренда и вашего товара. Мы расскажем вам все ключевые нюансы, которые сам WB ни в одной инструкции не прописывает. Выработаем стратегию работы на ближайшее время и поставим план на ближайшие отгрузки.
+        </p>
+        <p class="mt-6 md:mt-auto text-lg md:text-xl font-semibold text-center">
+          Стоимость: от 10 000₽
+        </p>
+        <a class="btn blue block text-center font-semibold my-4 mx-auto" open-modal data-name="baza">Подробнее</a>
+      </div>
+      <div class="p-8 flex flex-col" style=" min-width: 380px; width: 28%; background: #c0c0c0; border-radius: 20px; color: #000;">
+        <p class="text-2xl text-center">
+          «Новичок»
+        </p>
+        <div class="m-4" style="height: 2px; background: #10528f;"></div>
+        <p class="font-light text-base text-center">
+          Разбор с новичками. Зарегистрировали кабинет, но не знаете, как заводить карточки? Не знаете для чего и где WB выгружает отчеты? Как и куда отгрузить ваш товар? В данной консультации мы работаем с новичками, с теми, кто только-только зарегистрировал кабинет и ему требуется помощь в организации внутреннего процесса. Что будем делать на консультации?
+        </p>
+        <p class="mt-6 md:mt-auto text-lg md:text-xl font-semibold text-center">
+          Стоимость: от 12 000₽
+        </p>
+        <a class="btn blue block text-center font-semibold my-4 mx-auto" open-modal  data-name="new">Подробнее</a>
+      </div>
+      <div class="p-8 flex flex-col" style=" min-width: 380px; width: 28%; background: #c0c0c0; border-radius: 20px; color: #000;">
+        <p class="text-2xl text-center">
+          «Индивидуальный»
+        </p>
+        <div class="m-4" style="height: 2px; background: #10528f;"></div>
+        <p class="font-light text-base text-center">
+          Индивидуальное сопровождение.
+Расскажем абсолютно обо всем и поможем все применить на практике совместно с нами.
+В данной консультации мы становимся вашими партнерами и друзьями на определенное время. На первой встрече мы составим план нашей работы. И с момента первой консультации до момента осуществления отгрузки и проработки продаж мы с вами на связи. Мы отвечаем на все ваши вопросы и помогаем вам в воплощении нашего намеченного плана.
+        </p>
+        <p class="mt-6 md:mt-16 text-lg md:text-xl font-semibold text-center">
+          Стоимость: от 30 000₽
+        </p>
+        <a class="btn blue block text-center font-semibold my-4 mx-auto" open-modal  data-name="pro">Подробнее</a>
+      </div>
+    </div>
+    
+  </section>
+
+
+  
+  
+
+  <section class="">
+    <div class="s2c py-14 md:pb-48 md:px-28">
+      <div class="flex flex-col">
+        <div class="flex flex-wrap">
+          <div class="px-16 md:mx-0 text-6xl md:text-9xl font-semibold text-right w-full md:w-2/3" style="color: #181818;">
+            <div class="md:-mr-14">Остались</div>
+            <div class="text-left">Вопросы ?</div>
+          </div>
+
+          <div class="md:hidden flex items-center justify-center gap-2 p-4 w-full my-6">
+            <div style="width: 55px; height: 1px; background: #181818;"></div>
+            <div style="max-width: 310px;" class="font-extralight text-black text-center">
+                Напишите свой вопрос, и наши менеджеры подробно на него ответят!
+            </div>
+            <div style="width: 55px; height: 1px; background: #181818;"></div>
+            <!-- <a class="btn white inline-block text-center font-semibold" open-modal>Подробнее</a> -->
+          </div>
+
+          <div class="mx-auto md:mt-36 pt-2 md:ml-12 mb-0 md:mb-0 mb-48 overflow-visible" style="height: 150px; width: 267px;">
+            <div>
+              <input aria-label="name" type="text" name="name" placeholder="Ваше имя" class="input blacki">
+              <input aria-label="phone" type="tel" name="phone" placeholder="+7(999)999-9999" class="input blacki">
+              <textarea aria-label="textarea" name="textarea" placeholder="Ваш комментарий" rows="3" class="input blacki" style="height: 85px;"></textarea>
+              <button type="submit" class="btn black font-semibold" style="width: 100%;">
+                Отправить
+              </button>
+            </div>
+          </div>
+
+        </div>
+        <div class="hidden md:flex items-center mr-8">
+          <div style="width: 178px; height: 1px; background: #212121;"></div>
+          <div style="max-width: 440px;" class="mx-4 font-extralight text-black">
+            Напишите свой вопрос, и наши менеджеры подробно на него ответят!
+          </div>
+          <div style="width: 178px; height: 1px; background: #212121;"></div>
+          <!-- <a class="btn white inline-block text-center font-semibold" open-modal>Подробнее</a> -->
+        </div>
+      </div>
+      <!-- <div class="flex font-extralight" style="margin-left: 24px;">
+        <div class="text-3xl mb-8">Мы российско-китайская<br>логистическая компания:</div>
+        <div class="flex items-center">
+          <div style="width: 225px; height: 1px; background: #d8d8d8;"></div><div style="width: 5px; height: 5px; border-radius: 5px; background: #fff;"></div> 
+          <div class="ml-4">Склады по всему Китаю</div>
+        </div>
+      </div> -->
+    </div>    
+  </section>
+
+
+
+
+  <section style="min-height: 480px; background: rgba(27, 27, 27, 0.27);" class="p-16 text-black text-extralight">
+    <div class="flex justify-evenly flex-wrap gap-8">
+      <div class="flex flex-col items-center md:items-start gap-4 mx-auto md:mx-0">
+        <img class="w-24" src="media/logo.png" alt="">
+      </div>
+      <div class="flex flex-col items-center md:items-start gap-4">
+        <a href="https://safedecision.ru" class="font-bold pb-4">Главная</a>
+        <a href="https://safedecision.ru/#slaider">Слайдер</a>
+        <a href="/info.html">О нас</a>
+        <a href="https://safedecision.ru/#win">Ваша выгода</a>
+        <a href="https://safedecision.ru/#delivery">Тарифы и сроки</a>
+        <a href="https://safedecision.ru/#delivery">Маршруты</a>
+        <a href="https://safedecision.ru/#contacts">Бесплатная консультация</a>
+        <a href="https://safedecision.ru/#faq">F.A.Q.</a>
+      </div>
+      <div class="flex flex-col items-center md:items-start gap-4">
+        <div class="font-bold pb-4">Подробная информация</div>
+        <a href="/delivery.html">Доставка</a>
+        <a href="/cooperation.html">Варианты сотрудничества с нами</a>
+        <a href="/additional.html">Дополнительные услуги</a>
+        <a href="/faq.html">Часто задаваемые вопросы</a>
+        <a href="/info.html">Информация о компании</a>
+        <a href="/contacts.html">Контакты</a>
+      </div>
+      <div class="flex flex-col items-center md:items-start gap-2 text-sm" style="width: 216px; line-height: 19px;">
+        <p><span style="font-weight: 600;">ООО:</span> «Безопасное решение»</p>
+        <p><span style="font-weight: 600;">ОГРН:</span> 1227700895872</p>
+        <p class="text-center md:text-left">Вся информация на сайте представлена для ознакомления и не является публичной офертой</p>
+      </div>
+    </div>
+    
+  </section>
+
+
+
+
+  <!-- Модальное окно -->
+<div class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden" id="modal">
+  <div id="modal-container" class="bg-gray-100 shadow-lg w-full max-w-2xl p-8 pt-4" style="width: 90vw; max-width: 640px; max-height: 90vh; overflow-y: auto;">
+    <div id="modal-text-block" class="text-center text-black">
+
+      <!-- вставка кодом -->
+
+    </div>
+    <div class="mx-auto text-black">
+      <div style="max-width: 400px; margin: 40px auto;">
+        <input aria-label="name" type="text" name="name" placeholder="Ваше имя" class="input blacki lighti">
+        <input aria-label="phone" type="tel" name="phone" placeholder="+7(999)999-9999" class="input blacki lighti">
+        <!-- <textarea aria-label="textarea" name="textarea" placeholder="Коротко опишите запрос" rows="3" class="input blacki boldi" style="height: 102px;"></textarea> -->
+        <button type="submit" class="btn blue font-semibold" style="width: 100%;">
+          Отправить
+        </button>
+      </div>
+    </div>
+</div>
+<script defer>
+  const content = {
+    baza: `
+<h5 class="font-bold text-sm" style="letter-spacing: 2.5px;">Консультации под Wildberries</h5>
+<h2 class="font-bold text-xl m-6">Тариф «Базовый»</h2>
+<p class="font-light text-base text-left md:mx-12">
+1. Расскажем о ключевых разделах платформы.
+<br>2. Проанализируем ваш бренд и выявим ключевые проблемные места.
+<br>3. Анализ карточек и фотокарточек (расскажем, как за счет правильного заполнения карточек и загрузки инфографики попасть в большее количество категорий и ранжироваться на первых страницах)
+<br>4. Акции, отзывы и вопросы (расскажем, как грамотно входить в акции WB, и как за счет отзывов и ответов на вопросы подниматься в рейтинге)
+<br>5. Отгрузки (как грамотно привозить товар, чтобы не перегружать склады, а также не терять деньги за счет отсутствия конкретного товара. Какой из ваших товаров в топе и какой необходимо срочно отгрузить, чтобы пошли продажи? На основе вашего бренда мы выявим какой товар самый выгодный, а какой тянет вас в самый низ. Расскажем о частоте отгрузок и пользе от региональных складов. Поговорим про упаковку и маркировку.)
+<br>6. Новинки (как грамотно выводить новинки в продажу и изначально попасть и закрепиться на первых страницах, правильное заполнение карточек, самовыкупы и инфографика).
+</p>`,
+    new: `
+<h5 class="font-bold text-sm" style="letter-spacing: 2.5px;">Консультации под Wildberries</h5>
+<h2 class="font-bold text-xl m-6">Тариф «Новичок»</h2>
+<p class="font-light text-base text-left md:mx-12">
+1. Расскажем обо всех разделах WB и важности конкретных отделов.
+<br>2. Расскажем, как и где создаются карточки (раскроем ключевые показатели, которые необходимо ввести при создании карточек).
+<br>3. Покажем через какой раздел заводить поставку (определимся как привозить выбранный вами товар, как его маркировать и упаковывать. Определимся с типом поставки)
+<br>4. Поговорим о вашем товаре, какой есть спрос сейчас на него, конкуренция в данном разделе товаров, какой можно ожидать результат от поставки именно этого товара.
+<br>5. Разработаем стратегию выведения вашего товара на площадку (составим план от выборного вами товара до отгрузи этого товара). Поговорим о подручных способах выведения товара в топ (выкупы, проработка карточек, отзывы и т. д.)
+</p>`,
+    pro: `
+<h5 class="font-bold text-sm" style="letter-spacing: 2.5px;">Консультации под Wildberries</h5>
+<h2 class="font-bold text-xl m-6">Тариф «Индивидуальный»</h2>
+<p class="font-light text-base text-left md:mx-12">
+1. Создадим грамотные карточки на товары
+<br>2. Определимся с фотографиями (расскажем о пользе инфографики. Если применять инфографику, то какой она должна быть? Какие фотографии ставить на главную и как снимать товар, чтобы он был интересен покупателю с первой фотографии)
+<br>3. Определимся со складами и заведем поставку (на какой склад повезем поставку, какой тип поставки, какое кол-во товара нужно загрузить, как работать с региональными складами?)
+<br>4. Проработаем рекомендации к товарам (что такое рекомендации, насколько это важно и какие рекомендации ставить?)
+<br>5. Проработаем конкурентов (кто наши конкуренты, какие у них плюсы, почему их товар покупают? Что необходимо вам поправить или сделать, чтобы быть достойным конкурентом?)
+<br>6. Поработаем с ценой (посчитаем себестоимость на ваш товар, определимся какую цену ставить изначально, какую скидку поставить на WB, и какую прибыль вы получите с каждого проданного товара)
+<br>7. Запустим продажи вашего товара
+</p>`,
+    check: `
+<h5 class="font-bold text-sm" style="letter-spacing: 2.5px;">Дополнительные услуга</h5>
+<h2 class="font-bold text-xl m-6">Выездная проверка поставщика</h2>
+<p class="font-light text-base text-left md:mx-12">
+1. Отправляемся к поставщику, которого вы нашли сами или выбрали из нашего списка
+<br>2. Проверяем все документы и сертификаты соответствия
+<br>3. Проверяем товар
+<br>4. Осуществляем фото-видеосъемку нужного для вас товара, а также всей фабрики и процесс изготовления продукции
+<br>5. Заполняем отчет о поставщике со всей необходимой информацией
+<br>6. Отправляем весь отчёт вам
+</p>`,
+  }
+  function initModal(){
+    const modal = document.getElementById('modal');
+    const chat = document.getElementById('modal-container');
+    const fmsg = chat.getElementsByTagName('div')[0];
+    const sendBtn = modal.getElementsByTagName('button')[0];
+    const input = modal.getElementsByTagName('input')[0];
+    const mtb = document.getElementById('modal-text-block');
+    
+    const send = async function(){
+      const text = input.value;
+      if(!text.length) return;
+      add(text, true);
+      // metadata[webclient]=web&
+      let results = [];
+      console.log('!!! ',[{role: 'assistant', content: '/start'}, ...chatStorage.dialog].map(m=>({...m, text: m.content})));
+      const resp = await fetch('https://coral-app-s6ege.ondigitalocean.app/integrations/api/dialog?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjM2NDgxYzFjYzMxYzY1NTNkM2Y0ZjgiLCJpYXQiOjE3Mjg5MTQ3ODJ9.69HRiwJ56X1sUWdyJ5W1Fz_ZQHEZfHn-k5PWOBXr-gs',{
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          trigger: 'SiteAI-M',
+          dialog: [{role: 'assistant', content: '/start'}, ...chatStorage.dialog]
+        })
+      })
+      if(resp.ok) results = await resp.json();
+      console.log(results);
+      results.forEach(text => add(text));
+    }
+    const listenEnter = function (e) {
+      if (e.key === 'Enter') send()
+    }
+
+    document.querySelectorAll('[open-modal]').forEach(btn => btn.addEventListener('click', () => {
+      mtb.innerHTML = content[btn.dataset.name];
+      modal.classList.remove('hidden');
+      document.addEventListener('keypress', listenEnter); 
+    }));
+    modal.addEventListener('click', (event) => {
+      if (event.target.id !== 'modal') return;
+      modal.classList.add('hidden');
+      document.removeEventListener('keypress', listenEnter); 
+    });
+
+    sendBtn.addEventListener('click',send);
+
+  }
+  initModal();
+</script>
+
+
+
+<script defer>
+  const origin = document.location.origin;
+  body.innerHTML=body.innerHTML.split('safedecision.ru/').join(origin+'/');
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <!-- Prevues -->
+  <meta property="og:title" content="AI-M.io">
+  <meta property="og:site_name" content="ai-m.io">
+  <meta property="og:url" content="https://ai-m.io">
+  <meta property="og:description" content="AI-M Creating the intelligent solutions for your business">
+  <meta property="og:image" content="media/prevue.png" />
+  <meta property="og:image:width" content="548">
+  <meta property="og:image:height" content="321">
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <meta name="yandex-verification" content="e6975b592db4313e" />
+
+  <!-- Yandex.Metrika counter
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(100751436, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/100751436" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  /Yandex.Metrika counter -->
+
+  <!-- utm links 
+  <script>
+    async function sendUtm() {
+      const usp = new URLSearchParams(window.location.search);
+      const utm = usp.get('_utm')
+      console.log('UTM', utm)
+      if(!utm) return 
+      const data = {
+        'entry.288027570': utm,
+        'entry.1520944186': new Date().toLocaleString('ru-RU')
+      }
+      await fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfzRa3btKoaW5l0s3pzOAPD4E440d2ySyTwKZDL0y6QEG5JFw/formResponse', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+          body: new URLSearchParams(data).toString()
+      })
+    }
+    sendUtm();
+  </script> -->
+
+
+  <link rel="stylesheet" href="index.css">
+
+  <title>Safe decision</title>
+  <link rel="icon" type="image/x-icon" href="media/logo.png">
+</head>
+<body>
+  
+
+  <!-- <div id="loader" class="w-screen h-full bg-white fixed top-0 left-0 z-50">
+    <img src="media/hourglass_8721072.gif" class="w-32 h-32 mx-auto mt-64" alt="Icon" />
+  </div> -->
+
+
+  <header class="py-2 md:py-6 fixed top-0 left-0 w-screen z-20">
+    <div class="mx-auto flex justify-evenly md:justify-between items-center px-2">
+      <div class="logo text-lg" style="line-height: 25px;">
+        <a href="https://safedecision.ru/" style="color: inherit">
+          <span style="font-weight: 700;">Safe</span> Decision
+        </a>
+      </div>
+      <div style="min-width: 340px;">
+        <nav>
+          <ul class="flex justify-evenly md:items-center gap-2 md:gap-8 pl-2 flex-wrap text-sm md:text-base">
+            <!-- <li class="hidden md:block"><a href="#about" class="hover:text-gray-400">{{header_about}}</a></li> -->
+            <li><a href="/delivery.html" class="hover:text-gray-400">Доставка</a></li>
+            <li><a href="/additional.html" class="hover:text-gray-400">Доп услуги</a></li>
+            <li><a href="/faq.html" class="hover:text-gray-400">F.A.Q.</a></li>
+            <li class="hidden md:block"><a href="/cooperation" class="hover:text-gray-400">Сотрудничество</a></li>
+            <li><a href="/info.html" class="hover:text-gray-400">О нас</a></li>
+            <li><a href="/contacts.html" class="hover:text-gray-400">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex justify-end relative" style="width: 155px;">
+        <a class="tn-atom" href="tel: +74955653845"> 
+          <img src="media/phone_ico.png" alt="" style="width: 30px;"> 
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div style="height: 78px; width: 100vw; background: #000;"></div>
+
+
+  
+  <section class="hero w-full relative overflow-hidden flex justify-center items-center" style="height: 500px; background-image: url('media/hero_boat.png');">
+    <div class="hdarky p-8 md:p-24 flex justify-between items-end md:items-center">
+      <!-- <img class="w-12 h-12 cursor-pointer" src="media/slider_left.png"></img>
+      <img class="w-12 h-12 cursor-pointer" src="media/slider_right.png"></img> -->
+    </div>
+    <div class="hcard w-5/7 md:w-97 flex flex-col justify-around p-8 rounded-2xl text-center text-xl" style="height: 245px;">
+      <div><h1 class="text-5xl" style="font-weight: 700; line-height: 63px;">
+        Варианты сотрудничества с нами
+      </h1></div>   
+    </div>
+  </section>
+
+  
+
+  <section class="text-black my-6 md:my-16">
+    <div class="md:flex md:mx-32">
+      <div class="md:w-1/2">
+        <div class="w-full p-4 md:p-16 md:flex gap-2 text-lg font-semibold">
+          <div class="text-4xl w-10 relative mx-auto my-6 md:m-0">
+            <div>1</div>
+            <img src="media/decor.png" class="h-11 absolute -top-1 left-1/2 md:-left-1 -ml-7 md:ml-0">
+          </div>
+          <p class="text-4xl text-center md:text-left">
+            Всё «под ключ»
+          </p>
+        </div>
+        <div class="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 class="font-bold">1. Передача информации</h5>
+          <p>
+            Вы нам отправляете - либо фото товара, либо ссылку на него, либо просто характеристики 
+          </p>
+        </div>
+        <div class="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 class="font-bold">1. Передача информации</h5>
+          <p>
+            Вы нам отправляете - либо фото товара, либо ссылку на него, либо просто характеристики 
+          </p>
+        </div>
+        <div class="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 class="font-bold">1. Передача информации</h5>
+          <p>
+            Вы нам отправляете - либо фото товара, либо ссылку на него, либо просто характеристики 
+          </p>
+        </div>
+        <div class="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 class="font-bold">1. Передача информации</h5>
+          <p>
+            Вы нам отправляете - либо фото товара, либо ссылку на него, либо просто характеристики 
+          </p>
+        </div>
+        <div class="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 class="font-bold">1. Передача информации</h5>
+          <p>
+            Вы нам отправляете - либо фото товара, либо ссылку на него, либо просто характеристики 
+          </p>
+        </div>
+      </div>
+      <div style="width: 1px; background: #000;" class="hidden md:block relative mt-20">
+        <div style="border-radius: 100%; background: #000;" class="w-2 h-2 absolute top-0 left-1/2 -ml-1"></div>
+        <div style="border-radius: 100%; background: #000;" class="w-2 h-2 absolute bottom-0 left-1/2 -ml-1 -mb-1"></div>
+      </div>
+      <div class="md:w-1/2">
+        <div class="w-full p-4 md:p-16 md:flex gap-2 text-lg font-semibold">
+          <div class="text-4xl w-10 relative mx-auto my-6 md:m-0">
+            <div>2</div>
+            <img src="media/decor.png" class="h-11 absolute -top-1 left-1/2 md:-left-1 -ml-6 md:ml-0">
+          </div>
+          <p class="text-4xl text-center md:text-left">
+            Выкуп и доставка
+          </p>
+        </div>
+        <div class="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 class="font-bold">1. Передача информации</h5>
+          <p>
+            Вы нам отправляете - либо фото товара, либо ссылку на него, либо просто характеристики 
+          </p>
+        </div>
+        <div class="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 class="font-bold">1. Передача информации</h5>
+          <p>
+            Вы нам отправляете - либо фото товара, либо ссылку на него, либо просто характеристики 
+          </p>
+        </div>
+        <div class="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 class="font-bold">1. Передача информации</h5>
+          <p>
+            Вы нам отправляете - либо фото товара, либо ссылку на него, либо просто характеристики 
+          </p>
+        </div>
+        <div class="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 class="font-bold">1. Передача информации</h5>
+          <p>
+            Вы нам отправляете - либо фото товара, либо ссылку на него, либо просто характеристики 
+          </p>
+        </div>
+        <div class="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 class="font-bold">1. Передача информации</h5>
+          <p>
+            Вы нам отправляете - либо фото товара, либо ссылку на него, либо просто характеристики 
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full mb-16">
+      <div style="width: 100vw; height: 1px; background: #333333;"></div>
+      <div class="mx-4 font-extralight">
+        <p class="text-center text-xl md:text-2xl my-8 font-extralight text-black md:w-1/2 mx-auto">
+          И в том, и в другом варианте сотрудничества мы несём полную ответственность за ваш груз на всех этапах перевозки
+        </p>
+      </div>
+      <div style="width: 100vw; height: 1px; background: #333333;"></div>
+    </div>
+  </section>
+
+
+  
+
+
+
+  <section>
+    <a class="btn blue block text-center font-semibold my-16 mx-auto" role="button">Рассчитать стоимость</a>
+  </section>
+
+
+  
+
+
+  <section style="min-height: 480px; background: rgba(27, 27, 27, 0.27);" class="p-16 text-black text-extralight">
+    <div class="flex justify-evenly flex-wrap gap-8">
+      <div class="flex flex-col items-center md:items-start gap-4 mx-auto md:mx-0">
+        <img class="w-24" src="media/logo.png" alt="">
+      </div>
+      <div class="flex flex-col items-center md:items-start gap-4">
+        <a href="https://safedecision.ru" class="font-bold pb-4">Главная</a>
+        <a href="https://safedecision.ru/#slaider">Слайдер</a>
+        <a href="/info.html">О нас</a>
+        <a href="https://safedecision.ru/#win">Ваша выгода</a>
+        <a href="https://safedecision.ru/#delivery">Тарифы и сроки</a>
+        <a href="https://safedecision.ru/#delivery">Маршруты</a>
+        <a href="https://safedecision.ru/#contacts">Бесплатная консультация</a>
+        <a href="https://safedecision.ru/#faq">F.A.Q.</a>
+      </div>
+      <div class="flex flex-col items-center md:items-start gap-4">
+        <div class="font-bold pb-4">Подробная информация</div>
+        <a href="/delivery.html">Доставка</a>
+        <a href="/cooperation.html">Варианты сотрудничества с нами</a>
+        <a href="/additional.html">Дополнительные услуги</a>
+        <a href="/faq.html">Часто задаваемые вопросы</a>
+        <a href="/info.html">Информация о компании</a>
+        <a href="/contacts.html">Контакты</a>
+      </div>
+      <div class="flex flex-col items-center md:items-start gap-2 text-sm" style="width: 216px; line-height: 19px;">
+        <p><span style="font-weight: 600;">ООО:</span> «Безопасное решение»</p>
+        <p><span style="font-weight: 600;">ОГРН:</span> 1227700895872</p>
+        <p class="text-center md:text-left">Вся информация на сайте представлена для ознакомления и не является публичной офертой</p>
+      </div>
+    </div>
+    
+  </section>
+
+
+
+  <script defer>
+    const origin = document.location.origin;
+    body.innerHTML=body.innerHTML.split('safedecision.ru/').join(origin+'/');
+  </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <!-- Prevues -->
+  <meta property="og:title" content="AI-M.io">
+  <meta property="og:site_name" content="ai-m.io">
+  <meta property="og:url" content="https://ai-m.io">
+  <meta property="og:description" content="AI-M Creating the intelligent solutions for your business">
+  <meta property="og:image" content="media/prevue.png" />
+  <meta property="og:image:width" content="548">
+  <meta property="og:image:height" content="321">
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <meta name="yandex-verification" content="e6975b592db4313e" />
+
+  <!-- Yandex.Metrika counter
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(100751436, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/100751436" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  /Yandex.Metrika counter -->
+
+  <!-- utm links 
+  <script>
+    async function sendUtm() {
+      const usp = new URLSearchParams(window.location.search);
+      const utm = usp.get('_utm')
+      console.log('UTM', utm)
+      if(!utm) return 
+      const data = {
+        'entry.288027570': utm,
+        'entry.1520944186': new Date().toLocaleString('ru-RU')
+      }
+      await fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfzRa3btKoaW5l0s3pzOAPD4E440d2ySyTwKZDL0y6QEG5JFw/formResponse', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+          body: new URLSearchParams(data).toString()
+      })
+    }
+    sendUtm();
+  </script> -->
+
+
+  <link rel="stylesheet" href="index.css">
+
+  <title>Safe decision</title>
+  <link rel="icon" type="image/x-icon" href="media/logo.png">
+</head>
+<body>
+  
+
+  <!-- <div id="loader" class="w-screen h-full bg-white fixed top-0 left-0 z-50">
+    <img src="media/hourglass_8721072.gif" class="w-32 h-32 mx-auto mt-64" alt="Icon" />
+  </div> -->
+
+
+  <header class="py-2 md:py-6 fixed top-0 left-0 w-screen z-20">
+    <div class="mx-auto flex justify-evenly md:justify-between items-center px-2">
+      <div class="logo text-lg" style="line-height: 25px;">
+        <a href="https://safedecision.ru/" style="color: inherit">
+          <span style="font-weight: 700;">Safe</span> Decision
+        </a>
+      </div>
+      <div style="min-width: 340px;">
+        <nav>
+          <ul class="flex justify-evenly md:items-center gap-2 md:gap-8 pl-2 flex-wrap text-sm md:text-base">
+            <!-- <li class="hidden md:block"><a href="#about" class="hover:text-gray-400">{{header_about}}</a></li> -->
+            <li><a href="/delivery.html" class="hover:text-gray-400">Доставка</a></li>
+            <li><a href="/additional.html" class="hover:text-gray-400">Доп услуги</a></li>
+            <li><a href="/faq.html" class="hover:text-gray-400">F.A.Q.</a></li>
+            <li class="hidden md:block"><a href="/cooperation" class="hover:text-gray-400">Сотрудничество</a></li>
+            <li><a href="/info.html" class="hover:text-gray-400">О нас</a></li>
+            <li><a href="/contacts.html" class="hover:text-gray-400">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex justify-end relative" style="width: 155px;">
+        <a class="tn-atom" href="tel: +74955653845"> 
+          <img src="media/phone_ico.png" alt="" style="width: 30px;"> 
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div style="height: 78px; width: 100vw; background: #000;"></div>
+
+
+  
+  <section class="hero w-full relative overflow-hidden flex justify-center items-center">
+    <div class="hdarky p-8 lg:p-24 xl:p-56 2xl:p-72 flex justify-between items-end md:items-center">
+      <img class="w-12 h-12 cursor-pointer" src="media/slider_left.png"></img>
+      <img class="w-12 h-12 cursor-pointer" src="media/slider_right.png"></img>
+    </div>
+    <div class="hcard w-5/7 md:w-97 flex flex-col justify-around p-8 rounded-2xl text-center text-xl">
+      <div><h1 class="text-3xl md:text-5xl font-bold">
+        Качественно -
+        <br>не значит «дорого»
+      </h1></div>
+      <div><p>
+        Доставка товаров из Китая оптом <br>
+        От <strong style="font-weight: 700; color: rgb(37, 211, 102);">1.7$</strong> за кг.
+      </p></div>
+      <div>
+        <a class="btn ellow inline-block m-1" open-modal>Узнать стоимость доставки</a>
+        <a class="btn green inline-block m-1" open-modal>WhatsApp</a>
+      </div>
+      
+    </div>
+  </section>
+
+  <script>
+    const slides = [
+      {
+        bg: 'media/hero1.png',
+        title: 'Качественно - не значит «дорого»',
+        description: 'Доставка товаров из Китая оптом<br>От <strong style="color: rgb(37, 211, 102);">1.7$</strong> за кг.',
+        btns: `<a class="btn ellow inline-block m-1" open-modal>Узнать стоимость доставки</a>
+        <a class="btn green inline-block m-1" open-modal>WhatsApp</a>`
+      },
+      {
+        bg: 'media/hero2.png',
+        title: 'Тарифы и сроки доставки',
+        description: 'Подберите оптимальный для вас вариант транспортировки',
+        btns: `<a class="btn ellow inline-block m-1" open-modal>Узнать подробнее</a>`
+      },
+      {
+        bg: 'media/hero3.png',
+        title: 'Консультация под Wildberries',
+        description: 'Поможем заработать на маркетплейсе',
+        btns: `<a class="btn ellow inline-block m-1" open-modal>Узнать подробнее</a>`
+      },
+      {
+        bg: 'media/hero4.png',
+        title: 'Выездная проверка поставщика',
+        description: 'Узнайте как проходит проверка производства',
+        btns: `<a class="btn ellow inline-block m-1" open-modal>Узнать подробнее</a>`
+      }
+    ];
+
+    let currentSlide = 0;
+
+    const heroSection = document.querySelector('.hero');
+    const cardContainer = document.querySelector('.hero'); // можно уточнить, если нужно
+
+    const leftBtn = document.querySelector('img[src*="slider_left"]');
+    const rightBtn = document.querySelector('img[src*="slider_right"]');
+
+    function updateCardContent(card, slide) {
+      card.innerHTML = `
+        <div class="w-full h-full flex flex-col justify-around p-8 rounded-2xl text-center text-xl">
+          <div><h1 class="text-3xl md:text-5xl font-bold">${slide.title}</h1></div>
+          <div><p>${slide.description}</p></div>
+          <div>
+            ${slide.btns}
+          </div>
+        </div>
+      `;
+    }
+
+    function showSlide(nextIndex, direction = 1) {
+      const oldCard = document.querySelector('.hcard');
+      const nextSlide = slides[nextIndex];
+
+      // меняем фон
+      heroSection.style.backgroundImage = `url('${nextSlide.bg}')`;
+
+      // создаём новую карточку
+      const newCard = oldCard.cloneNode(true);
+      updateCardContent(newCard, nextSlide);
+
+      // подготовка к анимации
+      newCard.style.position = 'absolute';
+      newCard.style.top = oldCard.offsetTop + 'px';
+      newCard.style.left = oldCard.offsetLeft + 'px';
+      newCard.style.transition = 'transform 0.5s ease-in-out';
+      newCard.style.transform = `translateX(${direction * 200}%)`;
+      newCard.style.zIndex = 2;
+
+      oldCard.style.transition = 'transform 0.5s ease-in-out';
+      oldCard.style.zIndex = 1;
+
+      cardContainer.appendChild(newCard);
+
+      // trigger reflow
+      void newCard.offsetWidth;
+
+      // запускаем анимацию
+      requestAnimationFrame(() => {
+        oldCard.style.transform = `translateX(${-direction * 200}%)`;
+        newCard.style.transform = 'translateX(0)';
+      });
+
+      // после анимации: удалим старую
+      setTimeout(() => {
+        oldCard.remove();
+        newCard.classList.remove('absolute');
+        newCard.style.transform = '';
+        newCard.style.transition = '';
+        newCard.style.position = '';
+      }, 500);
+
+      currentSlide = nextIndex;
+    }
+
+    leftBtn.addEventListener('click', () => {
+      const next = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(next, -1);
+    });
+
+    rightBtn.addEventListener('click', () => {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next, 1);
+    });
+
+    // свайп
+    let startX = 0;
+    heroSection.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
+    heroSection.addEventListener('touchend', (e) => {
+      const endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) {
+        rightBtn.click();
+      } else if (endX - startX > 50) {
+        leftBtn.click();
+      }
+    });
+    // TACHPAD
+    let isScrolling = false;
+    heroSection.addEventListener('wheel', (e) => {
+      // Защита от спама: игнорируем во время анимации
+      if (isScrolling) return;
+
+      const scrollX = Math.abs(e.deltaX) > Math.abs(e.deltaY)
+        ? e.deltaX
+        : e.shiftKey
+          ? e.deltaY
+          : 0;
+
+      if (scrollX > 40) {
+        const next = (currentSlide + 1) % slides.length;
+        isScrolling = true;
+        showSlide(next, 1);
+      } else if (scrollX < -40) {
+        const next = (currentSlide - 1 + slides.length) % slides.length;
+        isScrolling = true;
+        showSlide(next, -1);
+      }
+
+      // отпускаем после анимации
+      if (scrollX !== 0) {
+        setTimeout(() => {
+          isScrolling = false;
+        }, 600);
+      }
+    }, { passive: true });    
+    
+  </script>
+
+
+
+
+  <section id="info" class="s2">
+    <div class="s2c md:pt-28 md:px-36">
+      <div class="flex flex-wrap-reverse">
+        <div class="font-extralight" style="margin-left: 32px;">
+          <div class="text-lg text-3xl mb-8">Мы российско-китайская<br>логистическая компания:</div>
+          <div class="flex items-center">
+            <div class="w-40 md:w-48" style="height: 1px; background: #d8d8d8;"></div><div style="width: 5px; height: 5px; border-radius: 5px; background: #fff;"></div> 
+            <div class="ml-4">Склады по всему Китаю</div>
+          </div>
+          <div class="flex items-center">
+            <div class="w-40 md:w-48" style="height: 1px; background: #d8d8d8;"></div><div style="width: 5px; height: 5px; border-radius: 5px; background: #fff;"></div> 
+            <div class="ml-4">Офис в Китае</div>
+          </div>
+          <div class="flex items-center">
+            <div class="w-40 md:w-48" style="height: 1px; background: #d8d8d8;"></div><div style="width: 5px; height: 5px; border-radius: 5px; background: #fff;"></div> 
+            <div class="ml-4" style="height: 1.5em; max-width: 50vw;">Все сотрудники отдела закупок-китайцы</div>
+          </div>
+        </div>
+        <div class="hidden md:block text-7xl font-semibold" style="margin-top: -48px; margin-left: -74px; color: #d8d8d8;">
+          <div class="text-9xl">Самые</div>
+          <div class="text-center">выгодные </div>
+          <div style="margin-left: 360px;">цены</div>
+        </div>
+        <div class="block md:hidden flex justify-between w-full text-4xl m-8 font-semibold">
+          <div>
+            <div class="text-7xl">Самые</div>
+            <div>выгодные </div>
+            <div>цены</div>
+          </div>
+          <div>
+            <img src="media/ch_flag.png" alt="" style="width: 140px;"> 
+            <img src="media/ru_flag.png" alt="" style="width: 112px; margin-left: 14px; transform: rotate(-18deg);"> 
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center mt-8 mx-6 py-16 md:pt-1">
+        <a class="btn white inline-block text-center font-semibold" open-modal>Подробнее</a>
+        <div class="w-full" style="height: 1px; background: #d8d8d8;"></div>
+      </div>
+    </div>    
+  </section>
+
+
+  <section id="win" class="w-sm mx-auto md:m-32 md:mx-48 text-black font-semibold">
+    <h1 class="text-center text-3xl md:text-4xl my-16 md:my-32">Мы любим дело, которое делаем:</h1>
+    <div class="benif flex flex-wrap text-center md:text-left">
+
+      <div class="it w-1/2 p-8">
+        <div class="text-4xl" style="position: relative;">
+          <div>1</div>
+          <img src="media/decor.png" style="height: 48px;" class="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0">
+        </div>
+        <h1 class="text-2xl md:text-4xl my-4">Прозрачное ценообразование</h1>
+        <p class="font-light">
+          Наши цены сразу включают в себя все дополнительные расходы, что помогает вам избежать неприятных сюрпризов и вы понимаете за что именно платите
+        </p>
+      </div>
+      <div class="it w-1/2 p-8">
+        <div class="text-4xl" style="position: relative;">
+          <div>2</div>
+          <img src="media/decor.png" style="height: 48px;" class="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0">
+        </div>
+        <h1 class="text-2xl md:text-4xl my-4">Сотрудники – носители языка</h1>
+        <p class="font-light">
+          Все сотрудники отдела закупок – носители китайского языка Это позволяет нам получить самые выгодные цены на товар, а также в кратчайшие сроки получить ответ на запрос от поставщика
+        </p>
+      </div>
+      <div class="it w-1/2 p-8">
+        <div class="text-4xl" style="position: relative;">
+          <div>3</div>
+          <img src="media/decor.png" style="height: 48px;" class="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0">
+        </div>
+        <h1 class="text-2xl md:text-4xl my-4">Собственные склады по всему Китаю</h1>
+        <p class="font-light">
+          Это позволяет нам уберечь вас от ненужных расходов
+        </p>
+      </div>
+      <div class="it w-1/2 p-8">
+        <div class="text-4xl" style="position: relative;">
+          <div>4</div>
+          <img src="media/decor.png" style="height: 48px;" class="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0">
+        </div>
+        <h1 class="text-2xl md:text-4xl my-4">Юридические и Физические лица</h1>
+        <p class="font-light">
+          Работаем как с юр лицами, так и с физ лицами
+        </p>
+      </div>
+      <div class="it w-1/2 p-8">
+        <div class="text-4xl" style="position: relative;">
+          <div>5</div>
+          <img src="media/decor.png" style="height: 48px;" class="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0">
+        </div>
+        <h1 class="text-2xl md:text-4xl my-4">Поиск и проверка товара</h1>
+        <p class="font-light">
+          Тщательно ищем и проверяем товар перед отправкой. Предоставляем «живые» фото-видео товара, проверяем документы на товар, осуществляем выездные проверки на фабрики к поставщикам
+        </p>
+      </div>
+      <div class="it w-1/2 p-8">
+        <div class="text-4xl" style="position: relative;">
+          <div>6</div>
+          <img src="media/decor.png" style="height: 48px;" class="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0">
+        </div>
+        <h1 class="text-2xl md:text-4xl my-4">Регистрация в Китае</h1>
+        <p class="font-light">
+          Компания зарегистрирована в Китае. Это означает, что мы имеем полные юридические права, в рамках китайского законодательства
+        </p>
+      </div>
+      <div class="it w-1/2 p-8">
+        <div class="text-4xl" style="position: relative;">
+          <div>7</div>
+          <img src="media/decor.png" style="height: 48px;" class="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0">
+        </div>
+        <h1 class="text-2xl md:text-4xl my-4">Сроки</h1>
+        <p class="font-light">
+          Соблюдаем сроки доставки и прописываем их в договоре
+        </p>
+      </div>
+      <div class="it w-1/2 p-8">
+        <div class="text-4xl" style="position: relative;">
+          <div>8</div>
+          <img src="media/decor.png" style="height: 48px;" class="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0">
+        </div>
+        <h1 class="text-2xl md:text-4xl my-4">Страховка товара</h1>
+        <p class="font-light">
+          Страхуем товар не только от потери, но и от брака
+        </p>
+      </div>
+      <div class="it w-1/2 p-8">
+        <div class="text-4xl" style="position: relative;">
+          <div>9</div>
+          <img src="media/decor.png" style="height: 48px;" class="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0">
+        </div>
+        <h1 class="text-2xl md:text-4xl my-4">Офис в Китае</h1>
+        <p class="font-light">
+          Наш офис находится в городе Гуанчжоу, что позволяет нам полноценно контролировать качественное выполнение работы
+        </p>
+      </div>
+      <div class="it w-1/2 p-8">
+        <div class="text-4xl" style="position: relative;">
+          <div>10</div>
+          <img src="media/decor.png" style="height: 48px;" class="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0">
+        </div>
+        <h1 class="text-2xl md:text-4xl my-4">Быстрый выкуп</h1>
+        <p class="font-light">
+          Выкуп товара за 1-2 дня
+        </p>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="delivery" class="w-sm mx-auto md:m-32 md:mx-48 text-black">
+    <h1 class="text-center text-3xl md:text-5xl font-semibold mt-24 mb-4">Тарифы и сроки</h1>
+    <h5 class="text-center text-xl font-light mb-24">Стоимость рассчитывается исходя от веса и плотности груза</h5>
+    <div class="flex flex-wrap justify-center md:justify-evenly gap-4">
+
+      <div class="price-card flex flex-col justify-evenly items-center">
+        <img style="height: 28px; display: inline;" src="media/plane.png" alt="">
+        <div>
+          <h5 class="text-center text-4xl font-semibold">Aвиа</h5>
+          <div style="height: 2px; width: 200px; margin: 6px; background: #597eb3;"></div>
+        </div>
+        <div style="line-height: 42px;" class="font-light mb-4">
+          <span class="font-semibold">Сроки:</span> 8 - 12 дней <br>
+          <span class="font-semibold">Цена:</span> от 5$ за кг <br>
+          <span class="font-semibold">Хранение:</span> бесплатно <br>
+          <span class="font-semibold">Маршруты:</span><div style="line-height: 24px; min-height: 48px">- Пекин-Москва <br></div>
+        </div>
+      </div>
+      <div class="price-card flex flex-col justify-evenly items-center">
+        <img style="height: 28px; display: inline;" src="media/planeNcar.png" alt="">
+        <div>
+          <h5 class="text-center text-4xl font-semibold">Aвиа + авто</h5>
+          <div style="height: 2px; width: 200px; margin: 6px; background: #597eb3;"></div>
+        </div>
+        <div style="line-height: 42px;" class="font-light mb-4">
+          <span class="font-semibold">Сроки:</span>  12 - 18 дней <br>
+          <span class="font-semibold">Цена:</span> от 2.7$ за кг <br>
+          <span class="font-semibold">Хранение:</span> бесплатно <br>
+          <span class="font-semibold">Маршруты:</span><div style="line-height: 24px; min-height: 48px">- Гуанчжоу-Москва<br>- Иу-Москва<br></div>
+        </div>
+      </div>
+      <div class="price-card flex flex-col justify-evenly items-center">
+        <img style="height: 28px; display: inline;" src="media/car.png" alt="">
+        <div>
+          <h5 class="text-center text-4xl font-semibold">Авто</h5>
+          <div style="height: 2px; width: 200px; margin: 6px; background: #597eb3;"></div>
+        </div>
+        <div style="line-height: 42px;" class="font-light mb-4">
+          <span class="font-semibold">Сроки:</span> 20 - 30 дней <br>
+          <span class="font-semibold">Цена:</span> от 2.3$ за кг <br>
+          <span class="font-semibold">Хранение:</span> бесплатно <br>
+          <span class="font-semibold">Маршруты:</span><div style="line-height: 24px; min-height: 48px">- Гуанчжоу-Москва<br>- Иу-Москва<br></div>
+        </div>
+      </div>
+      <div class="price-card flex flex-col justify-evenly items-center">
+        <img style="height: 28px; display: inline;" src="media/train.png" alt="">
+        <div>
+          <h5 class="text-center text-4xl font-semibold">Ж/Д</h5>
+          <div style="height: 2px; width: 200px; margin: 6px; background: #597eb3;"></div>
+        </div>
+        <div style="line-height: 42px;" class="font-light mb-4">
+          <span class="font-semibold">Сроки:</span> 40 - 60 дней <br>
+          <span class="font-semibold">Цена:</span> от 1.7$ за кг <br>
+          <span class="font-semibold">Хранение:</span> бесплатно <br>
+          <span class="font-semibold">Маршруты:</span><div style="line-height: 24px; min-height: 48px">- Гуанчжоу-Москва<br>- Иу-Москва<br></div>
+        </div>
+      </div>
+
+    </div>
+    <a class="btn blue block text-center font-semibold my-16 mx-auto" open-modal>Рассчитать стоимость</a>
+  </section>
+
+
+
+  <section class="w-sm mx-auto md:m-32 md:mx-48 text-black relative">
+    <h1 class="text-center text-3xl md:text-5xl font-semibold mt-24 mb-4">Алгоритм работы</h1>
+    <h5 class="text-center text-xl font-light mb-24">Срок бесплатного хранения на складе в Москве составляет 3 дня</h5>
+    <div class="alg flex flex-col gep-4 items-center text-base">
+      
+      <div>
+        <h5 class="text-2xl md:text-4xl font-semibold">Заявка</h5>
+        <p>Вы оставляете заявку на сайте</p>
+      </div>
+      <div>
+        <h5 class="text-2xl md:text-4xl font-semibold">Обратная связь</h5>
+        <p>С вами связывается наш специалист для консультации и получения подробной информации</p>
+      </div>
+      <div>
+        <h5 class="text-2xl md:text-4xl font-semibold">Коммерческое предложение</h5>
+        <p>Мы подготавливаем и отправляем вам индивидуальное коммерческое предложение</p>
+      </div>
+      <div>
+        <h5 class="text-2xl md:text-4xl font-semibold">Договор</h5>
+        <p>Обговариваем все условия сотрудничества, составляем договор и подписываем его</p>
+      </div>
+      <div>
+        <h5 class="text-2xl md:text-4xl font-semibold">Страхование товара</h5>
+        <p>После закупки нужного товара, мы его страхуем чтобы вы <b style="font-weight: 600;">НЕ</b> понесли убытки</p>
+      </div>
+      <div>
+        <h5 class="text-2xl md:text-4xl font-semibold">Доставка</h5>
+        <p>Доставляем товар до Москвы, где он хранится на нашем складе бесплатно*</p>
+      </div>
+
+    </div>
+    <img src="media/point.png" style="height: 20px; width: 16px; margin-left: -4.5px;" class="absolute -mt-4 top-56 md:mt-0 md:top-48 left-1 md:left-1/2">
+    <div id="road" class="flex flex-col items-center absolute top-56 md:top-52 left-1 md:left-1/2">
+      <div style="width: 7px; height: 7px; border-radius: 7px; background: #004b88;"></div> 
+      <div style="width: 2px; height: 197px; background: #004b88;"></div>
+      <div style="width: 7px; height: 7px; border-radius: 7px; background: #004b88;"></div> 
+      <div style="width: 2px; height: 197px; background: #004b88;"></div>
+      <div style="width: 7px; height: 7px; border-radius: 7px; background: #004b88;"></div> 
+      <div style="width: 2px; height: 197px; background: #004b88;"></div>
+      <div style="width: 7px; height: 7px; border-radius: 7px; background: #004b88;"></div> 
+      <div style="width: 2px; height: 197px; background: #004b88;"></div>
+      <div style="width: 7px; height: 7px; border-radius: 7px; background: #004b88;"></div> 
+      <div style="width: 2px; height: 197px; background: #004b88;"></div>
+      <div style="width: 7px; height: 7px; border-radius: 7px; background: #004b88;"></div>
+    </div>
+  </section>
+
+
+
+  <section id="contacts" class="s2">
+    <div class="s2c py-14 md:pb-48 md:px-28">
+      <div class="flex flex-col">
+        <div class="flex flex-wrap">
+          <div class="mx-8 md:mx-0 text-6xl md:text-9xl font-semibold md:text-right" style="color: #d8d8d8;">
+            <div class="md:-mr-14">Бесплатная</div>
+            <div>консультация</div>
+          </div>
+
+          <div class="md:hidden flex items-center justify-center gap-2 p-4 w-full my-6">
+            <div style="width: 55px; height: 1px; background: #d8d8d8;"></div>
+            <div style="max-width: 310px;" class="font-extralight">
+              Оставьте свои контакты, наш специалист свяжется с вами для проведения консультации
+            </div>
+            <div style="width: 55px; height: 1px; background: #d8d8d8;"></div>
+            <!-- <a class="btn white inline-block text-center font-semibold" open-modal>Подробнее</a> -->
+          </div>
+
+          <div class="mx-auto md:mt-36 pt-2 md:ml-12 mb-0 md:mb-0 mb-48 overflow-visible" style="height: 150px; width: 267px;">
+            <div>
+              <input aria-label="name" type="text" name="name" placeholder="Ваше имя" class="input">
+              <input aria-label="phone" type="tel" name="phone" placeholder="+7(999)999-9999" class="input">
+              <textarea aria-label="textarea" name="textarea" placeholder="Ваш комментарий" rows="3" class="input" style="height: 85px;"></textarea>
+              <button type="submit" class="btn white font-semibold" style="width: 100%;">
+                Отправить
+              </button>
+            </div>
+          </div>
+
+        </div>
+        <div class="hidden md:flex items-center mr-8">
+          <div style="width: 178px; height: 1px; background: #d8d8d8;"></div>
+          <div style="max-width: 440px;" class="mx-4 font-extralight">
+            Оставьте свои контакты, наш специалист свяжется с вами для проведения консультации
+          </div>
+          <div style="width: 178px; height: 1px; background: #d8d8d8;"></div>
+          <!-- <a class="btn white inline-block text-center font-semibold" open-modal>Подробнее</a> -->
+        </div>
+      </div>
+      <!-- <div class="flex font-extralight" style="margin-left: 24px;">
+        <div class="text-3xl mb-8">Мы российско-китайская<br>логистическая компания:</div>
+        <div class="flex items-center">
+          <div style="width: 225px; height: 1px; background: #d8d8d8;"></div><div style="width: 5px; height: 5px; border-radius: 5px; background: #fff;"></div> 
+          <div class="ml-4">Склады по всему Китаю</div>
+        </div>
+      </div> -->
+    </div>    
+  </section>
+
+
+  <section id="faq" class="w-sm mx-auto md:m-32 md:mx-48 text-black relative">
+    <h1 class="text-center text-3xl md:text-5xl font-semibold mt-24 mb-4">Часто задаваемые вопросы</h1>
+    <div class="accordion">
+
+      <div class="accordion-item py-4">
+        <div class="accordion-header">
+          <h3 class="text-xl font-bold">Может ли измениться цена в процессе сотрудничества?</h3>
+          <button class="accordion-btn">
+            <svg class="w-8 h-8 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14M5 12h14" />
+            </svg>
+          </button>
+        </div>
+        <div class="accordion-content">
+          <p class="mb-4">Нет, не может. Мы сразу обговариваем с вами цену с учётом всех дополнительных расходов и прописываем её в договоре</p>
+        </div>
+      </div>
+
+      <div class="accordion-item py-4">
+        <div class="accordion-header">
+          <h3 class="text-xl font-bold">Вы доставляете грузы только в Москву?</h3>
+          <button class="accordion-btn">
+            <svg class="w-8 h-8 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14M5 12h14" />
+            </svg>
+          </button>
+        </div>
+        <div class="accordion-content">
+          <p class="mb-4">Изначально товары приходят на наш склад в Москве, отсюда мы можем отправить груз в любой город России</p>
+        </div>
+      </div>
+
+      <div class="accordion-item py-4">
+        <div class="accordion-header">
+          <h3 class="text-xl font-bold">Работаете ли вы с физическими лицами?</h3>
+          <button class="accordion-btn">
+            <svg class="w-8 h-8 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14M5 12h14" />
+            </svg>
+          </button>
+        </div>
+        <div class="accordion-content">
+          <p class="mb-4">Да, работаем</p>
+        </div>
+      </div>
+
+    </div>
+    <a class="btn blue block text-center font-semibold my-16 mx-auto" open-modal>Больше информации</a>
+  </section>
+  <script defer>
+    function initAccardeon(){
+      const accordionItems = document.querySelectorAll('.accordion-item');
+      accordionItems.forEach((item) => {
+        const btn = item.querySelector('.accordion-header');
+        btn.addEventListener('click', () => {
+          item.classList.toggle('open');
+          console.log(item);
+          
+        });
+      });
+    }
+    initAccardeon()
+  </script>
+
+
+  <section style="min-height: 480px; background: rgba(27, 27, 27, 0.27);" class="p-16 text-black text-extralight">
+    <div class="flex justify-evenly flex-wrap gap-8">
+      <div class="flex flex-col items-center md:items-start gap-4 mx-auto md:mx-0">
+        <img class="w-24" src="media/logo.png" alt="">
+      </div>
+      <div class="flex flex-col items-center md:items-start gap-4">
+        <a href="https://safedecision.ru" class="font-bold pb-4">Главная</a>
+        <a href="https://safedecision.ru/#slaider">Слайдер</a>
+        <a href="https://safedecision.ru/#info">О нас</a>
+        <a href="https://safedecision.ru/#win">Ваша выгода</a>
+        <a href="https://safedecision.ru/#delivery">Тарифы и сроки</a>
+        <a href="https://safedecision.ru/#delivery">Маршруты</a>
+        <a href="https://safedecision.ru/#contacts">Бесплатная консультация</a>
+        <a href="https://safedecision.ru/#faq">F.A.Q.</a>
+      </div>
+      <div class="flex flex-col items-center md:items-start gap-4">
+        <div class="font-bold pb-4">Подробная информация</div>
+        <a href="/delivery.html">Доставка</a>
+        <a href="/cooperation.html">Варианты сотрудничества с нами</a>
+        <a href="/additional.html">Дополнительные услуги</a>
+        <a href="/faq.html">Часто задаваемые вопросы</a>
+        <a href="/info.html">Информация о компании</a>
+        <a href="/contacts.html">Контакты</a>
+      </div>
+      <div class="flex flex-col items-center md:items-start gap-2 text-sm" style="width: 216px; line-height: 19px;">
+        <p><span style="font-weight: 600;">ООО:</span> «Безопасное решение»</p>
+        <p><span style="font-weight: 600;">ОГРН:</span> 1227700895872</p>
+        <p class="text-center md:text-left">Вся информация на сайте представлена для ознакомления и не является публичной офертой</p>
+      </div>
+    </div>
+    
+  </section>
+
+
+
+
+  <!-- Модальное окно -->
+<div class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden" id="modal">
+  <div id="modal-container" class="bg-gray-100 shadow-lg w-full max-w-2xl p-8 pt-4" style="width: 90vw; max-width: 560px; height: 80vh; max-height: 540px;">
+    <div class="mx-auto text-black">
+      <h5 class="text-center text-4xl my-6 font-bold">
+        Рассчитать стоимость доставки
+      </h5>
+      <div>
+        <input aria-label="name" type="text" name="name" placeholder="Ваше имя" class="input blacki boldi">
+        <input aria-label="phone" type="tel" name="phone" placeholder="+7(999)999-9999" class="input blacki boldi">
+        <textarea aria-label="textarea" name="textarea" placeholder="Коротко опишите запрос" rows="3" class="input blacki boldi" style="height: 102px;"></textarea>
+        <button type="submit" class="btn blue font-semibold" style="width: 100%;">
+          Отправить
+        </button>
+      </div>
+    </div>
+</div>
+<script defer>
+  function initModal(){
+    const modal = document.getElementById('modal');
+    const chat = document.getElementById('modal-container');
+    const fmsg = chat.getElementsByTagName('div')[0];
+    const sendBtn = modal.getElementsByTagName('button')[0];
+    const input = modal.getElementsByTagName('input')[0];
+    
+    const send = async function(){
+      const text = input.value;
+      if(!text.length) return;
+      add(text, true);
+      // metadata[webclient]=web&
+      let results = [];
+      console.log('!!! ',[{role: 'assistant', content: '/start'}, ...chatStorage.dialog].map(m=>({...m, text: m.content})));
+      const resp = await fetch('https://coral-app-s6ege.ondigitalocean.app/integrations/api/dialog?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjM2NDgxYzFjYzMxYzY1NTNkM2Y0ZjgiLCJpYXQiOjE3Mjg5MTQ3ODJ9.69HRiwJ56X1sUWdyJ5W1Fz_ZQHEZfHn-k5PWOBXr-gs',{
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          trigger: 'SiteAI-M',
+          dialog: [{role: 'assistant', content: '/start'}, ...chatStorage.dialog]
+        })
+      })
+      if(resp.ok) results = await resp.json();
+      console.log(results);
+      results.forEach(text => add(text));
+    }
+    const listenEnter = function (e) {
+      if (e.key === 'Enter') send()
+    }
+
+    document.querySelectorAll('[open-modal]').forEach(btn => btn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      document.addEventListener('keypress', listenEnter); 
+    }));
+    modal.addEventListener('click', (event) => {
+      if (event.target.id !== 'modal') return;
+      modal.classList.add('hidden');
+      document.removeEventListener('keypress', listenEnter); 
+    });
+
+    sendBtn.addEventListener('click',send);
+
+  }
+  initModal();
+</script>
+
+<script defer>
+  const origin = document.location.origin;
+  body.innerHTML=body.innerHTML.split('safedecision.ru/').join(origin+'/');
+</script>
+
+</body>
+</html>
