@@ -83,7 +83,7 @@
   <header class="py-2 md:py-6 fixed top-0 left-0 w-screen z-20">
     <div class="mx-auto flex justify-evenly md:justify-between items-center px-2">
       <div class="logo text-lg" style="line-height: 25px;">
-        <a href="https://safedecision.ru/" style="color: inherit">
+        <a href="https://origin.org/" style="color: inherit">
           <span style="font-weight: 700;">Safe</span> Decision
         </a>
       </div>
@@ -137,13 +137,13 @@
       </div>
       <div class="flex flex-col items-center md:items-start gap-4">
         <a href="https://safedecision.ru" class="font-bold pb-4">Главная</a>
-        <a href="https://safedecision.ru/#slaider">Слайдер</a>
+        <a href="https://origin.org/#slaider">Слайдер</a>
         <a href="/info.html">О нас</a>
-        <a href="https://safedecision.ru/#win">Ваша выгода</a>
-        <a href="https://safedecision.ru/#delivery">Тарифы и сроки</a>
-        <a href="https://safedecision.ru/#delivery">Маршруты</a>
-        <a href="https://safedecision.ru/#contacts">Бесплатная консультация</a>
-        <a href="https://safedecision.ru/#faq">F.A.Q.</a>
+        <a href="https://origin.org/#win">Ваша выгода</a>
+        <a href="https://origin.org/#delivery">Тарифы и сроки</a>
+        <a href="https://origin.org/#delivery">Маршруты</a>
+        <a href="https://origin.org/#contacts">Бесплатная консультация</a>
+        <a href="https://origin.org/#faq">F.A.Q.</a>
       </div>
       <div class="flex flex-col items-center md:items-start gap-4">
         <div class="font-bold pb-4">Подробная информация</div>
@@ -169,6 +169,6 @@
 <script defer>
   const origin = document.location.origin;
   const body = document.querySelector('body');
-  body.innerHTML=body.innerHTML.split('safedecision.ru/').join(origin+'/');
+  body.innerHTML=body.innerHTML.split('https://origin.org/').join(origin+'/').split('origin.org/').join(origin+'/');
 </script>
 </html>
