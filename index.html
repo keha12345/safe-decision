@@ -767,10 +767,12 @@
 
 
 
-</body>
 <script defer>
   const origin = document.location.origin;
-  const body = document.querySelector('body');//
-  body.innerHTML=body.innerHTML.split('https://origin.org/').join(origin+'/').split('origin.org/').join(origin+'/');
+  const links = document.querySelectorAll('[href]');
+  links.forEach(l=>l.href=l.href.split('https://origin.org/').join(origin+'/').split('origin.org/').join(origin+'/'))
 </script>
+
+
+</body>
 </html>
