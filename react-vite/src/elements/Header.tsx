@@ -1,12 +1,14 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router';
 
+const prefix = '/save-decision'
+
 export default function Header({}){
     let navigate = useNavigate();
 
     const nav = (e: React.MouseEvent) =>{
         e.preventDefault();        
-        navigate((e.currentTarget as HTMLAnchorElement).href.replace(window.location.origin,''))
+        navigate(prefix+(e.currentTarget as HTMLAnchorElement).href.replace(window.location.origin,''))
     }
 
     useEffect(()=>{

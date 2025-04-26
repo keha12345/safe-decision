@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router';
 
+const prefix = '/save-decision';
+
 export default function Footer({}){
     let navigate = useNavigate();
 
@@ -31,23 +33,23 @@ export default function Footer({}){
             <img className="w-24" src="media/logo.png" alt="" />
         </div>
         <div className="flex flex-col items-center md:items-start gap-4">
-            <a onClick={nav} href="/" className="font-bold pb-4">Главная</a>
-            <a onClick={nav} href="/#slaider">Слайдер</a>
-            <a onClick={nav} href="/#info">О нас</a>
-            <a onClick={nav} href="/#win">Ваша выгода</a>
-            <a onClick={nav} href="/#delivery">Тарифы и сроки</a>
-            <a onClick={nav} href="/#delivery">Маршруты</a>
-            <a onClick={nav} href="/#contacts">Бесплатная консультация</a>
-            <a onClick={nav} href="/#faq">F.A.Q.</a>
+            <a onClick={nav} href={`${prefix}/`} className="font-bold pb-4">Главная</a>
+            <a onClick={nav} href={`${prefix}/#slaider`}>Слайдер</a>
+            <a onClick={nav} href={`${prefix}/#info`}>О нас</a>
+            <a onClick={nav} href={`${prefix}/#win`}>Ваша выгода</a>
+            <a onClick={nav} href={`${prefix}/#delivery`}>Тарифы и сроки</a>
+            <a onClick={nav} href={`${prefix}/#delivery`}>Маршруты</a>
+            <a onClick={nav} href={`${prefix}/#contacts`}>Бесплатная консультация</a>
+            <a onClick={nav} href={`${prefix}/#faq`}>F.A.Q.</a>
         </div>
         <div className="flex flex-col items-center md:items-start gap-4">
             <div className="font-bold pb-4">Подробная информация</div>
-            <a onClick={nav} href="/delivery">Доставка</a>
-            <a onClick={nav} href="/cooperation">Варианты сотрудничества с нами</a>
-            <a onClick={nav} href="/additional">Дополнительные услуги</a>
-            <a onClick={nav} href="/faq">Часто задаваемые вопросы</a>
-            <a onClick={nav} href="/info">Информация о компании</a>
-            <a onClick={nav} href="/contacts">Контакты</a>
+            <a onClick={nav} href={`${prefix}/delivery`}>Доставка</a>
+            <a onClick={nav} href={`${prefix}/cooperation`}>Варианты сотрудничества с нами</a>
+            <a onClick={nav} href={`${prefix}/additional`}>Дополнительные услуги</a>
+            <a onClick={nav} href={`${prefix}/faq`}>Часто задаваемые вопросы</a>
+            <a onClick={nav} href={`${prefix}/info`}>Информация о компании</a>
+            <a onClick={nav} href={`${prefix}/contacts`}>Контакты</a>
         </div>
         <div className="flex flex-col items-center md:items-start gap-2 text-sm" style={{width: '216px', lineHeight: '19px'}}>
             <p><span style={{fontWeight: 600}}>ООО:</span> «Безопасное решение»</p>
