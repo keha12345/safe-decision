@@ -17,6 +17,15 @@ function App() {
     <>
       <Header />
       <Routes>
+        <Route path="/save-decision" element={<Index />} />
+        <Route path="/save-decision/delivery" element={<Delivery />} />
+        <Route path="/save-decision/cooperation" element={<Cooperation />} />
+        <Route path="/save-decision/additional" element={<Additional />} />
+        <Route path="/save-decision/faq" element={<Faq />} />
+        <Route path="/save-decision/info" element={<Info />} />
+        <Route path="/save-decision/contacts" element={<Contacts />} />
+        <Route path="/save-decision/grat" element={<Grat />} />
+
         <Route path="/" element={<Index />} />
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/cooperation" element={<Cooperation />} />
