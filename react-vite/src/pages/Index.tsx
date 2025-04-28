@@ -4,7 +4,7 @@ import Accardion from '../elements/Accardion'
 import Modal from '../elements/Modal'
 import useForm from '../hooks/useForm'
 
-const prefix = window.location.href.includes('github')? '/save-decision':'';;
+const prefix = window.location.href.includes('github')? '/save-decision':'';
 
 export default function Index({}){
     const [modal, setModal] = useState(false)
