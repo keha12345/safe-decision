@@ -1,7 +1,7 @@
 
 import Hero from '../elements/Hero'
 
-const prefix = '/save-decision'
+const prefix = window.location.href.includes('github')? '/save-decision':'';
 
 export default function Grat({}){
 

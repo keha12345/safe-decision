@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router';
 
-const prefix = '/save-decision';
+const prefix = window.location.href.includes('github')? '/save-decision':'';;
 
 export default function Footer({}){
     let navigate = useNavigate();

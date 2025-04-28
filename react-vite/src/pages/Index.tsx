@@ -4,6 +4,8 @@ import Accardion from '../elements/Accardion'
 import Modal from '../elements/Modal'
 import useForm from '../hooks/useForm'
 
+const prefix = window.location.href.includes('github')? '/save-decision':'';;
+
 export default function Index({}){
     const [modal, setModal] = useState(false)
     const [h,send] = useForm({phone: '', name: '', text: ''})
@@ -76,7 +78,7 @@ export default function Index({}){
                     </div>
                 </div>
                 <div className="flex items-center mt-8 mx-6 py-16 md:pt-1">
-                    <a className="btn white inline-block text-center font-semibold" onClick={()=>setModal(true)}>Подробнее</a>
+                    <a className="btn white inline-block text-center font-semibold" href={`${prefix}/#delivery`}>Подробнее</a>
                     <div className="w-full" style={{height: '1px', background: '#d8d8d8'}}></div>
                 </div>
             </div>    
@@ -370,7 +372,7 @@ export default function Index({}){
 
             },
         ]} />
-        <a className="btn blue block text-center font-semibold my-32 mt-8 mx-auto" onClick={()=>setModal(true)}>Больше информации</a>
+        <a className="btn blue block text-center font-semibold my-32 mt-8 mx-auto" href={`${prefix}/#faq`}>Больше информации</a>
 
         <Modal 
             content={<>
