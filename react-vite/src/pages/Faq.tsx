@@ -8,7 +8,7 @@ export default function Faq({}){
     return <>
 
     <Hero slides={[{
-        bg: 'media/plane.png',
+        bg: 'media/hero_plane.png',
         title: 'Часто задаваемые вопросы'
     }]}  ch={256}/>
   

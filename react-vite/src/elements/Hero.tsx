@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import useSwipe from '../hooks/useSwipe';
 
 
 export default function Hero({slides, ch}: {
     slides: Array<{bg: string, title: string | JSX.Element, description?: string | JSX.Element, btns?: string | JSX.Element}>, ch?: number
 }){
     const [currentSlide, setCurrentSlide] = useState<number>(0);
- 
+
     
     const slideHandler = async (d: -1 | 1) => {
         let second = (currentSlide + d);
@@ -15,8 +16,14 @@ export default function Hero({slides, ch}: {
         setCurrentSlide(second);
     } 
 
+    const swipe = useSwipe({
+        leftH: ()=>slideHandler(1),
+        rightH: ()=>slideHandler(-1),
+        scroll: true
+    })
+
     return <>
-    <section className="hero w-full relative overflow-hidden flex flex-col justify-center items-center"
+    <section {...swipe} className="hero w-full relative overflow-hidden flex flex-col justify-center items-center"
         style={{backgroundImage: `url('${slides[currentSlide].bg}')`, height: `${(ch as number)*2||723}px`}}
     >
         <div className="hdarky"></div>
