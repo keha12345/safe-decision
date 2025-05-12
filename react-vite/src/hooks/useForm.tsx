@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router";
 
-const prefix = window.location.href.includes('github')? '/save-decision':'';
+const prefix = window.location.href.includes('github')? '/safe-decision':'';
 
 export default function useForm(def:object){
     let navigate = useNavigate();
