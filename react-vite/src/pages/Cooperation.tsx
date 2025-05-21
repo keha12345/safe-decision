@@ -12,7 +12,7 @@ export default function Cooperation({}){
 
   
 
-  <section className="text-black my-6 md:my-16">
+  {/* <section className="text-black my-6 md:my-16">
     <div className="md:flex md:mx-32 items-strech">
       <div className="md:w-1/2">
         <div className="w-full p-4 md:p-16 md:flex gap-2 text-lg font-semibold">
@@ -110,8 +110,110 @@ export default function Cooperation({}){
       </div>
       <div style={{width: '100vw', height: '1px', background: '#333333'}}></div>
     </div>
-  </section>
+  </section> */}
 
+
+
+
+<section className="text-black my-6 md:my-16">
+    <div className="md:flex md:mx-32 items-strech">
+      <div className="md:w-1/2">
+        <div className="w-full p-4 md:p-16 md:flex gap-2 text-lg font-semibold">
+          <div className="text-4xl w-10 relative mx-auto my-6 md:m-0">
+            <div>1</div>
+            <img src="media/decor.png" className="h-11 absolute -top-1 left-1/2 md:-left-1 -ml-7 md:ml-0" />
+          </div>
+          <p className="text-4xl text-center md:text-left">
+            Производителю или поставщику
+          </p>
+        </div>
+        <div className="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 className="font-bold">1. Передача информации</h5>
+          <p>
+            Вы нам отправляете: Каталог вашей продуукции, обьемы, сроки производства. 
+          </p>
+        </div>
+        <div className="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 className="font-bold">2. Анализ</h5>
+          <p>
+            Мы анализируем какие позиции могут быть трендовыми, а так же издержки доставки и реализации.
+          </p>
+        </div>
+        <div className="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 className="font-bold">3. Проверка соответствия</h5>
+          <p>
+            Мы проверяем соответствие сертификации и запрашиваем документы на товар
+          </p>
+        </div>
+        <div className="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 className="font-bold">4. Проверка спроса</h5>
+          <p>
+            Выкупаем сами или с партнерами товар для проверки реализации
+          </p>
+        </div>
+        <div className="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 className="font-bold">5. Наращиваем объем</h5>
+          <p>
+            Мы рекомендуем ваш товар своим клиентам и выкупаем в больших обьемах. 
+          </p>
+        </div>
+      </div>
+      <div style={{width: '1px', background: '#000'}} className="hidden md:block relative mt-20">
+        <div style={{borderRadius: '100%', background: '#000'}} className="w-2 h-2 absolute top-0 left-1/2 -ml-1"></div>
+        <div style={{borderRadius: '100%', background: '#000'}} className="w-2 h-2 absolute bottom-0 left-1/2 -ml-1 -mb-1"></div>
+      </div>
+      <div className="md:w-1/2">
+        <div className="w-full p-4 md:p-16 md:flex gap-2 text-lg font-semibold">
+          <div className="text-4xl w-10 relative mx-auto my-6 md:m-0">
+            <div>2</div>
+            <img src="media/decor.png" className="h-11 absolute -top-1 left-1/2 md:-left-1 -ml-6 md:ml-0" />
+          </div>
+          <p className="text-4xl text-center md:text-left">
+            Для магазинов и предпринимателей
+          </p>
+        </div>
+        <div className="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 className="font-bold">1. Поиск Товара</h5>
+          <p>
+            Вы либо сами находите товар, либо мы подбираем в зависимости от потребности. 
+          </p>
+        </div>
+        <div className="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 className="font-bold">2. Поиск поставщика</h5>
+          <p>
+            Мы находим или выбираем среди партнеров производителя или поставщика товара соответстующего критериям обьема и цены 
+          </p>
+        </div>
+        <div className="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 className="font-bold">3. Выкуп товара</h5>
+          <p>
+            Мы выкупаем товар, который вы выбрали
+          </p>
+        </div>
+        <div className="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 className="font-bold">4. Страховка товара</h5>
+          <p>
+            Мы проверяем товар перед отправкой и страхуем
+          </p>
+        </div>
+        <div className="px-16 py-4 font-extralight text-center md:text-left">
+          <h5 className="font-bold">5. Упаковка и транспортировка</h5>
+          <p>
+            Упаковываем товар и привозим его в пункт назначения
+          </p>
+        </div>
+      </div>
+    </div>
+    <div className="w-full mb-16">
+      <div style={{width: '100vw', height: '1px', background: '#333333'}}></div>
+      <div className="mx-4 font-extralight">
+        <p className="text-center text-xl md:text-2xl my-8 font-extralight text-black md:w-1/2 mx-auto">
+          И в том, и в другом варианте сотрудничества мы несём полную ответственность за качество работы!
+        </p>
+      </div>
+      <div style={{width: '100vw', height: '1px', background: '#333333'}}></div>
+    </div>
+  </section>
 
   
 

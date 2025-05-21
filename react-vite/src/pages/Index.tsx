@@ -4,7 +4,7 @@ import Accardion from '../elements/Accardion'
 import Modal from '../elements/Modal'
 import useForm from '../hooks/useForm'
 
-const prefix = window.location.href.includes('github')? '/safe-decision':'';
+// const prefix = window.location.href.includes('github')? '/safe-decision':'';
 
 export default function Index({}){
     const [modal, setModal] = useState(false)
@@ -16,22 +16,34 @@ export default function Index({}){
                     bg: 'media/hero1.png',
                     title: <>Качественно -<br/> не значит «дорого»</>,
                     description: <>
-                        Доставка товаров из Китая оптом <br/>
+                        {/* Доставка товаров из Китая оптом */}
+                        Подбор трендовых товаров оптом
+                        <br/>
                         От <strong style={{fontWeight: 700, color: 'rgb(37, 211, 102)'}}>1.7$</strong> за кг.
                     </>,
-                    btns: <><a className="btn ellow inline-block m-1" onClick={()=>setModal(true)}>Узнать стоимость доставки</a>
+                    btns: <><a className="btn ellow inline-block m-1" onClick={()=>setModal(true)}>
+                        Узнать стоимость {/*доставки*/}
+                    </a>
                     <a className="btn green inline-block m-1" href="https://wa.me/79917888378">WhatsApp</a></>
                 },
-                {
-                    bg: 'media/hero2.png',
-                    title: 'Тарифы и сроки доставки',
-                    description: 'Подберите оптимальный для вас вариант транспортировки',
-                    btns: <a className="btn ellow inline-block m-1" onClick={()=>setModal(true)}>Узнать подробнее</a>
-                },
+                // {
+                //     bg: 'media/hero2.png',
+                //     // title: 'Тарифы и сроки доставки',
+                //     title: 'Тарифы и сроки',
+                //     // description: 'Подберите оптимальный для вас вариант транспортировки',
+                //     description: 'Подберите оптимальный для вас вариант сотрудничества',
+                //     btns: <a className="btn ellow inline-block m-1" onClick={()=>setModal(true)}>Узнать подробнее</a>
+                // },
                 {
                     bg: 'media/hero3.png',
                     title: 'Консультация под Wildberries',
                     description: 'Поможем заработать на маркетплейсе',
+                    btns: <a className="btn ellow inline-block m-1" onClick={()=>setModal(true)}>Узнать подробнее</a>
+                },
+                {   // TODO удалить после проверки
+                    bg: 'media/hero2.png',
+                    title: 'Тарифы и сроки',
+                    description: 'Подберите оптимальный для вас вариант сотрудничества',
                     btns: <a className="btn ellow inline-block m-1" onClick={()=>setModal(true)}>Узнать подробнее</a>
                 },
                 {
@@ -46,18 +58,30 @@ export default function Index({}){
             <div className="s2c md:pt-28 md:px-36">
                 <div className="flex flex-wrap-reverse">
                     <div className="font-extralight" style={{marginLeft: '32px'}}>
-                    <div className="text-lg text-3xl mb-8">Мы российско-китайская<br/>логистическая компания:</div>
-                    <div className="flex items-center">
-                        <div className="w-40 md:w-48" style={{height: '1px', background: '#d8d8d8'}}></div><div style={{width: '5px', height: '5px', borderRadius: '5px', background: '#fff'}}></div> 
-                        <div className="ml-4">Склады по всему Китаю</div>
+                    <div className="text-lg text-3xl mb-8">
+                        {/* Мы российско-китайская <br/> логистическая компания:*/}
+                        Мы российская <br/> торговая компания
                     </div>
                     <div className="flex items-center">
                         <div className="w-40 md:w-48" style={{height: '1px', background: '#d8d8d8'}}></div><div style={{width: '5px', height: '5px', borderRadius: '5px', background: '#fff'}}></div> 
-                        <div className="ml-4">Офис в Китае</div>
+                        <div className="ml-4">
+                            {/* Склады по всему Китаю */}
+                            Находим и анализируем тренды
+                        </div>
                     </div>
                     <div className="flex items-center">
                         <div className="w-40 md:w-48" style={{height: '1px', background: '#d8d8d8'}}></div><div style={{width: '5px', height: '5px', borderRadius: '5px', background: '#fff'}}></div> 
-                        <div className="ml-4" style={{height: '1.5em', maxWidth: '50vw'}}>Все сотрудники отдела закупок-китайцы</div>
+                        <div className="ml-4">
+                            {/* Офис в Китае */}
+                            У нас провереные партнеры
+                        </div>
+                    </div>
+                    <div className="flex items-center">
+                        <div className="w-40 md:w-48" style={{height: '1px', background: '#d8d8d8'}}></div><div style={{width: '5px', height: '5px', borderRadius: '5px', background: '#fff'}}></div> 
+                        <div className="ml-4" style={{height: '1.5em', maxWidth: '50vw'}}>
+                            {/* Все сотрудники отдела закупок-китайцы */}
+                            Консультируем по маркетплейсам
+                        </div>
                     </div>
                     </div>
                     <div className="hidden md:block text-7xl font-semibold" style={{marginTop: '-48px', marginLeft: '-74px', color: '#d8d8d8'}}>
@@ -78,7 +102,8 @@ export default function Index({}){
                     </div>
                 </div>
                 <div className="flex items-center mt-8 mx-6 py-16 md:pt-1">
-                    <a className="btn white inline-block text-center font-semibold" href={`${prefix}/#delivery`}>Подробнее</a>
+                    {/* <a className="btn white inline-block text-center font-semibold" href={`${prefix}/#delivery`}>Подробнее</a> */}
+                    <a className="btn white inline-block text-center font-semibold" onClick={()=>setModal(true)}>Подробнее</a>
                     <div className="w-full" style={{height: '1px', background: '#d8d8d8'}}></div>
                 </div>
             </div>    
@@ -89,111 +114,178 @@ export default function Index({}){
             <h1 className="text-center text-3xl md:text-4xl my-16 md:my-32">Мы любим дело, которое делаем:</h1>
             <div className="benif flex flex-wrap text-center md:text-left">
 
-            <div className="it w-1/2 p-8">
-                <div className="text-4xl relative">
-                <div>1</div>
-                <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>1</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Прозрачное ценообразование</h1>
+                    <p className="font-light">
+                        Наши цены сразу включают в себя все дополнительные расходы, что помогает вам избежать неприятных сюрпризов и вы понимаете, за что именно платите
+                    </p>
                 </div>
-                <h1 className="text-2xl md:text-4xl my-4">Прозрачное ценообразование</h1>
-                <p className="font-light">
-                Наши цены сразу включают в себя все дополнительные расходы, что помогает вам избежать неприятных сюрпризов и вы понимаете за что именно платите
-                </p>
-            </div>
-            <div className="it w-1/2 p-8">
-                <div className="text-4xl relative">
-                <div>2</div>
-                <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>2</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Надежные партнеры</h1>
+                    <p className="font-light">
+                        Наши партнеры проверены временем, что гарантирует качество и соблюдение сроков
+                    </p>
                 </div>
-                <h1 className="text-2xl md:text-4xl my-4">Сотрудники – носители языка</h1>
-                <p className="font-light">
-                Все сотрудники отдела закупок – носители китайского языка Это позволяет нам получить самые выгодные цены на товар, а также в кратчайшие сроки получить ответ на запрос от поставщика
-                </p>
-            </div>
-            <div className="it w-1/2 p-8">
-                <div className="text-4xl relative">
-                <div>3</div>
-                <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>3</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Поиск и проверка товара</h1>
+                    <p className="font-light">
+                    Тщательно ищем и проверяем товар перед отправкой. Предоставляем «живые» фото-видео товара, проверяем документы на товар, осуществляем выездные проверки на фабрики к поставщикам
+                    </p>
                 </div>
-                <h1 className="text-2xl md:text-4xl my-4">Собственные склады по всему Китаю</h1>
-                <p className="font-light">
-                Это позволяет нам уберечь вас от ненужных расходов
-                </p>
-            </div>
-            <div className="it w-1/2 p-8">
-                <div className="text-4xl relative">
-                <div>4</div>
-                <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>4</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Юридические и Физические лица</h1>
+                    <p className="font-light">
+                    Работаем как с юр лицами, так и с физ лицами
+                    </p>
                 </div>
-                <h1 className="text-2xl md:text-4xl my-4">Юридические и Физические лица</h1>
-                <p className="font-light">
-                Работаем как с юр лицами, так и с физ лицами
-                </p>
-            </div>
-            <div className="it w-1/2 p-8">
-                <div className="text-4xl relative">
-                <div>5</div>
-                <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>5</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Быстрый выкуп</h1>
+                    <p className="font-light">
+                        Выкуп товара за 1-2 дня
+                    </p>
                 </div>
-                <h1 className="text-2xl md:text-4xl my-4">Поиск и проверка товара</h1>
-                <p className="font-light">
-                Тщательно ищем и проверяем товар перед отправкой. Предоставляем «живые» фото-видео товара, проверяем документы на товар, осуществляем выездные проверки на фабрики к поставщикам
-                </p>
-            </div>
-            <div className="it w-1/2 p-8">
-                <div className="text-4xl relative">
-                <div>6</div>
-                <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>6</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Страховка товара</h1>
+                    <p className="font-light">
+                        Страхуем товар от брака
+                    </p>
                 </div>
-                <h1 className="text-2xl md:text-4xl my-4">Регистрация в Китае</h1>
-                <p className="font-light">
-                Компания зарегистрирована в Китае. Это означает, что мы имеем полные юридические права, в рамках китайского законодательства
-                </p>
-            </div>
-            <div className="it w-1/2 p-8">
-                <div className="text-4xl relative">
-                <div>7</div>
-                <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                
+                {/* ---
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>1</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Прозрачное ценообразование</h1>
+                    <p className="font-light">
+                        Наши цены сразу включают в себя все дополнительные расходы, что помогает вам избежать неприятных сюрпризов и вы понимаете, за что именно платите
+                    </p>
                 </div>
-                <h1 className="text-2xl md:text-4xl my-4">Сроки</h1>
-                <p className="font-light">
-                Соблюдаем сроки доставки и прописываем их в договоре
-                </p>
-            </div>
-            <div className="it w-1/2 p-8">
-                <div className="text-4xl relative">
-                <div>8</div>
-                <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>2</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Сотрудники – носители языка</h1>
+                    <p className="font-light">
+                    Все сотрудники отдела закупок – 
+                    носители китайского языка 
+                    Это позволяет нам получить самые выгодные цены на товар, а также в кратчайшие сроки получить ответ на запрос от поставщика
+                    </p>
                 </div>
-                <h1 className="text-2xl md:text-4xl my-4">Страховка товара</h1>
-                <p className="font-light">
-                Страхуем товар не только от потери, но и от брака
-                </p>
-            </div>
-            <div className="it w-1/2 p-8">
-                <div className="text-4xl relative">
-                <div>9</div>
-                <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>3</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">
+                        Собственные склады по всему Китаю
+
+                    </h1>
+                    <p className="font-light">
+                        Это позволяет нам уберечь вас от ненужных расходов
+                    </p>
                 </div>
-                <h1 className="text-2xl md:text-4xl my-4">Офис в Китае</h1>
-                <p className="font-light">
-                Наш офис находится в городе Гуанчжоу, что позволяет нам полноценно контролировать качественное выполнение работы
-                </p>
-            </div>
-            <div className="it w-1/2 p-8">
-                <div className="text-4xl relative">
-                <div>10</div>
-                <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>4</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Юридические и Физические лица</h1>
+                    <p className="font-light">
+                    Работаем как с юр лицами, так и с физ лицами
+                    </p>
                 </div>
-                <h1 className="text-2xl md:text-4xl my-4">Быстрый выкуп</h1>
-                <p className="font-light">
-                Выкуп товара за 1-2 дня
-                </p>
-            </div>
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>5</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Поиск и проверка товара</h1>
+                    <p className="font-light">
+                    Тщательно ищем и проверяем товар перед отправкой. Предоставляем «живые» фото-видео товара, проверяем документы на товар, осуществляем выездные проверки на фабрики к поставщикам
+                    </p>
+                </div>
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>6</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Регистрация в Китае</h1>
+                    <p className="font-light">
+                        Компания зарегистрирована в Китае. Это означает, что мы имеем полные юридические права, в рамках китайского законодательства
+                    </p>
+                </div>
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>7</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Сроки</h1>
+                    <p className="font-light">
+                        Соблюдаем сроки доставки и прописываем их в договоре
+                    </p>
+                </div>
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>8</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Страховка товара</h1>
+                    <p className="font-light">
+                        Страхуем товар не только от потери, но и от брака
+                    </p>
+                </div>
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>9</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Офис в Китае</h1>
+                    <p className="font-light">
+                        Наш офис находится в городе Гуанчжоу, что позволяет нам полноценно контролировать качественное выполнение работы
+                    </p>
+                </div>
+                <div className="it w-1/2 p-8">
+                    <div className="text-4xl relative">
+                    <div>10</div>
+                    <img src="media/decor.png" style={{height: '48px'}} className="absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
+                    </div>
+                    <h1 className="text-2xl md:text-4xl my-4">Быстрый выкуп</h1>
+                    <p className="font-light">
+                        Выкуп товара за 1-2 дня
+                    </p>
+                </div> */}
             
             </div>
         </section>
 
-        <section id="delivery" className="w-sm mx-auto md:m-32 md:mx-48 text-black">
+        {/* <section id="delivery" className="w-sm mx-auto md:m-32 md:mx-48 text-black">
             <h1 className="text-center text-3xl md:text-5xl font-semibold mt-24 mb-4">Тарифы и сроки</h1>
             <h5 className="text-center text-xl font-light mb-24">Стоимость рассчитывается исходя от веса и плотности груза</h5>
             <div className="flex flex-wrap justify-center md:justify-evenly gap-4">
@@ -253,13 +345,16 @@ export default function Index({}){
 
             </div>
             <a className="btn blue block text-center font-semibold my-16 mx-auto" onClick={()=>setModal(true)}>Рассчитать стоимость</a>
-        </section>
+        </section> */}
+        <a className="btn blue block text-center font-semibold my-16 mx-auto" onClick={()=>setModal(true)}>Рассчитать стоимость</a>
+
 
 
 
         <section className="w-sm mx-auto md:m-32 md:mx-48 text-black relative">
             <h1 className="text-center text-3xl md:text-5xl font-semibold mt-24 mb-4">Алгоритм работы</h1>
-            <h5 className="text-center text-xl font-light mb-24">Срок бесплатного хранения на складе в Москве составляет 3 дня</h5>
+            {/* <h5 className="text-center text-xl font-light mb-24">Срок бесплатного хранения на складе в Москве составляет 3 дня</h5> */}
+            <h5 className="text-center text-xl font-light mb-24">Работа с нами это всегда «вовремя и надежно»</h5>
             <div className="alg flex flex-col gep-4 items-center text-base">
             
             <div>
@@ -283,8 +378,9 @@ export default function Index({}){
                 <p>После закупки нужного товара, мы его страхуем чтобы вы <b style={{fontWeight: 600}}>НЕ</b> понесли убытки</p>
             </div>
             <div>
-                <h5 className="text-2xl md:text-4xl font-semibold">Доставка</h5>
-                <p>Доставляем товар до Москвы, где он хранится на нашем складе бесплатно*</p>
+                <h5 className="text-2xl md:text-4xl font-semibold">Получение</h5>
+                {/* <p>Доставляем товар до Москвы, где он хранится на нашем складе бесплатно*</p> */}
+                <p>Принемаем товар в Москве, где он ожидает вас на нашем складе</p>
             </div>
 
             </div>
@@ -362,8 +458,10 @@ export default function Index({}){
 
             },
             {
-                q: 'Вы доставляете грузы только в Москву?', 
-                a: 'Изначально товары приходят на наш склад в Москве, отсюда мы можем отправить груз в любой город России'
+                // q: 'Вы доставляете грузы только в Москву?', 
+                // a: 'Изначально товары приходят на наш склад в Москве, отсюда мы можем отправить груз в любой город России'
+                q: 'Почему товары приходят в Москву?', 
+                a: 'Изначально товары приходят на склад в Москве, отсюда удобно отправить груз на склады маркетплейсов или ваш в любой город России'
 
             },
             {
@@ -372,7 +470,8 @@ export default function Index({}){
 
             },
         ]} />
-        <a className="btn blue block text-center font-semibold my-32 mt-8 mx-auto" href={`${prefix}/#faq`}>Больше информации</a>
+        {/* <a className="btn blue block text-center font-semibold my-32 mt-8 mx-auto" href={`${prefix}/faq`}>Больше информации</a> */}
+        <a className="btn blue block text-center font-semibold my-16 mx-auto" onClick={()=>setModal(true)}>Больше информации</a>
 
         <Modal 
             content={<>
@@ -383,7 +482,7 @@ export default function Index({}){
                 <div>
                     <input onChange={h} aria-label="name" type="text" name="name" placeholder="Ваше имя" className="input blacki boldi" />
                     <input onChange={h} aria-label="phone" type="tel" name="phone" placeholder="+7(999)999-9999" className="input blacki boldi" />
-                    <textarea onChange={h} aria-label="textarea" name="textarea" placeholder="Коротко опишите запрос" rows={3} className="input blacki boldi" style={{height: '102px'}}></textarea>
+                    <textarea onChange={h} aria-label="text" name="text" placeholder="Коротко опишите запрос" rows={3} className="input blacki boldi" style={{height: '102px'}}></textarea>
                     <button onClick={send} type="submit" className="btn blue font-semibold w-full" >
                     Отправить
                     </button>
