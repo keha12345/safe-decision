@@ -96,7 +96,7 @@ export default function Index({}){
                         <div>цены</div>
                     </div>
                     <div>
-                        <img src="media/ch_flag.png" alt="" style={{width: '140px'}} /> 
+                        {/* <img src="media/ch_flag.png" alt="" style={{width: '140px'}} />  */}
                         <img src="media/ru_flag.png" alt="" style={{width: '112px', marginLeft: '14px', transform: 'rotate(-18deg)'}} /> 
                     </div>
                     </div>
