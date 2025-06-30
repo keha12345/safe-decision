@@ -7,7 +7,7 @@ export default function Hero(){
     return <section className="w-full relative overflow-hidden">
 
     {/* Контент */}
-    <div className="w-sm md:w-lg m-16 mb-0" >
+    <div className="w-sm md:w-lg m-16 mb-0 relative z-10" >
       <h1 className="text-4xl md:text-6xl font-bold mb-4">
         Качественно — не значит «дорого»
       </h1>
@@ -30,12 +30,17 @@ export default function Hero(){
         </a>
       </div>
     </div>
-    <div className="w-full relative h-screen -mt-16"
+    <div className="w-full relative bg-top h-screen -mt-16"
         style={{
             height: '325px',
-            background: "linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 10%)",
-            backgroundImage: "url('/media/planet_06f7a40c8b.webp')"
+            backgroundImage: "url('/media/planet_06f7a40c8b.webp')",
+            backgroundSize: '140%',
     }}>
+        <div style={{
+            width: '100%',
+            height: '100%',
+            background: "linear-gradient(180deg, rgb(31, 31, 31) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, rgb(31, 31, 31) 100%)",
+        }}></div>
     </div>
   </section>
 
