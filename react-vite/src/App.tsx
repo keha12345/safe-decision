@@ -1,5 +1,8 @@
 
 import { Routes, Route } from "react-router";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { useEffect } from 'react';
 import Index from './pages/Index';
 import Delivery from './pages/Delivery';
 import Cooperation from './pages/Cooperation';
@@ -13,6 +16,12 @@ import Footer from './elements/Footer';
 
 function App() {
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // длительность анимации в мс
+      once: true,    // анимация только при первом скролле
+    });
+  }, []);
   return (
     <>
       <Header />
