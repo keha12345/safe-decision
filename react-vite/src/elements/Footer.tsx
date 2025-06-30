@@ -37,17 +37,17 @@ export default function Footer({}){
             <a onClick={nav} href={`${prefix}/#slaider`}>Слайдер</a>
             <a onClick={nav} href={`${prefix}/#info`}>О нас</a>
             <a onClick={nav} href={`${prefix}/#win`}>Ваша выгода</a>
-            {/* <a onClick={nav} href={`${prefix}/#delivery`}>Тарифы и сроки</a>
-            <a onClick={nav} href={`${prefix}/#delivery`}>Маршруты</a> */}
+            <a onClick={nav} href={`${prefix}/#delivery`}>Тарифы и сроки</a>
+            <a onClick={nav} href={`${prefix}/#delivery`}>Маршруты</a>
             <a onClick={nav} href={`${prefix}/#contacts`}>Бесплатная консультация</a>
             <a onClick={nav} href={`${prefix}/#faq`}>F.A.Q.</a>
         </div>
         <div className="flex flex-col items-center md:items-start gap-4">
             <div className="font-bold pb-4">Подробная информация</div>
-            {/* <a onClick={nav} href={`${prefix}/delivery`}>Доставка</a> */}
+            <a onClick={nav} href={`${prefix}/delivery`}>Доставка</a>
             <a onClick={nav} href={`${prefix}/cooperation`}>Варианты сотрудничества с нами</a>
             <a onClick={nav} href={`${prefix}/additional`}>Дополнительные услуги</a>
-            {/* <a onClick={nav} href={`${prefix}/faq`}>Часто задаваемые вопросы</a> */}
+            <a onClick={nav} href={`${prefix}/faq`}>Часто задаваемые вопросы</a>
             <a onClick={nav} href={`${prefix}/info`}>Информация о компании</a>
             <a onClick={nav} href={`${prefix}/contacts`}>Контакты</a>
         </div>

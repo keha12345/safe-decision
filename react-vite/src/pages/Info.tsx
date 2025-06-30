@@ -17,18 +17,10 @@ export default function Info({}){
 
 
 
-        {/* <section className="my-16 md:my-32">
-            <div className="p-8 md:p-16 mx-auto" style={{width: '85vw', maxWidth: '1080px', background: '#d0d0d0', border: '3px solid #537ca6', borderRadius: '20px', color: '#000'}}>
-            <p className="text-xl md:text-3xl font-semibold text-center">
-                Компетентность «SAFE DECISION» в сфере доставки грузов из Китая позволяет нам осуществлять этот процесс быстро и освобождать наших клиентов от множества проблем и переживаний за сохранность и целостность грузов. Сотрудники нашей компании – профессионалы в этой области, поэтому мы можем гарантировать быструю доставку грузов и адекватные цены на наши услуги.
-            </p>
-            </div>
-        </section> */}
-        
         <section className="my-16 md:my-32">
             <div className="p-8 md:p-16 mx-auto" style={{width: '85vw', maxWidth: '1080px', background: '#d0d0d0', border: '3px solid #537ca6', borderRadius: '20px', color: '#000'}}>
             <p className="text-xl md:text-3xl font-semibold text-center">
-                Компетентность «SAFE DECISION» в сфере анализа и подбора товаров позволяет нам осуществлять этот процесс быстро, а наработаная сеть различных пратнеров освобождать наших клиентов от множества проблем и переживаний за упаковку и доставку товаров. Сотрудники нашей компании – профессионалы в этой области, поэтому мы можем гарантировать качество товаров и адекватные цены на наши услуги.
+                Компетентность «SAFE DECISION» в сфере доставки грузов из Китая позволяет нам осуществлять этот процесс быстро и освобождать наших клиентов от множества проблем и переживаний за сохранность и целостность грузов. Сотрудники нашей компании – профессионалы в этой области, поэтому мы можем гарантировать быструю доставку грузов и адекватные цены на наши услуги.
             </p>
             </div>
         </section>
@@ -37,7 +29,7 @@ export default function Info({}){
         
 
 
-        {/* <section className="w-full md:mx-auto my-16 text-black font-semibold">
+        <section className="w-full md:mx-auto my-16 text-black font-semibold">
         
             <div className="flex items-center w-full mb-16">
             <div style={{width: 'calc(50vw - 420px)', minWidth: '20px', height: '1px', background: '#333333'}}></div>
@@ -156,7 +148,7 @@ export default function Info({}){
             
 
             </div>
-        </section> */}
+        </section>
 
         
 

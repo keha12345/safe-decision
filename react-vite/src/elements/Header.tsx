@@ -30,11 +30,9 @@ export default function Header({}){
             <nav>
             <ul className="flex justify-evenly md:items-center gap-2 md:gap-8 pl-2 flex-wrap text-sm md:text-base">
                 {/* <li className="hidden md:block"><a onClick={nav} href="#about" className="hover:text-gray-400">{{header_about}}</a></li> */}
-                {/* <li><a onClick={nav} href="/delivery" className="hover:text-gray-400">Доставка</a></li> */}
-                <li><a onClick={nav} href="/" className="hover:text-gray-400">Главная</a></li>
+                <li><a onClick={nav} href="/delivery" className="hover:text-gray-400">Доставка</a></li>
                 <li><a onClick={nav} href="/additional" className="hover:text-gray-400">Доп услуги</a></li>
-                {/* <li><a onClick={nav} href="/faq" className="hover:text-gray-400">F.A.Q.</a></li> */}
-                <li><a onClick={nav} href="/#faq" className="hover:text-gray-400">F.A.Q.</a></li>
+                <li><a onClick={nav} href="/faq" className="hover:text-gray-400">F.A.Q.</a></li>
                 <li className="hidden md:block"><a onClick={nav} href="/cooperation" className="hover:text-gray-400">Сотрудничество</a></li>
                 <li><a onClick={nav} href="/info" className="hover:text-gray-400">О нас</a></li>
                 <li><a onClick={nav} href="/contacts" className="hover:text-gray-400">Контакты</a></li>
