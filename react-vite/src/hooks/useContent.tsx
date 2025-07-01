@@ -381,16 +381,9 @@ const content = {
 
 }
 
-/**
- * @param {enum} defLangKey - ['ru']
- */
 
 export default function useContent() {
-
-  
   return content;
-
-    
 }
 
 
