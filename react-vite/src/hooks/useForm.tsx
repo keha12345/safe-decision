@@ -21,7 +21,7 @@ export default function useForm(def:object){
             })
         });
         navigate(prefix+'/grat');
-    }]
+    }, data]
 }
 
 

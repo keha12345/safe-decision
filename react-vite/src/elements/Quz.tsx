@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useContent from "../hooks/useContent";
+import useForm from "../hooks/useForm";
 
 const defdata = {
     title: 'Сделайте шаг к надёжной доставке!',
@@ -19,15 +20,7 @@ export default function Quiz() {
   const content = useContent();
   const res = {...defdata, ...content.quiz}
 
-  const [selected, setSelected] = useState(res.options[0]);
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    // Здесь можно отправить данные на сервер
-    alert(`Вы выбрали: ${selected}, Имя: ${name}, Телефон: ${phone}`);
-  };
+  const [h,send,data] = useForm({service: res.options[0], phone: '', name: ''})
 
   return (
     <div id='Quiz' data-aos="fade-up" className="bg-black text-white rounded-xl max-w-xl w-full mx-auto p-6 md:p-8">
@@ -40,16 +33,16 @@ export default function Quiz() {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="">
+      <form onSubmit={send} className="">
         <div className="my-6">
           {res.options.map((opt) => (
             <label key={opt} className="flex items-center gap-3 cursor-pointer">
               <span
                 className={`w-4 h-4 border-2 rounded-full flex items-center justify-center ${
-                  selected === opt ? "border-orange-400" : "border-white"
+                  data.service === opt ? "border-orange-400" : "border-white"
                 }`}
               >
-                {selected === opt && (
+                {data.service === opt && (
                   <span className="w-2 h-2 bg-orange-400 rounded-full" />
                 )}
               </span>
@@ -57,8 +50,8 @@ export default function Quiz() {
                 type="radio"
                 name="service"
                 value={opt}
-                checked={selected === opt}
-                onChange={() => setSelected(opt)}
+                checked={data.service === opt}
+                onChange={h}
                 className="hidden"
               />
               <span className="text-base">{opt}</span>
@@ -69,16 +62,18 @@ export default function Quiz() {
         <input
           type="text"
           placeholder="ФИО"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          name='name'
+          value={data.name}
+          onChange={h}
           className="my-1 w-full bg-transparent border border-orange-500 text-white px-4 py-2 rounded focus:outline-none"
           required
         />
         <input
           type="tel"
           placeholder="Телефон"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
+          name='phone'
+          value={data.phone}
+          onChange={h}
           className="my-1 w-full bg-transparent border border-orange-500 text-white px-4 py-2 rounded focus:outline-none"
           required
         />
