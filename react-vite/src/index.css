@@ -1,8 +1,9 @@
 
 * {
   /* font-family: 'Netflix Sans', sans-serif; */
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'Inter', 'Monserat', sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,8 +23,7 @@ body {
 }
 
 header{
-  font-size: 14px;
-  background: #000000;
+  background: rgb(31, 31, 31);
   opacity: 0.7;
 }
 
@@ -38,4 +38,181 @@ header div:nth-child(1) {
 }
 
 
+/* для Webkit-браузеров (Chrome, Safari) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
+/* для Firefox */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+
+
+
+
+
+
+
+.btn {
+  width: 326px;
+  height: 56px;
+  line-height: 50px;
+  border-width: 3px;
+  border-radius: 10px;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  font-size: 18px;
+}
+.btn:hover{
+  background-color: #ffffff;
+  border-color: #537ca6;
+  color: #537ca6;
+}
+.ellow{
+  color: #000000;
+  background-color: #ed9c0f;
+}
+.green{
+  color: #ffffff;
+  background-color: #25d366;
+}
+.white{
+  color: #28568a;
+  background-color: #d2dee1;
+}
+.blue{
+  color: #d2dee1;
+  background-color: #537ca6;
+}
+.black{
+  color: #d2dee1;
+  background-color: #303030;
+}
+
+.s2{
+  /* background: #000000; */
+  opacity: 0.85;
+}
+.s2c{
+  max-width: 1472px;
+  margin: 0 auto;
+}
+.benif .it:nth-child(n + 3){
+  border-top: 1px solid rgba(27, 27, 27, 0.5);
+}
+.benif .it:nth-child(2n){
+  border-left: 1px solid rgba(27, 27, 27, 0.5);
+}
+@media (max-width: 500px) {
+  .benif .it:nth-child(n) {
+      border: none; 
+      border-bottom: 1px solid rgba(27, 27, 27, 0.5);
+  }
+}
+.it{
+  min-width: 340px;
+}
+
+
+@media (max-width: 500px) {
+  .w-sm{
+  width: 340px;
+  }
+}
+
+.price-card{
+  width: 300px;
+  background: rgba(200,200,200, 0.7);
+  border-radius: 20px;
+  height: 420px;
+}
+
+
+.input{
+  color: rgb(210, 210, 210); 
+  border: 1px solid rgb(210, 210, 210); 
+  background-color: transparent; 
+  border-radius: 10px; 
+  font-weight: 300; 
+  font-size: 18px; 
+  height: 62px; 
+  margin-bottom: 10px;  
+  padding: 10px 20px;
+  width: 100%; 
+}
+
+.lighti {
+  font-size: 16px; 
+  height: 44px; 
+  margin-bottom: 14px;  
+  padding: 14px;
+}
+
+.blacki{
+  color: rgb(36, 36, 36); 
+  border: 1px solid rgb(36, 36, 36); 
+}
+
+.boldi::placeholder{
+  font-weight: 700;
+}
+
+.accordion {
+  display: space-y-4;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 6rem;
+}
+
+.accordion-item {
+  border-radius: 14px;
+  background-color: rgb(21, 21, 21);
+  border-bottom: 1px solid black;
+  box-shadow: 0 -2px 2px -1px rgba(42, 42, 42, 0.5);
+}
+.accordion-item:nth-child(1){
+  border-top: 1px solid black;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.accordion-btn {
+  outline: none;
+  color: rgb(244, 212, 148);
+}
+
+.accordion-btn svg {
+  transition: transform 0.5s ease-in-out;
+}
+
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 1.5rem;
+  transition: max-height 0.3s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.accordion-item.open .accordion-btn svg {
+  transform: rotate(-45deg);
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 9999px;
+  padding: 1rem 1.5rem;
+  color: rgb(212, 212, 212);
+}
+
+b {
+  font-weight: 700;
+}

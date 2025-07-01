@@ -20,38 +20,35 @@ export default function Header({}){
 
     return <>
     <header className="py-2 md:py-6 fixed top-0 left-0 w-screen z-20">
-        <div className="mx-auto flex justify-evenly md:justify-between items-center px-2">
+        <div className="mx-auto flex justify-evenly md:justify-between items-center pl-2">
         <div className="logo text-lg" style={{lineHeight: '25px'}}>
-            <a onClick={nav} href="/" style={{color: 'inherit'}}>
+            <a onClick={nav} href="/" style={{color: 'white'}}>
             <span style={{fontWeight: 700}}>Safe</span> Decision
             </a>
         </div>
-        <div style={{minWidth: '340px'}}>
+        <div style={{width: '80%', maxWidth: '700px'}}>
             <nav>
-            <ul className="flex justify-evenly md:items-center gap-2 md:gap-8 pl-2 flex-wrap text-sm md:text-base">
-                {/* <li className="hidden md:block"><a onClick={nav} href="#about" className="hover:text-gray-400">{{header_about}}</a></li> */}
-                {/* <li><a onClick={nav} href="/delivery" className="hover:text-gray-400">Доставка</a></li> */}
-                <li><a onClick={nav} href="/" className="hover:text-gray-400">Главная</a></li>
-                <li><a onClick={nav} href="/additional" className="hover:text-gray-400">Доп услуги</a></li>
-                {/* <li><a onClick={nav} href="/faq" className="hover:text-gray-400">F.A.Q.</a></li> */}
-                <li><a onClick={nav} href="/#faq" className="hover:text-gray-400">F.A.Q.</a></li>
-                <li className="hidden md:block"><a onClick={nav} href="/cooperation" className="hover:text-gray-400">Сотрудничество</a></li>
-                <li><a onClick={nav} href="/info" className="hover:text-gray-400">О нас</a></li>
-                <li><a onClick={nav} href="/contacts" className="hover:text-gray-400">Контакты</a></li>
+            <ul className="flex flex-wrap justify-start md:items-center gap-4 gap-y-2 md:gap-8 text-sm md:text-base px-6">
+                {/* <li className="hidden md:block"><a onClick={nav} href="#about" className="text-white hover:text-gray-400">{{header_about}}</a></li> */}
+                <li className="hidden md:block"><a onClick={nav} href="/" className="text-white hover:text-gray-400">Главная</a></li>
+                <li><a onClick={nav} href="/delivery" className="text-white hover:text-gray-400">Услуги</a></li>
+                <li><a onClick={nav} href="/cooperation" className="text-white hover:text-gray-400">Сотрудничество</a></li>
+                {/* <li><a onClick={nav} href="/additional" className="text-white hover:text-gray-400">Доп услуги</a></li>e */}
+                {/* <li><a onClick={nav} href="/faq" className="text-white hover:text-gray-400">F.A.Q.</a></li> */}
+                <li><a onClick={nav} href="/#Faq" className="text-white hover:text-gray-400">F.A.Q.</a></li>
+                <li><a onClick={nav} href="/info" className="text-white hover:text-gray-400">О нас</a></li>
+                <li><a onClick={nav} href="/contacts" className="text-white hover:text-gray-400">Контакты</a></li>
             </ul>
             </nav>
         </div>
-        <div className="flex justify-end relative"  style={{width: '155px'}}>
-            <a onClick={nav} className="tn-atom" href="tel: +74955653845"> 
-            <img src="media/phone_ico.png" alt=""  style={{width: '30px'}} /> 
-            </a>
-        </div>
+        <a href="tel: +74955653845" style={{width: '45px'}}> 
+            <img src="media/phone_ico.png" alt="" style={{width: '100%'}} /> 
+        </a>
         </div>
     </header>
     <div style={{
         height: '78px', 
         width: '100vw',
-        background: '#000',
     }}></div>
     </>
 }

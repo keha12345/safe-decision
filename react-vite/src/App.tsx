@@ -1,13 +1,11 @@
 
 import { Routes, Route } from "react-router";
 import 'aos/dist/aos.css';
-import AOS from 'aos';
-import { useEffect } from 'react';
 import Index from './pages/Index';
 import Delivery from './pages/Delivery';
 import Cooperation from './pages/Cooperation';
 import Additional from './pages/Additional';
-import Faq from './pages/Faq';
+import Faq from './elements/Faq';
 import Info from './pages/Info';
 import Contacts from './pages/Contacts';
 import Grat from './pages/Grat';
@@ -16,12 +14,7 @@ import Footer from './elements/Footer';
 
 function App() {
 
-  useEffect(() => {
-    AOS.init({
-      duration: 800, // длительность анимации в мс
-      once: true,    // анимация только при первом скролле
-    });
-  }, []);
+  
   return (
     <>
       <Header />

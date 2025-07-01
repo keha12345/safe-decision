@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 
-export default function Accardion({list}:{list: Array<{q: string | JSX.Element, a: string | JSX.Element}>}){
+export default function Accardion({list, title}:{list: Array<{q: string | JSX.Element, a: string | JSX.Element}>, title?: string}){
     const [opens, setOpens] = useState<Array<number>>([]);
 
     const openHandler = (i: number) =>{
@@ -9,11 +9,11 @@ export default function Accardion({list}:{list: Array<{q: string | JSX.Element, 
         else setOpens([...opens, i]);
     }
     return <>
-       <section id="faq" className="w-sm mx-auto md:m-32 md:mx-48 text-black relative">
-            <h1 className="text-center text-3xl md:text-5xl font-semibold mt-24 mb-4">Часто задаваемые вопросы</h1>
+       <section id="Accardion" className="w-xl mx-auto md:m-32 md:mx-48 relative owerflow-hidden">
+            <h1 className="text-center text-3xl md:text-5xl font-semibold mt-24 mb-4">{title||'Часто задаваемые вопросы'}</h1>
             <div className="accordion">
 
-                {list.map((it,i)=><div key={it.q.toString()} className={`accordion-item py-4${opens.includes(i)?' open':''}`}>
+                {list.map((it,i)=><div key={it.q.toString()} className={`accordion-item my-4${opens.includes(i)?' open':''}`}>
                     <div className="accordion-header"
                         onClick={()=>openHandler(i)}
                     >
