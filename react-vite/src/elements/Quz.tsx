@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import useContent from "../hooks/useContent";
 import useForm from "../hooks/useForm";
 
@@ -20,12 +20,12 @@ export default function Quiz() {
   const content = useContent();
   const res = {...defdata, ...content.quiz}
 
-  const [h,send,data] = useForm({service: res.options[0], phone: '', name: ''})
+  const [h,send,data] = useForm({phone: '', name: ''})
 
   return (
     <div id='Quiz' data-aos="fade-up" className="bg-black text-white rounded-xl max-w-xl w-full mx-auto p-6 md:p-8">
       <div>
-        <h2 className="text-xl font-bold uppercase leading-snug my-2">
+        <h2 className="text-xl font-bold uppercase leading-snug my-2 text-yellow-100/80">
           {res.title}
         </h2>
         <p className="text-sm text-gray-300 my-2">
@@ -36,21 +36,17 @@ export default function Quiz() {
       <form onSubmit={send} className="">
         <div className="my-6">
           {res.options.map((opt) => (
-            <label key={opt} className="flex items-center gap-3 cursor-pointer">
+            <label key={opt} className="flex items-center gap-3 cursor-pointer mx-2">
               <span
-                className={`w-4 h-4 border-2 rounded-full flex items-center justify-center ${
-                  data.service === opt ? "border-orange-400" : "border-white"
+                className={`w-4 h-4 border-2 rounded-full flex items-center justify-center text-stone-100 ${
+                  data[opt] === opt ? "border-yellow-600" : "border-white"
                 }`}
-              >
-                {data.service === opt && (
-                  <span className="w-2 h-2 bg-orange-400 rounded-full" />
-                )}
-              </span>
+              >{data[opt] === opt ? "v" : ""}</span>
               <input
                 type="radio"
-                name="service"
+                name={opt}//"service"
                 value={opt}
-                checked={data.service === opt}
+                checked={data[opt] === opt}
                 onChange={h}
                 className="hidden"
               />
@@ -65,7 +61,7 @@ export default function Quiz() {
           name='name'
           value={data.name}
           onChange={h}
-          className="my-1 w-full bg-transparent border border-orange-500 text-white px-4 py-2 rounded focus:outline-none"
+          className="my-1 w-full bg-transparent border border-orange-100/70 text-white px-4 py-2 rounded focus:outline-none"
           required
         />
         <input
@@ -74,7 +70,7 @@ export default function Quiz() {
           name='phone'
           value={data.phone}
           onChange={h}
-          className="my-1 w-full bg-transparent border border-orange-500 text-white px-4 py-2 rounded focus:outline-none"
+          className="my-1 w-full bg-transparent border border-orange-100/70 text-white px-4 py-2 rounded focus:outline-none"
           required
         />
 

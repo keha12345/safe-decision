@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Hero from '../elements/Hero'
 import QuestionBlock from '../elements/QuestionBlock'
 import Quiz from '../elements/Quz';

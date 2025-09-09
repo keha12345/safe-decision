@@ -2,7 +2,7 @@
 
 import useContent from '../hooks/useContent'
 import Accardion from './Accardion'
-import QuestionBlock from './QuestionBlock'
+// import QuestionBlock from './QuestionBlock'
 
 const defData = {
     list: [

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import useSwipe from "../hooks/useSwipe";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 import useContent from "../hooks/useContent";
 
 
@@ -14,7 +14,7 @@ const defOptions = {
         details: ["Срок: 7–10 дней", "Подходит для дорогих товаров", "Премиум поддержка"],
         popular: false,
         link: '/delivery/rail',
-        background: 'media/hero_boat.png', // Замените на реальный URL
+        background: 'media/hero_deli.png', // Замените на реальный URL
       },
       {
         title: "Оптимальный выбор",
@@ -34,7 +34,7 @@ const defOptions = {
         details: ["Срок: 10–15 дней", "Идеально для доставки по регионам", "Умеренная стоимость"],
         popular: false,
         link: '/delivery/rail',
-        background: 'media/hero_boat.png', // Замените на реальный URL
+        background: 'media/hero_plane.png', // Замените на реальный URL
       },
   ]
 };
@@ -43,7 +43,7 @@ const defOptions = {
 
 export default function DeliverySlider() {
   const isPhoneScreen = (typeof window !== 'undefined' && window.innerWidth < 768);
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   const ref = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [dist, setDist] = useState(0);

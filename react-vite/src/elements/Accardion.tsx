@@ -9,11 +9,11 @@ export default function Accardion({list, title}:{list: Array<{q: string | JSX.El
         else setOpens([...opens, i]);
     }
     return <>
-       <section id="Accardion" className="w-xl mx-auto md:m-32 md:mx-48 relative owerflow-hidden">
+       <section id="Accardion" className="w-xl mx-auto md:my-32 relative owerflow-hidden max-w-screen">
             <h1 className="text-center text-3xl md:text-5xl font-semibold mt-24 mb-4">{title||'Часто задаваемые вопросы'}</h1>
             <div className="accordion">
 
-                {list.map((it,i)=><div key={it.q.toString()} className={`accordion-item my-4${opens.includes(i)?' open':''}`}>
+                {list.map((it,i)=><div key={it.q.toString()} className={`max-w-screen accordion-item my-4${opens.includes(i)?' open':''}`}>
                     <div className="accordion-header"
                         onClick={()=>openHandler(i)}
                     >

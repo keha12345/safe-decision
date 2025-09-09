@@ -1,4 +1,4 @@
-import { useState } from "react"
+// import { useState } from "react"
 
 const content = {
   mainPage: {
@@ -308,7 +308,7 @@ const content = {
         details: ["Срок: 7–10 дней", "Подходит для дорогих товаров", "Премиум поддержка"],
         popular: false,
         link: '/delivery/rail',
-        background: 'media/hero_boat.png', // Замените на реальный URL
+        background: 'media/hero_plane.png', // Замените на реальный URL
       },
       {
         title: "Оптимальный выбор",
@@ -328,7 +328,7 @@ const content = {
         details: ["Срок: 10–15 дней", "Идеально для доставки по регионам", "Умеренная стоимость"],
         popular: false,
         link: '/delivery/rail',
-        background: 'media/hero_boat.png', // Замените на реальный URL
+        background: 'media/hero_addit.png', // Замените на реальный URL
       },
     ],
   },

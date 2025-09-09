@@ -132,14 +132,14 @@ export default function Delivery() {
     <section className="bg-white py-16 px-4 sm:px-8 lg:px-20" style={{
         background: "linear-gradient(180deg, rgb(31, 31, 31) 0%, rgb(217, 217, 217) 4%)"
     }}>
-      <h2 className="text-3xl text-black font-bold text-center mb-12">{res.title}</h2>
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-4">
+      <h2 className="text-3xl text-black font-bold text-center my-12">{res.title}</h2>
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-4">
         {res.plans.map((plan, idx) => (
           <div
             key={idx}
             data-aos={idx<2? 'fade-right':idx<4? 'fade-left':'fade-up' }
             data-aos-delay={`${(idx==1||idx==2?0:idx<4?1:idx-4)*200}`}
-            className={`relative flex flex-col border rounded-2xl p-6 md: p-8 shadow-md shadow-lg scale-105 z-10 bg-white ${
+            className={`relative flex flex-col border rounded-2xl p-6 md:p-8 mb-2 shadow-md shadow-lg scale-105 z-10 bg-white ${
               !plan.popular ? "border-black" : "border-yellow"
             }`}
           >
@@ -151,7 +151,7 @@ export default function Delivery() {
             <h3 className="text-xl font-semibold mt-6" style={{color: 'rgb(81, 75, 41)'}}>{plan.title}</h3>
             <p className="text-sm text-gray-500 mt-2">{plan.subtitle}</p>
             <p className="text-3xl font-bold text-black my-4">{plan.price}</p>
-            <p className="text-sm text-gray-600 my-4">{plan.description}</p>
+            <p className="text-sm text-gray-600 my-4 h-6">{plan.description}</p>
             <ul className="mb-6 space-y-2 text-sm text-gray-700 my-6">
               {plan.details.map((item, i) => (
                 <li key={i}>✓ {item}</li>

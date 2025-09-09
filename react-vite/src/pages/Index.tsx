@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Hero from '../elements/Hero'
-import Accardion from '../elements/Accardion'
-import Modal from '../elements/Modal'
-import useForm from '../hooks/useForm'
+// import Accardion from '../elements/Accardion'
+// import Modal from '../elements/Modal'
+// import useForm from '../hooks/useForm'
 import Advantages from '../elements/Advantages'
-import Delivery from './Delivery'
+// import Delivery from './Delivery'
 import DeliverySlider from '../elements/DeliverySlider'
-import { Link } from 'react-router'
-import { ArrowRight } from 'lucide-react'
+// import { Link } from 'react-router'
+// import { ArrowRight } from 'lucide-react'
 import Faq from '../elements/Faq'
 import RoadMap from '../elements/RoadMap'
 import QuestionBlock from '../elements/QuestionBlock'
@@ -35,8 +35,8 @@ export default function Index({}){
     const content = useContent();
     const res = {...defaultContent, ...content.infoPage.info}
 
-    const [modal, setModal] = useState(false)
-    const [h,send] = useForm({phone: '', name: '', text: ''})
+    // const [modal, setModal] = useState(false)
+    // const [h,send] = useForm({phone: '', name: '', text: ''})
     const isPhoneScreen = (typeof window !== 'undefined' && window.innerWidth < 768);
 
     useEffect(() => {
