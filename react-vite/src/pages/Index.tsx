@@ -8,32 +8,34 @@ import Advantages from '../elements/Advantages'
 import DeliverySlider from '../elements/DeliverySlider'
 // import { Link } from 'react-router'
 // import { ArrowRight } from 'lucide-react'
-import Faq from '../elements/Faq'
+// import Faq from '../elements/Faq'
 import RoadMap from '../elements/RoadMap'
 import QuestionBlock from '../elements/QuestionBlock'
 import Quiz from '../elements/Quz'
 import AOS from 'aos'
-import useContent from '../hooks/useContent'
+// import useContent from '../hooks/useContent'
 
 // const prefix = window.location.href.includes('github')? '/safe-decision':'';
 
 
-const defaultContent = {
-    info: {
-        title: 'Мы российско-китайская логистическая компания',
-        points: [
-        'Склады по всему Китаю',
-        'У нас проверенные партнеры',
-        'Все сотрудники отдела закупок - китайцы',
-        ],
-        highlighted: ['Самые', 'выгодные', 'цены'],
-        moreLinkText: 'Подробнее',
-    }
-}
+// const defaultContent = {
+//     info: {
+//         title: 'Мы российско-китайская логистическая компания',
+//         points: [
+//         'Склады по всему Китаю',
+//         'У нас проверенные партнеры',
+//         'Все сотрудники отдела закупок - китайцы',
+//         ],
+//         highlighted: ['Самые', 'выгодные', 'цены'],
+//         moreLinkText: 'Подробнее',
+//     }
+// }
+
+
 export default function Index({}){
 
-    const content = useContent();
-    const res = {...defaultContent, ...content.infoPage.info}
+    // const content = useContent();
+    // const res = {...defaultContent, ...content.infoPage.info}
 
     // const [modal, setModal] = useState(false)
     // const [h,send] = useForm({phone: '', name: '', text: ''})

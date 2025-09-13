@@ -57,7 +57,7 @@ export default function Info(){
             });
     }, []);
     return <>
-        
+         
         <Hero title='SAFE DECISION' subtitle='Мы стремимся, чтобы закупка партии товаров в Китае была не сложнее, чем в России' buttons={<></>}/>
 
         <section id="info" className="s2 w-full overflow-hidden pt-16">
