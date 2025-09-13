@@ -172,7 +172,7 @@ export default function Delivery() {
 
         <Quiz />
 
-        <Accardion title={res.faq_block.title} list={res.faq_block.items.map(el=>({q: el.question, a: el.answer}))}/>
+        {/* <Accardion title={res.faq_block.title} list={res.faq_block.items.map(el=>({q: el.question, a: el.answer}))}/> */}
     </div>
     <QuestionBlock />
 </>);

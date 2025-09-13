@@ -8,7 +8,7 @@ import useContent from '../hooks/useContent';
 
 const defaultContent = {
     hero: {
-      title: 'SAFE-DECISION',
+      title: 'SAFEDECISION',
       subtitle: 'Мы стремимся, чтобы закупка партии товаров в Китае была не сложнее, чем в России',
     },
     info: {
@@ -58,7 +58,7 @@ export default function Info(){
     }, []);
     return <>
         
-        <Hero title='SAFE-DECISION' subtitle='Мы стремимся, чтобы закупка партии товаров в Китае была не сложнее, чем в России' buttons={<></>}/>
+        <Hero title='SAFE DECISION' subtitle='Мы стремимся, чтобы закупка партии товаров в Китае была не сложнее, чем в России' buttons={<></>}/>
 
         <section id="info" className="s2 w-full overflow-hidden pt-16">
             <div data-aos='fade-up' className="flex flex-col items-center md:pt-28 md:px-36">
@@ -106,13 +106,13 @@ export default function Info(){
 
 
         
-        <section className="my-16 md:my-32">
+        {/* <section className="my-16 md:my-32">
             <div className="p-8 md:p-16 mx-auto">
-            <p className="text-xl md:text-3xl font-semibold text-center">
-                {res.competence.text}
-            </p>
+            <p className="text-xl md:text-3xl font-semibold text-center"> */}
+                {/* {res.competence.text} */}
+            {/* </p>
             </div>
-        </section>
+        </section> */}
 
         
         
