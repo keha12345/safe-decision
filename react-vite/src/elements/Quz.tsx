@@ -33,7 +33,7 @@ export default function Quiz() {
         </p>
       </div>
 
-      <form onSubmit={send} className="">
+      <div>
         <div className="my-6">
           {res.options.map((opt) => (
             <label key={opt} className="flex items-center gap-3 cursor-pointer mx-2">
@@ -76,11 +76,12 @@ export default function Quiz() {
 
         <button
           type="submit"
+          onClick={send}
           className="my-1 bg-yellow-500 hover:bg-yellow-600 transition text-black font-semibold w-full py-3 rounded flex items-center justify-center gap-2"
         >
           {res.btn}
         </button>
-      </form>
+      </div>
     </div>
   );
 }
