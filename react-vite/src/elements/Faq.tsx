@@ -38,18 +38,11 @@ const defData = {
       ]
 }
 
-export default function Faq({}){
+export default function Faq({title='Часто задаваемые вопросы'}){
     const content = useContent();
     const res = {...defData, ...content.faq}
     return <>
     <div id='Faq'></div>
-  <Accardion list={res.list} />
-
-
-  
-  
-
-
-  
+  <Accardion title={title} list={res.list} />
 </>
 }

@@ -11,6 +11,7 @@ import Contacts from './pages/Contacts';
 import Grat from './pages/Grat';
 import Header from './elements/Header';
 import Footer from './elements/Footer';
+import FaqPage from "./pages/FaqPage";
 
 function App() {
 
@@ -32,7 +33,7 @@ function App() {
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/cooperation" element={<Cooperation />} />
         <Route path="/additional" element={<Additional />} />
-        <Route path="/faq" element={<Faq />} />
+        <Route path="/faq" element={<FaqPage />} />
         <Route path="/info" element={<Info />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/grat" element={<Grat />} />
