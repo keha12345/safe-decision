@@ -238,7 +238,7 @@ const content = {
     note: 'И в том, и в другом варианте сотрудничества мы несём полную ответственность за ваш груз на всех этапах перевозки',
   },
   contactsPage: {
-    title: 'safedecision@mail.ru',
+    title: 'info@safedecision.ru',
     subtitle: 'Россия, г.Москва, ул. Научный проезд д.17',
     btn: 'WhatsApp',
     btnLink: "https://wa.me/79999999999"
