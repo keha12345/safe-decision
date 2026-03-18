@@ -1,17 +1,24 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Hero from '../elements/Hero'
 import QuestionBlock from '../elements/QuestionBlock'
 import Modal from '../elements/Modal'
 import useForm from '../hooks/useForm';
+import AOS from 'aos';
 
 export default function Additional({}){
     const [modal, setModal] = useState<null|string|JSX.Element>(null);
+
+    useEffect(() => {
+      AOS.init({
+                    duration: 800, // длительность анимации в мс
+                    once: true,    // анимация только при первом скролле
+                  });
+          }, []);
+
+
     return <>
 
-    <Hero slides={[{
-        bg: 'media/hero_addit.png',
-        title: 'Дополнительные услуги'
-    }]} ch={256} />
+    <Hero  />
 
  
   

@@ -1,20 +1,21 @@
 
 * {
   /* font-family: 'Netflix Sans', sans-serif; */
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'Inter', 'Monserat', sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(224, 222, 202);
+  background-color:rgb(31, 31, 31);;
   /* background: linear-gradient(rgba(200, 200, 155, 0.24), rgba(200, 200, 155, 0.25)), url('media/bg.png'); */
-  background: url('media/bg.png');
+  /* background: url('media/bg.png');
   background-size: contain;
   background-size: cover;
-  background-attachment: fixed;
-  overflow-x: hidden;
+  background-attachment: fixed; */
+  overflow-x: hidden; 
   font-size: 20px;
   font-weight: 300;
   color: rgb(255, 255, 255);
@@ -22,8 +23,7 @@ body {
 }
 
 header{
-  font-size: 14px;
-  background: #000000;
+  background: rgb(31, 31, 31);
   opacity: 0.7;
 }
 
@@ -37,49 +37,24 @@ header div:nth-child(1) {
   text-transform: uppercase;
 }
 
-.hero {
-  background-color: rgb(10,10,10);
-  background-image: url('media/hero1.png');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-color: transparent;
-  border-style: solid;
-  height: 723px;
-  position: relative;
-  font-weight: 600;
-  transition: background-image 0.5s ease-in-out;
-  overflow: hidden;
+
+/* для Webkit-браузеров (Chrome, Safari) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-.hdarky {
-  position:absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  background-color: #2b2a29;
-  background-position: center center;
-  border-color: transparent;
-  border-style: solid;
-  transition: opacity 0.3s ease-in-out;
+/* для Firefox */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.hcard {
-  width: 883px;
-  height: 465px;
-  border-radius: 20px;
-  background: rgba(180, 179, 190, 0.2);
-  backdrop-filter: blur(10px);
-  /* transition: transform 0.5s ease-in-out; */
-}
 
-@media (max-width: 500px) {
-  .hcard {
-  width: 442px;
-  }
-}
+
+
+
+
+
 
 .btn {
   width: 326px;
@@ -120,7 +95,7 @@ header div:nth-child(1) {
 }
 
 .s2{
-  background: #000000;
+  /* background: #000000; */
   opacity: 0.85;
 }
 .s2c{
@@ -140,13 +115,13 @@ header div:nth-child(1) {
   }
 }
 .it{
-  min-width: 380px;
+  min-width: 340px;
 }
 
 
 @media (max-width: 500px) {
   .w-sm{
-  width: 380px;
+  width: 340px;
   }
 }
 
@@ -157,28 +132,6 @@ header div:nth-child(1) {
   height: 420px;
 }
 
-.alg{
-  position: relative;
-}
-
-.alg div{
-  margin-left: 420px;
-  text-align: start;
-  width: 340px;
-  height: 205px;
-}
-
-.alg div:nth-child(2n){
-  margin-left: 0;
-  margin-right: 420px;
-  text-align: end;
-}
-@media (max-width: 800px) {
-  .alg div:nth-child(n){
-  margin: 0 0 0 20px;
-  text-align: start;
-  }
-}
 
 .input{
   color: rgb(210, 210, 210); 
@@ -188,7 +141,7 @@ header div:nth-child(1) {
   font-weight: 300; 
   font-size: 18px; 
   height: 62px; 
-  margin-bottom: 20px;  
+  margin-bottom: 10px;  
   padding: 10px 20px;
   width: 100%; 
 }
@@ -211,15 +164,16 @@ header div:nth-child(1) {
 
 .accordion {
   display: space-y-4;
-  max-width: 760px;
+  max-width: 960px;
   margin: 0 auto;
   margin-top: 6rem;
 }
 
 .accordion-item {
-  background-color: transparent;
+  border-radius: 14px;
+  background-color: rgb(21, 21, 21);
   border-bottom: 1px solid black;
-  /* box-shadow: 0 -2px 2px -1px rgba(42, 42, 42, 0.5); */
+  box-shadow: 0 -2px 2px -1px rgba(42, 42, 42, 0.5);
 }
 .accordion-item:nth-child(1){
   border-top: 1px solid black;
@@ -235,7 +189,7 @@ header div:nth-child(1) {
 
 .accordion-btn {
   outline: none;
-  color: #537ca6;
+  color: rgb(244, 212, 148);
 }
 
 .accordion-btn svg {
@@ -256,10 +210,9 @@ header div:nth-child(1) {
 .accordion-item.open .accordion-content {
   max-height: 9999px;
   padding: 1rem 1.5rem;
-  color: rgb(7, 7, 7);
+  color: rgb(212, 212, 212);
 }
 
 b {
   font-weight: 700;
 }
-
