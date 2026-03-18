@@ -6,7 +6,7 @@ import AOS from 'aos';
 import useContent from '../hooks/useContent';
 
 const defaultContent = {
-    title: 'safedecision@mail.ru',
+    title: 'info@safedecision.ru',
     subtitle: 'Россия, г.Москва, ул. Научный проезд д.17',
     btn: 'WhatsApp',
     btnLink: "https://wa.me/79999999999"
@@ -36,7 +36,7 @@ export default function Contacts({}){
         {/* <div className="p-8 md:py-24 mx-auto text-black text-4xl md:text-6xl font-bold text-center bg-white">
         <p>
             +7 (495) 565-38-45 <br/>
-            safedecision@mail.ru
+            info@safedecision.ru
         </p>
         <p className="text-3xl font-light my-8">
             Россия, г.Москва, ул. Научный проезд д.17
