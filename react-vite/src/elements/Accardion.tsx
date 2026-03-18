@@ -43,7 +43,7 @@ export default function Accardion({list, title}:{list: Array<{q: string | JSX.El
                 
                 });
             });
-            }
+            } 
             initAccardeon()
         </script> */}
     </>
