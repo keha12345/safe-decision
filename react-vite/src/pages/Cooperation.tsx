@@ -1,88 +1,16 @@
 
-import { useEffect } from 'react';
 import Hero from '../elements/Hero'
-import AOS from 'aos';
-import QuestionBlock from '../elements/QuestionBlock';
-import useContent from '../hooks/useContent';
-
-const defaultContent = {
-  hero: {
-    title: 'Сотрудничать с нами просто и выгодно',
-    subtitle: 'Узнайте из чего строиться долгосрочное сотрудничество с нами'
-  },
-  title: 'Как мы работаем',
-  subtitle: 'subtitle',
-  columns: [
-    {
-      title: 'Всё «под ключ»',
-      steps: [
-        {
-          title: '1. Передача информации',
-          description: 'Вы нам отправляете - либо фото товара, либо ссылку на него, либо просто характеристики',
-        },
-        {
-          title: '2. Поиск поставщиков',
-          description:
-            'Мы находим по соотношению цены и качества 3-5 поставщиков, из них выбираем лучших и отправляем вам 2-3 варианта на выбор.',
-        },
-        {
-          title: '3. Проверка поставщиков',
-          description: 'Мы проверяем поставщиков, запрашиваем документы на товар',
-        },
-        {
-          title: '4. Проверка товара и согласование',
-          description: 'Отправляем вам «живые» фото-видео товара и после согласования выкупаем',
-        },
-        {
-          title: '5. Страховка и отправка',
-          description: 'Проверяем перед отправкой товар и страхуем его, после упаковываем и привозим.',
-        },
-      ],
-    },
-    {
-      title: 'Выкуп и доставка',
-      steps: [
-        {
-          title: '1. Самостоятельный поиск поставщика',
-          description: 'Вы сами находите поставщика',
-        },
-        {
-          title: '2. Передача информации',
-          description: 'Отправляете нам ссылку на товар',
-        },
-        {
-          title: '3. Выкуп товара',
-          description: 'Мы выкупаем товар, который вы выбрали',
-        },
-        {
-          title: '4. Проверка и страховка товара',
-          description: 'Перед тем как отправить вам товар, мы его проверяем перед отправкой и страхуем',
-        },
-        {
-          title: '5. Упаковка и транспортировка',
-          description: 'Упаковываем товар и привозим его в пункт назначения',
-        },
-      ],
-    },
-  ],
-  note: 'И в том, и в другом варианте сотрудничества мы несём полную ответственность за ваш груз на всех этапах перевозки',
-};
 
 export default function Cooperation({}){
-    const content = useContent()
-    const res =  {...defaultContent, ...content.cooperationPage}
-
-      useEffect(() => {
-        AOS.init({
-                duration: 800, // длительность анимации в мс
-                once: true,    // анимация только при первом скролле
-              });
-      }, []);
-      
 
     return <>
 
-    <Hero title={res.hero.title} subtitle={res.hero.subtitle} buttons={<></>}/>
+    <Hero slides={[{
+        bg: 'media/hero_boat.png',
+        title: 'Варианты сотрудничества с нами'
+    }]} ch={256}/>
+
+  
 
   <section className="text-black my-6 md:my-16">
     <div className="md:flex md:mx-32 items-strech">
@@ -188,15 +116,9 @@ export default function Cooperation({}){
   
 
 
-      {res.note && (
-        <div data-aos='fade-up' className="max-w-3xl mx-auto mt-16 text-center text-gray-300 text-lg">
-          <hr className="border-gray-600 mb-6" />
-          <p>{res.note}</p>
-          <hr className="border-gray-600 mt-6" />
-        </div>
-      )}
-    </section>
 
-    <QuestionBlock />
-  </>
+  <section>
+    <a className="btn blue block text-center font-semibold my-16 mx-auto" href="tel: +74955653845">Звонок</a>
+  </section>
+</>
 }

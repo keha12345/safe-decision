@@ -1,19 +1,8 @@
-import { useEffect } from 'react'
+import { useState } from 'react'
 import Hero from '../elements/Hero'
-// import Accardion from '../elements/Accardion'
-// import Modal from '../elements/Modal'
-// import useForm from '../hooks/useForm'
-import Advantages from '../elements/Advantages'
-// import Delivery from './Delivery'
-import DeliverySlider from '../elements/DeliverySlider'
-// import { Link } from 'react-router'
-// import { ArrowRight } from 'lucide-react'
-// import Faq from '../elements/Faq'
-import RoadMap from '../elements/RoadMap'
-import QuestionBlock from '../elements/QuestionBlock'
-import Quiz from '../elements/Quz'
-import AOS from 'aos'
-// import useContent from '../hooks/useContent'
+import Accardion from '../elements/Accardion'
+import Modal from '../elements/Modal'
+import useForm from '../hooks/useForm'
 
 const prefix = window.location.href.includes('github')? '/safe-decision':'';
 
@@ -267,7 +256,6 @@ export default function Index({}){
         </section>
 
 
-export default function Index({}){
 
         <section className="w-sm mx-auto md:m-32 md:mx-48 text-black relative">
             <h1 className="text-center text-3xl md:text-5xl font-semibold mt-24 mb-4">Алгоритм работы</h1>
@@ -317,38 +305,70 @@ export default function Index({}){
         </section>
 
 
-    // const [modal, setModal] = useState(false)
-    // const [h,send] = useForm({phone: '', name: '', text: ''})
-    const isPhoneScreen = (typeof window !== 'undefined' && window.innerWidth < 768);
 
-    useEffect(() => {
-        AOS.init({
-          duration: 800, // длительность анимации в мс
-          once: true,    // анимация только при первом скролле
-        });
-    }, []);
+        <section id="contacts" className="s2">
+            <div className="s2c py-14 md:pb-48 md:px-28">
+            <div className="flex flex-col">
+                <div className="flex flex-wrap">
+                <div className="mx-8 md:mx-0 text-6xl md:text-9xl font-semibold md:text-right" style={{color: '#d8d8d8'}}>
+                    <div className="md:-mr-14">Бесплатная</div>
+                    <div>консультация</div>
+                </div>
 
-    return <>
-        <Hero />
-        {isPhoneScreen? <>
-            <DeliverySlider />
-            <Advantages />
-        </>:<>
-            <Advantages />
-            <DeliverySlider />
-        </>}
-        <RoadMap />
-        <Quiz />
+                <div className="md:hidden flex items-center justify-center gap-2 p-4 w-full my-6">
+                    <div style={{width: '55px', height: '1px', background: '#d8d8d8'}}></div>
+                    <div style={{maxWidth: '310px'}} className="font-extralight">
+                    Оставьте свои контакты, наш специалист свяжется с вами для проведения консультации
+                    </div>
+                    <div style={{width: '55px', height: '1px', background: '#d8d8d8'}}></div>
+                    {/* <!-- <a className="btn white inline-block text-center font-semibold" onClick={()=>setModal(true)}>Подробнее</a> --> */}
+                </div>
 
-        
+                <div className="mx-auto md:mt-36 pt-2 md:ml-12 mb-0 md:mb-0 mb-48 overflow-visible" style={{height: '150px', width: '267px'}}>
+                    <div>
+                    <input aria-label="name" type="text" name="name" placeholder="Ваше имя" className="input" />
+                    <input aria-label="phone" type="tel" name="phone" placeholder="+7(999)999-9999" className="input" />
+                    <textarea aria-label="textarea" name="textarea" placeholder="Ваш комментарий" rows={3} className="input" style={{height: '85px'}}></textarea>
+                    <button type="submit" className="btn white font-semibold" style={{width: '100%'}}>
+                        Отправить
+                    </button>
+                    </div>
+                </div>
 
+                </div>
+                <div className="hidden md:flex items-center mr-8">
+                <div style={{width: '178px', height: '1px', background: '#d8d8d8'}}></div>
+                <div style={{maxWidth: '440px'}} className="mx-4 font-extralight">
+                    Оставьте свои контакты, наш специалист свяжется с вами для проведения консультации
+                </div>
+                <div style={{width: '178px', height: '1px', background: '#d8d8d8'}}></div>
+                {/* <!-- <a className="btn white inline-block text-center font-semibold" onClick={()=>setModal(true)}>Подробнее</a> --> */}
+                </div>
+            </div>
+            {/* <!-- <div className="flex font-extralight" style={{margin-left: 24px;">
+                <div className="text-3xl mb-8">Мы российско-китайская<br/>логистическая компания:</div>
+                <div className="flex items-center">
+                <div style={{width: 225px; height: 1px; background: #d8d8d8;"></div><div style={{width: 5px; height: 5px; border-radius: 5px; background: #fff;"></div> 
+                <div className="ml-4">Склады по всему Китаю</div>
+                </div>
+            </div> --> */}
+            </div>    
+        </section>
+
+        <Accardion list={[
+            {
+                q: 'Может ли измениться цена в процессе сотрудничества?', 
+                a: 'Нет, не может. Мы сразу обговариваем с вами цену с учётом всех дополнительных расходов и прописываем её в договоре'
 
             },
             {
                 q: 'Вы доставляете грузы только в Москву?', 
                 a: 'Изначально товары приходят на наш склад в Москве, отсюда мы можем отправить груз в любой город России'
 
-        
+            },
+            {
+                q: 'Работаете ли вы с физическими лицами?', 
+                a: 'Да, работаем'
 
             },
         ]} />
@@ -357,6 +377,7 @@ export default function Index({}){
         <Modal 
             content={<>
                 <h5 className="text-center text-4xl my-6 font-bold">
+                    {/* Рассчитать стоимость доставки */}
                     Оставить заявку
                 </h5>
                 <div>
@@ -370,6 +391,6 @@ export default function Index({}){
             </>} 
             close={!modal} 
             onClose={()=> setModal(false)}
-        /> */}
+        />
     </>
 }
