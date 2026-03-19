@@ -20,14 +20,14 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/safe-decision" element={<Index />} />
+        {/* <Route path="/safe-decision" element={<Index />} />
         <Route path="/safe-decision/delivery" element={<Delivery />} />
         <Route path="/safe-decision/cooperation" element={<Cooperation />} />
         <Route path="/safe-decision/additional" element={<Additional />} />
         <Route path="/safe-decision/faq" element={<Faq />} />
         <Route path="/safe-decision/info" element={<Info />} />
         <Route path="/safe-decision/contacts" element={<Contacts />} />
-        <Route path="/safe-decision/grat" element={<Grat />} />
+        <Route path="/safe-decision/grat" element={<Grat />} /> */}
 
         <Route path="/" element={<Index />} />
         <Route path="/delivery" element={<Delivery />} />
