@@ -3,13 +3,13 @@
 const content = {
   mainPage: {
     title: 'Доставка грузов из Китая',
-    subtitle: 'Доставляем и по белой логистике, и в карго',
+    subtitle: ' ',
     buttons: <>
         <a href="#Quiz" className="block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold mb-2 p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start" >
         Узнать стоимость
         </a>
-        <a href="https://wa.me/79917888378" className="block bg-transparent border border-white hover:bg-white hover:text-black text-white font-semibold p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start" >
-        WhatsApp
+        <a href="tel:+79917888378" className="block bg-transparent border border-white hover:bg-white hover:text-black text-white font-semibold p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start" >
+        Позвонить
         </a>
     </>
   }, 
@@ -240,8 +240,8 @@ const content = {
   contactsPage: {
     title: 'info@safedecision.ru',
     subtitle: 'Россия, г.Москва, ул. Научный проезд д.17',
-    btn: 'WhatsApp',
-    btnLink: "https://wa.me/79999999999"
+    btn: 'Написать',
+    btnLink: "mailto:info@safedecision.ru"
   },
   roadMap: {
     subtitle: 'Этапы нашей работы — от первого контакта до вручения груза.',
