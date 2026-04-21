@@ -8,7 +8,7 @@ const content = {
         <a href="#Quiz" className="block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold mb-2 p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start" >
         Узнать стоимость
         </a>
-        <a href="tel:+79917888378" className="block bg-transparent border border-white hover:bg-white hover:text-black text-white font-semibold p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start" >
+        <a href="tel: +7 (495) 565-38-45" className="block bg-transparent border border-white hover:bg-white hover:text-black text-white font-semibold p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start" >
         Позвонить
         </a>
     </>

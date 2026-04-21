@@ -27,9 +27,9 @@ export default function Contacts({}){
         <a href="tel: +7 (495) 565-38-45" className="block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold mb-2 p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start" >
         {'+7 (495) 565-38-45'}
         </a>
-        <a href={res.btnLink} className="block bg-transparent border border-white hover:bg-white hover:text-black text-white font-semibold p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start" >
+        {/* <a href={res.btnLink} className="block bg-transparent border border-white hover:bg-white hover:text-black text-white font-semibold p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start" >
             {res.btn}
-        </a>
+        </a> */}
     </>}/>
 
     <section className="my-16 md:my-32">
