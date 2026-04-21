@@ -35,7 +35,7 @@ export default function Header({}){
                 <li><a onClick={nav} href="/cooperation" className="text-white hover:text-gray-400">Сотрудничество</a></li>
                 {/* <li><a onClick={nav} href="/additional" className="text-white hover:text-gray-400">Доп услуги</a></li>e */}
                 {/* <li><a onClick={nav} href="/faq" className="text-white hover:text-gray-400">F.A.Q.</a></li> */}
-                <li><a onClick={nav} href="/faq" className="text-white hover:text-gray-400">F.A.Q.</a></li>
+                {/* <li><a onClick={nav} href="/faq" className="text-white hover:text-gray-400">F.A.Q.</a></li> */}
                 <li><a onClick={nav} href="/info" className="text-white hover:text-gray-400">О нас</a></li>
                 <li><a onClick={nav} href="/contacts" className="text-white hover:text-gray-400">Контакты</a></li>
             </ul>
