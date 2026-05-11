@@ -129,7 +129,7 @@ export default function Delivery() {
               {res.hero_block.cta_button.text}
             </a>
     </>}/>
-    <section className="bg-white py-16 px-4 sm:px-8 lg:px-20" style={{
+    <section id='delivery' className="bg-white py-16 px-4 sm:px-8 lg:px-20" style={{
         background: "linear-gradient(180deg, rgb(31, 31, 31) 0%, rgb(217, 217, 217) 4%)"
     }}>
       <h2 className="text-3xl text-black font-bold text-center my-12">{res.title}</h2>

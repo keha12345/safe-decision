@@ -20,10 +20,18 @@ export default function Quiz() {
   const content = useContent();
   const res = {...defdata, ...content.quiz}
 
-  const [h,send,data] = useForm({phone: '', name: ''})
+  const [h,send,data] = useForm({
+    phone: '', 
+    name: '', 
+    description: '',
+    value: '', 
+    addresses: '', 
+    volumeAndWeight: '',
+
+  })
 
   return (
-    <div id='Quiz' data-aos="fade-up" className="bg-black text-white rounded-xl max-w-xl w-full mx-auto p-6 md:p-8">
+    <div id='Quiz' data-aos="fade-up" className="bg-black text-white rounded-xl max-w-xl w-full mx-auto my-20 p-6 md:p-8">
       <div>
         <h2 className="text-xl font-bold uppercase leading-snug my-2 text-yellow-100/80">
           {res.title}
@@ -34,7 +42,7 @@ export default function Quiz() {
       </div>
 
       <div>
-        <div className="my-6">
+        {/* <div className="my-6">
           {res.options.map((opt) => (
             <label key={opt} className="flex items-center gap-3 cursor-pointer mx-2">
               <span
@@ -53,8 +61,44 @@ export default function Quiz() {
               <span className="text-base">{opt}</span>
             </label>
           ))}
-        </div>
+        </div> */}
 
+        <input
+          type="text"
+          placeholder="Наименование груза"
+          name='description'
+          value={data.description}
+          onChange={h}
+          className="my-1 w-full bg-transparent border border-orange-100/70 text-white px-4 py-2 rounded focus:outline-none"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Стоимость груза"
+          name='value'
+          value={data.value}
+          onChange={h}
+          className="my-1 w-full bg-transparent border border-orange-100/70 text-white px-4 py-2 rounded focus:outline-none"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Объем и вес"
+          name='volumeAndWeight'
+          value={data.volumeAndWeight}
+          onChange={h}
+          className="my-1 w-full bg-transparent border border-orange-100/70 text-white px-4 py-2 rounded focus:outline-none"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Адреса забора и доставки"
+          name='addresses'
+          value={data.addresses}
+          onChange={h}
+          className="my-1 w-full bg-transparent border border-orange-100/70 text-white px-4 py-2 rounded focus:outline-none"
+          required
+        />
         <input
           type="text"
           placeholder="ФИО"

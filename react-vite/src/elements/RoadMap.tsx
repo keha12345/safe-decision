@@ -24,11 +24,11 @@ const defContent = {
         },
         {
             title: 'Доставка и приёмка',
-            description: 'Мы доставляем товар, вы принимаете его на складе в Москве или по адресу.',
+            description: 'Мы доставляем товар, вы принимаете его на своём складе.',
         },
     ]
 }
-const RoadMap = () => {
+const RoadMap = ({disableAOS=false}) => {
     const content = useContent();
     const res = {...defContent, ...content.roadMap}
 
@@ -44,11 +44,11 @@ const RoadMap = () => {
             </div>
             <div className="relative mx-auto" style={{maxWidth: '720px'}}>
 
-                <div data-aos="slide-up" data-aos-delay="4000" className="absolute left-1/2 border-l-2 border-gray-600 mt-4 w-1" style={{height: '95%'}}></div>
+                <div data-aos={disableAOS? 'none' :"slide-up"} data-aos-delay="4000" className="absolute left-1/2 border-l-2 border-gray-600 mt-4 w-1 z-0" style={{height: '95%'}}></div>
                 {res.steps.map((step, index) => (
                     <div
                         key={index}
-                        data-aos={index % 2 === 0 ? 'fade-right': 'fade-left'}//"fade-up"
+                        data-aos={disableAOS? 'none' : index % 2 === 0 ? 'fade-right': 'fade-left'}//"fade-up"
                         data-aos-delay={`${index * 50}`}
                         className={`mb-14 sm:mb-20 flex flex-col ${''
                         // index % 2 === 0 ? 'sm:flex-row-reverse' : ''
@@ -58,7 +58,7 @@ const RoadMap = () => {
                             {index + 1}
                         </div>
             
-                        <div>
+                        <div className="z-10">
                             <div
                                 className={`p-6 rounded-2xl shadow-lg mt-2 ${
                                     index % 2 === 0 ? 'sm:mr-auto sm:ml-12' : 'sm:ml-auto sm:mr-12'

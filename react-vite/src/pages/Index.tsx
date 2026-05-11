@@ -13,6 +13,7 @@ import RoadMap from '../elements/RoadMap'
 import QuestionBlock from '../elements/QuestionBlock'
 import Quiz from '../elements/Quz'
 import AOS from 'aos'
+import Advantages2 from '../elements/Advantages2'
 // import useContent from '../hooks/useContent'
 
 // const prefix = window.location.href.includes('github')? '/safe-decision':'';
@@ -51,13 +52,13 @@ export default function Index({}){
     return <>
         <Hero />
         {isPhoneScreen? <>
-            <DeliverySlider />
-            <Advantages />
+            {/* <DeliverySlider /> */}
+            <Advantages2 />
         </>:<>
-            <Advantages />
-            <DeliverySlider />
+            <Advantages2 />
+            {/* <DeliverySlider /> */}
         </>}
-        <RoadMap />
+        {/* <RoadMap /> */}
         <Quiz />
 
         

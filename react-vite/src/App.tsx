@@ -11,6 +11,7 @@ import Contacts from './pages/Contacts';
 import Grat from './pages/Grat';
 import Header from './elements/Header';
 import Footer from './elements/Footer';
+import Reviews from "./pages/Reviews";
 // import FaqPage from "./pages/FaqPage";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/info" element={<Info />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/grat" element={<Grat />} />
+        <Route path="/reviews" element={<Reviews />} />
       </Routes>
       <Footer />
     </>

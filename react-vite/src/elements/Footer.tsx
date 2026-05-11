@@ -29,8 +29,11 @@ export default function Footer({}){
     return <>
     <section style={{minHeight: '480px', background: 'rgb(0, 0, 0)'}} className="p-16 text-extralight">
         <div className="flex justify-evenly flex-wrap gap-8">
-        <div className="flex flex-col items-center md:items-start gap-4 mx-auto md:mx-0">
-            <img className="w-24" src="media/logo.png" alt="" />
+        <div className="flex flex-col items-center md:items-start gap-1 mx-auto md:mx-0">
+            <img className="w-24 md:w-26 mx-auto" src="media/logo.png" alt="" />
+            <div className='text-zinc-800 whitespace-nowrap'>
+                <span style={{fontWeight: 700}}>Безопасное</span> Решение
+            </div>
         </div>
         <div className="flex flex-col items-center md:items-start gap-4">
             <a onClick={nav} href={`${prefix}/`} className="font-bold pb-4">Главная</a>

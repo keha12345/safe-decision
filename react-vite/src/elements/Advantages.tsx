@@ -4,42 +4,42 @@ const defAdvs = {
   list: [
     {
       title: 'Прозрачное ценообразование',
-      description:
+      text:
         'Все расходы уже включены в цену — никаких скрытых платежей и неприятных сюрпризов.',
     //   icon: '💰',
         icon: '/media/Иконки NEW (1).png',
     },
     {
       title: 'Надёжные партнёры',
-      description:
+      text:
         'Работаем только с проверенными поставщиками. Гарантируем сроки и качество.',
     //   icon: '🤝',
         icon: '/media/Иконки NEW (2).png',
     },
     {
       title: 'Выездная проверка',
-      description:
+      text:
         'Проверяем товар лично на фабриках. Фото- и видеоотчёты по каждому заказу.',
     //   icon: '🕵️‍♂️',
         icon: '/media/Иконки NEW (3).png',
     },
     {
       title: 'Работа с юр. и физ. лицами',
-      description:
+      text:
         'Обслуживаем и компании, и индивидуальных предпринимателей. Всё легально.',
     //   icon: '📄',
         icon: '/media/Иконки NEW (4).png',
     },
     {
       title: 'Быстрый выкуп товара',
-      description:
+      text:
         'Выкупаем товар в течение 1–2 дней — не тянем время и не держим вас в ожидании.',
     //   icon: '⚡',
         icon: '/media/Иконки NEW (5).png',
     },
     {
       title: 'Страховка от брака',
-      description:
+      text:
         'Ваши товары застрахованы от производственных дефектов. Мы несем ответственность.',
     //   icon: '🛡️',
         icon: '/media/Иконки NEW (6).png',
@@ -111,7 +111,7 @@ const defAdvs = {
                 {/* <div className="w-12 h-12 mr-8" style={{color: 'silver'}}>{feature.icon}</div> */}
                 <div>
                     <h3 className="font-medium text-2xl mb-2" style={{color: isPhoneScreen? 'rgb(250 212 121)': 'white'}}>{feature.title}</h3>
-                    <p className="text-base font-light">{feature.description}</p>
+                    <p className="text-base font-light">{feature.text}</p>
                 </div>
             </div>
             ))}

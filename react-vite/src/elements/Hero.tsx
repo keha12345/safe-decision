@@ -1,4 +1,4 @@
-import React from "react";
+import { JSX } from "react";
 import useContent from "../hooks/useContent";
 
 const defaultContent = {
@@ -19,10 +19,10 @@ export default function Hero(content:{
     subtitle?: string,
     buttons?: JSX.Element
 }){
-    const c = useContent();
-    const res = {...defaultContent, ...c.mainPage, ...(content||{})}
+  const c = useContent();
+  const res = {...defaultContent, ...c.mainPage, ...(content||{})}
 
-    return <section className="w-full relative overflow-hidden md:mb-16">
+  return <section className="w-full relative overflow-hidden md:mb-16">
 
     {/* Контент */}
     
@@ -31,23 +31,23 @@ export default function Hero(content:{
             width: '100vw',
             maxWidth: '1480px',
             margin: '0 auto',
-            height: '80vh',
+            height: '60vh',
             maxHeight: '100vw',
             backgroundImage: "url('/media/planet_06f7a40c8b.webp')",
             backgroundSize: '100%',
     }}>
-        <GlowArc />
-        <div className="flex justify-center"
+      <GlowArc />
+      <div className="flex justify-center items-end"
         style={{
             width: '100%',
-            height: '100%',
+            minHeight: '100%',
             background: "linear-gradient(180deg, rgb(31, 31, 31) 0%, rgba(0, 0, 0, 0) 10%, rgb(31, 31, 31) 100%)",
         }}>
-            <div data-aos="fade-down" className="w-sm md:w-full mx-auto m-16 mb-0 md:m-0 absolute bottom-4 md:bottom-16 md:text-center" >
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            <div data-aos="fade-down" className="w-sm md:w-full m-4 mb-0 md:m-0 text-center" >
+                <h1 className="text-2xl md:text-4xl font-bold mb-4 uppercase">
                     {res.title}{/* Качественно — не значит «дорого» */}
                 </h1>
-                <p className="text-lg md:text-xl mb-8">
+                <p className="text-base md:text-lg mb-8 mx-8">
                     {res.subtitle}{/* Подбор трендовых товаров оптом от 1.7$ за кг */}
                 </p>
 

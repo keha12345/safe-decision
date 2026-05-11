@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { JSX, useState } from 'react'
 
 
 export default function Accardion({list, title}:{list: Array<{q: string | JSX.Element, a: string | JSX.Element}>, title?: string}){

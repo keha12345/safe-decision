@@ -58,13 +58,13 @@ export default function Info(){
     }, []);
     return <>
          
-        <Hero title='SAFE DECISION' subtitle='Мы стремимся, чтобы закупка партии товаров в Китае была не сложнее, чем в России' buttons={<></>}/>
+        <Hero title={res.hero.title} subtitle={res.hero.subtitle} buttons={<></>}/>
 
         <section id="info" className="s2 w-full overflow-hidden pt-16">
             <div data-aos='fade-up' className="flex flex-col items-center md:pt-28 md:px-36">
-                <div className="flex flex-wrap-reverse">
+                <div className="relative w-full max-w-[900px] flex flex-wrap-reverse">
                     <div className="font-extralight" style={{marginLeft: '32px'}}>
-                    <div className="text-lg text-3xl mb-8">
+                    <div className="text-lg text-3xl my-8">
                         {/* Мы российско-китайская <br/> логистическая компания: */}
                         {res.info.title.split(' ').slice(0,2).join(' ')}
                         <br />
@@ -78,22 +78,22 @@ export default function Info(){
                         </div>
                     )}
                     </div>
-                    <div className="hidden md:block text-7xl font-semibold" style={{marginTop: '-48px', marginLeft: '-74px', color: '#d8d8d8'}}>
-                    <div className="text-9xl">{res.info.highlighted[0]}</div>
-                    <div className="text-center">{res.info.highlighted[1]} </div>
-                    <div style={{marginLeft: '360px'}}>{res.info.highlighted[2]}</div>
+                    <div className="mx-8 text-5xl font-semibold text-white  md:w-64 md:absolute right-16 -top-2">
+                        <div className="text-9xl">{res.info.highlighted[0]}</div>
+                        <div className="md:text-7xl">{res.info.highlighted[1]}</div>
+                        <div style={{marginLeft: '360px'}}>{res.info.highlighted[2]}</div>
                     </div>
-                    <div className="block md:hidden flex justify-between w-full text-4xl m-8 font-semibold">
-                    <div>
-                        <div className="text-7xl">{res.info.highlighted[0]}</div>
-                        <div>{res.info.highlighted[1]} </div>
-                        <div>{res.info.highlighted[2]}</div>
-                    </div>
-                    <div data-aos="fade-left">
-                        <img src="media/ch_flag.png" alt="" style={{width: '140px'}} /> 
-                        <img src="media/ru_flag.png" alt="" style={{width: '112px', marginLeft: '14px', transform: 'rotate(-18deg)'}} /> 
-                    </div>
-                    </div>
+                    {/* <div className="block md:hidden flex justify-between w-full text-4xl m-8 font-semibold">
+                        <div>
+                            <div className="text-7xl">{res.info.highlighted[0]}</div>
+                            <div>{res.info.highlighted[1]} </div>
+                            <div>{res.info.highlighted[2]}</div>
+                        </div>
+                        {/* <div data-aos="fade-left">
+                            <img src="media/ch_flag.png" alt="" style={{width: '140px'}} /> 
+                            <img src="media/ru_flag.png" alt="" style={{width: '112px', marginLeft: '14px', transform: 'rotate(-18deg)'}} /> 
+                        </div>
+                    </div> */}
                 </div>
                 <div className="flex items-center mt-8 mx-6 py-16 md:pt-1">
                     <a href="#QuestionBlock" className="block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold mb-2 p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start" >
@@ -121,13 +121,13 @@ export default function Info(){
         <section className="w-full md:mx-auto my-16 font-semibold">
         
             <div className="flex items-center w-full mb-16">
-            <div style={{width: 'calc(50vw - 420px)', minWidth: '20px', height: '1px', background: 'rgb(187, 146, 0)'}}></div>
-            <div className="p-4 md:p-8 font-extralight border rounded-xl" style={{minWidth: '320px', maxWidth: '840px', borderColor: 'rgb(187, 146, 0)'}}>
-                <h1 className="text-center text-2xl md:text-3xl font-semibold">
-                    {res.benefits.title}
-                </h1>
-            </div>
-            <div style={{width: 'calc(50vw - 420px)', minWidth: '20px', height: '1px', background: 'rgb(187, 146, 0)'}}></div>
+                <div style={{width: 'calc(50vw - 420px)', minWidth: '20px', height: '1px', background: 'rgb(187, 146, 0)'}}></div>
+                <div className="p-4 md:p-8 font-extralight border rounded-xl" style={{minWidth: '320px', maxWidth: '840px', borderColor: 'rgb(187, 146, 0)'}}>
+                    <h1 className="text-center text-2xl md:text-3xl font-semibold">
+                        {res.benefits.title}
+                    </h1>
+                </div>
+                <div style={{width: 'calc(50vw - 420px)', minWidth: '20px', height: '1px', background: 'rgb(187, 146, 0)'}}></div>
             </div>
 
 
@@ -139,7 +139,7 @@ export default function Info(){
                     <img src="media/decor.png" className="h-11 absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
                     </div>
                     <p className="text-center md:w-11/12 md:text-left">
-                        {el}
+                        {el.split('\\n').map(str=><>{str}<br/></>)}
                     </p>
                 </div>
                 )}
@@ -166,7 +166,7 @@ export default function Info(){
 
 
 
-        <section className="w-full md:mx-auto my-16 font-semibold">
+        {/* <section className="w-full md:mx-auto my-16 font-semibold">
         
             <div className="flex items-center w-full mb-16">
             <div style={{width: 'calc(50vw - 120px)', minWidth: '50px', height: '1px', background: 'rgb(187, 146, 0)'}}></div>
@@ -193,7 +193,7 @@ export default function Info(){
                 )}          
 
             </div>
-        </section>
+        </section> */}
 
         
 
