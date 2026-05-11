@@ -1,3 +1,4 @@
+import {JSX} from 'react'
 
 export default function Modal(props:{content: string | JSX.Element | null, close?: boolean, onClose: ()=>void}){
 
