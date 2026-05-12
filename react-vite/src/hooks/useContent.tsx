@@ -1,13 +1,14 @@
+import { useEffect, useState } from "react";
 
 
-const content = {
+const defContent = {
   mainPage: {
     title: 'Официальная доставка грузов из Китая',
     subtitle: ` 📦\u00A0Выкуп\u00A0и\u00A0проверка\u00A0товара.
 📑\u00A0Полный\u00A0пакет\u00A0документов.
 🚚\u00A0Доставка\u00A0до\u00A0вашего\u00A0склада.`,
     // subtitle: ` Надёжно транспортируем любые виды грузов для вашего бизнеса небом, морем и сушей.`,
-    buttons: <>
+    buttons: `
         <a href="#Quiz" className="block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold mb-2 p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start">
         Рассчитать стоимость
         </a>
@@ -17,7 +18,7 @@ const content = {
         <a href="tel: +7 (495) 565-38-45" className="block bg-transparent border border-white hover:bg-white hover:text-black text-white font-semibold mb-2 p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start">
         Позвонить
         </a>
-    </>
+    `
   }, 
   infoPage: {
     hero: {
@@ -435,11 +436,11 @@ const content = {
         icon: '/media/Иконки NEW (3).png'
       }
     ],
-    buttons: <>
+    buttons: `
         <a href="/delivery" className="block bg-yellow-400 hover:bg-yellow-500 tracking-[0.3em] text-gray-800 uppercase font-extrabold text-xs p-4 md:py-6 px-6 rounded-lg transition text-center w-full">
-          {'Выборать\u00A0маршрут и\u00A0тариф'}
+          Выборать\u00A0маршрут и\u00A0тариф
         </a>
-    </>
+    `
   },
   reviews: {
     hero: {
@@ -515,7 +516,46 @@ const content = {
 
 
 export default function useContent() {
+
+  const [content, setContent] = useState(defContent);
+
+  useEffect(() =>{
+    async function load() {
+      //https://docs.google.com/document/u/0/export?format=txt&id=1E550kLjxSKpedK3NKCQFhTGd8TRXFczJQIoiRib_-k0&token=AOqKD6BRNwu6Ee7Yz-W7jVo3NfyF%3A1778530594929&ouid=105332566598596564644&includes_info_params=true&usp=drive_web&cros_files=false&nded=false&tab=t.0&inspectorResult=%7B%22pc%22%3A16%2C%22lplc%22%3A5%7D
+      try {
+        const resp = await fetch('https://docs.google.com/document/u/0/export?format=txt&id=1E550kLjxSKpedK3NKCQFhTGd8TRXFczJQIoiRib_-k0&token=AOqKD6BRNwu6Ee7Yz-W7jVo3NfyF%3A1778530594929&ouid=105332566598596564644&includes_info_params=true&usp=drive_web&cros_files=false&nded=false&tab=t.0&inspectorResult=%7B%22pc%22%3A15%2C%22lplc%22%3A1%7D')
+        const str = await resp.text();
+        const newContent = parseJsLikeString(str);
+        setContent(newContent);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    load()
+  },[])
+
   return content;
 }
 
 
+
+
+
+function parseJsLikeString(str:string) {
+  try {
+    // 1. Убираем комментарии (строки начинающиеся с //)
+    let cleanStr = str.replace(/\/\/.*$/gm, '');
+
+    // 2. Исправляем возможные проблемы с невидимыми символами
+    cleanStr = cleanStr.trim();
+
+    // 3. Используем new Function для безопасного превращения в объект
+    // Обертываем в скобки ({}), чтобы JS понял, что это объект, а не блок кода
+    const obj = new Function(`return (${cleanStr})`)();
+    
+    return obj;
+  } catch (e) {
+    console.error("Ошибка парсинга:", e);
+    return null;
+  }
+}

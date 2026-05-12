@@ -1,5 +1,7 @@
-    import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import useContent from '../hooks/useContent';
+import parse from 'html-react-parser';
+
 
     const defAdvs = [
     {
@@ -117,7 +119,7 @@ import useContent from '../hooks/useContent';
                 </div>
                 <div className='mt-10 mr-10 w-full gap-8'>
                     <div>
-                        {content.advantages.buttons}
+                        {typeof content.advantages.buttons === 'string' ? parse(content.advantages.buttons) : content.advantages.buttons}
                     </div>
                 </div>
             </div>

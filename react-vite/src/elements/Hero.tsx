@@ -1,17 +1,18 @@
 import { JSX } from "react";
 import useContent from "../hooks/useContent";
+import parse from 'html-react-parser';
 
 const defaultContent = {
     title: 'Качественно — не значит «дорого»',
     subtitle: 'Подбор трендовых товаров оптом от 1.7$ за кг',
-    buttons: <>
+    buttons: `<>
         <a href="#DeliverySlider" className="block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold mb-2 p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start" >
         Узнать стоимость
         </a>
         <a href="https://wa.me/79999999999" className="block bg-transparent border border-white hover:bg-white hover:text-black text-white font-semibold p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start" >
         WhatsApp
         </a>
-    </>
+    </>`
 }
 
 export default function Hero(content:{
@@ -52,7 +53,7 @@ export default function Hero(content:{
                 </p>
 
                 <div className="md:flex md:justify-center md:items-start gap-4">
-                    {res.buttons}
+                    {typeof res.buttons === 'string' ? parse(res.buttons) : res.buttons}
                 </div>
             </div>
         </div>
