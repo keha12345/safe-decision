@@ -66,7 +66,7 @@ import parse from 'html-react-parser';
     const [activeStep, setActiveStep] = useState('01');
     const cardRefs = useRef<(HTMLDivElement | null)[]>([null]);
     const content = useContent();
-    const advantages = [...defAdvs, ...content.advantages.list]
+    const advantages = content?.advantages?.list||defAdvs;
 
     useEffect(() => {
         const observerOptions = {
@@ -101,10 +101,10 @@ import parse from 'html-react-parser';
             <div className="md:sticky md:top-32 h-fit md:w-1/3 z-10 md:p-auto ml-4">
                 <div className="flex flex-col gap-2">
                     <h2 className="text-5xl md:text-6xl font-bold uppercase tracking-tighter">
-                    7 причин
+                    {content?.advantages?.title||'7 причин'}
                     </h2>
                     <p className="text-xl text-gray-400 font-light max-w-xs">
-                    доверять свой груз <br /> 
+                    {content?.advantages?.subtitle||'доверять свой груз'} <br /> 
                     <span className="text-white font-semibold">SAFE DECISION</span>
                     </p>
                 </div>

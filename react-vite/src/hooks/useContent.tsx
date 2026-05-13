@@ -386,6 +386,13 @@ const defContent = {
     ],
   },
   advantages: {
+    title: '7 причин',
+    subtitle: 'доверять свой груз',
+    buttons: `
+        <a href="/delivery" className="block bg-yellow-400 hover:bg-yellow-500 tracking-[0.3em] text-gray-800 uppercase font-extrabold text-xs p-4 md:py-6 px-6 rounded-lg transition text-center w-full">
+          Выборать\u00A0маршрут и\u00A0тариф
+        </a>
+    `,
     list: [
       {
         id: '01',
@@ -436,11 +443,6 @@ const defContent = {
         icon: '/media/Иконки NEW (3).png'
       }
     ],
-    buttons: `
-        <a href="/delivery" className="block bg-yellow-400 hover:bg-yellow-500 tracking-[0.3em] text-gray-800 uppercase font-extrabold text-xs p-4 md:py-6 px-6 rounded-lg transition text-center w-full">
-          Выборать\u00A0маршрут и\u00A0тариф
-        </a>
-    `
   },
   reviews: {
     hero: {

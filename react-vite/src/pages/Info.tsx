@@ -65,21 +65,26 @@ export default function Info(){
             <div data-aos='fade-up' className="flex flex-col items-center md:pt-28 md:px-36">
                 <div className="relative w-full max-w-[900px] flex flex-wrap-reverse">
                     <div className="font-extralight" style={{marginLeft: '32px'}}>
-                    <div className="text-lg text-3xl my-8">
-                        {/* Мы российско-китайская <br/> логистическая компания: */}
-                        {res.info.title.split(' ').slice(0,2).join(' ')}
-                        <br />
-                        {res.info.title.split(' ').slice(2).join(' ')}
-                    </div>
-                    {res.info.points.map(el=><div key={el} className="flex items-center">
-                            <div className="w-40 md:w-48" style={{height: '1px', background: '#d8d8d8'}}></div><div style={{width: '5px', height: '5px', borderRadius: '5px', background: '#fff'}}></div> 
-                            <div className="ml-4">
-                                {el}
-                            </div>
+                        <div className='flex justify-around mb-8'>
+                            <img src="media/ch_flag.png" alt="" style={{width: '140px'}} /> 
+                            <img src="media/ru_flag.png" alt="" style={{width: '112px', marginLeft: '14px', transform: 'rotate(-18deg)'}} /> 
                         </div>
-                    )}
+                        {
+                            typeof res.info.title == 'string' && !res.info.title.trim()? '':
+                            <div className="text-lg text-3xl mb-8">
+                                {/* Мы российско-китайская <br/> логистическая компания: */}
+                                {parse(res.info.title)}
+                            </div>
+                        }
+                        {res.info.points.map(el=><div key={el} className="flex items-center">
+                                <div className="w-40 md:w-48" style={{height: '1px', background: '#d8d8d8'}}></div><div style={{width: '5px', height: '5px', borderRadius: '5px', background: '#fff'}}></div> 
+                                <div className="ml-4">
+                                    {parse(el)}
+                                </div>
+                            </div>
+                        )}
                     </div>
-                    <div className="mx-8 text-5xl font-semibold text-white  md:w-64 md:absolute right-16 -top-2">
+                    <div className="mx-8 text-5xl font-semibold text-white  md:w-64 md:absolute right-16 -mt-8 mb-8">
                         <div className="text-9xl">{res.info.highlighted[0]}</div>
                         <div className="md:text-7xl">{res.info.highlighted[1]}</div>
                         <div style={{marginLeft: '360px'}}>{res.info.highlighted[2]}</div>
@@ -98,7 +103,7 @@ export default function Info(){
                 </div>
                 <div className="flex items-center mt-8 mx-6 py-16 md:pt-1">
                     <a href="#QuestionBlock" className="block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold mb-2 p-2 md:py-3 px-6 rounded-lg transition text-center md:text-start" >
-                        {res.info.moreLinkText}
+                        {parse(res.info.moreLinkText)}
                     </a>
                     <div className="w-full" style={{height: '1px', background: '#d8d8d8'}}></div>
                 </div>
@@ -125,7 +130,7 @@ export default function Info(){
                 <div style={{width: 'calc(50vw - 420px)', minWidth: '20px', height: '1px', background: 'rgb(187, 146, 0)'}}></div>
                 <div className="p-4 md:p-8 font-extralight border rounded-xl" style={{minWidth: '320px', maxWidth: '840px', borderColor: 'rgb(187, 146, 0)'}}>
                     <h1 className="text-center text-2xl md:text-3xl font-semibold">
-                        {res.benefits.title}
+                        {parse(res.benefits.title)}
                     </h1>
                 </div>
                 <div style={{width: 'calc(50vw - 420px)', minWidth: '20px', height: '1px', background: 'rgb(187, 146, 0)'}}></div>
