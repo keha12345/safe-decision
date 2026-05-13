@@ -4,6 +4,7 @@ import QuestionBlock from '../elements/QuestionBlock'
 import Quiz from '../elements/Quz';
 import AOS from 'aos';
 import useContent from '../hooks/useContent';
+import parse from 'html-react-parser';
 
 
 const defaultContent = {
@@ -139,7 +140,7 @@ export default function Info(){
                     <img src="media/decor.png" className="h-11 absolute -top-1 left-1/2 md:-left-1 -ml-4 md:ml-0" />
                     </div>
                     <p className="text-center md:w-11/12 md:text-left">
-                        {el.split('\\n').map(str=><>{str}<br/></>)}
+                        {typeof el === 'string' ? parse(el) : el}
                     </p>
                 </div>
                 )}
