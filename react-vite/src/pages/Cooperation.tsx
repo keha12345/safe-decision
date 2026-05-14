@@ -92,15 +92,15 @@ export default function Cooperation({}){
         </h2>
       </div>
 
-      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div className="relative flex flex-wrap justify-center gap-12">
         {res.columns.map((col, colIndex) => (
-          <div key={colIndex} data-aos="fade-up">
+          <div key={colIndex} data-aos="fade-up" className='max-w-[567px]'>
             <div className="flex items-center gap-2 mb-6">
               <h3 className="ml-12 text-3xl font-semibold">{col.title}</h3>
             </div>
 
             <div className="relative">
-              <div className="absolute left-5 top-6 bottom-0 w-0.5 h-5/6 bg-gray-600 z-0" />
+              <div className={`absolute left-5 top-9 bottom-0 w-0.5 h-${col.steps.length}/${col.steps.length+1} bg-gray-600 z-0`} />
               {col.steps.map((step, index) => (
                 <div
                   key={index}
@@ -108,7 +108,7 @@ export default function Cooperation({}){
                   data-aos={window.innerWidth<700 ? 'fade-left' : 'fade-up'}
                   data-aos-delay={`${index * 50}`}
                 >
-                  <div className="absolute left-2 top-1 w-6 h-6 bg-yellow-400 text-black font-bold rounded-full flex items-center justify-center z-10 text-sm shadow-md border-2 border-black">
+                  <div className="absolute left-2 top-5 w-6 h-6 bg-yellow-400 text-black font-bold rounded-full flex items-center justify-center z-10 text-sm shadow-md border-2 border-black">
                     {index + 1}
                   </div>
                   <div className="p-4 rounded-2xl shadow-lg">
