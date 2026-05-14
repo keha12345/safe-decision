@@ -111,7 +111,7 @@ const deliveryData = {
 
 export default function Delivery() {
     const content = useContent()
-    const res = {...deliveryData, ...content.deliveryPage};
+    const res = { ...deliveryData, ...content.deliveryPage } as typeof deliveryData;
 
     useEffect(() => {
         AOS.init({
@@ -150,7 +150,7 @@ export default function Delivery() {
             )}
             <h3 className="text-xl font-semibold mt-6" style={{color: 'rgb(81, 75, 41)'}}>{plan.title}</h3>
             <p className="text-sm text-gray-500 mt-2">{plan.subtitle}</p>
-            <p className="text-3xl font-bold text-black my-4">{plan.price}</p>
+            <p className="text-3xl font-bold text-black my-4">{plan?.price}</p>
             <p className="text-sm text-gray-600 my-4 h-6">{plan.description}</p>
             <ul className="mb-6 space-y-2 text-sm text-gray-700 my-6">
               {plan.details.map((item, i) => (
