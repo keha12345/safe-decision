@@ -13,6 +13,7 @@ interface Case {
   anti: boolean;
   details: string[];
   fullStory: string;
+  decision: string,
   result: string;
   review: string;
 }
@@ -30,6 +31,7 @@ const reviews = {
       anti: false,
       details: ["Прямой контракт с КНР", "Официальный возврат НДС", "Чистые документы"],
       fullStory: "Поставка производственной линии «под ключ». Мы заранее подготовили класс-решение, подтвердили единый код ТН ВЭД и провели оплату в юанях напрямую заводу.",
+      decision: "",
       result: "Товар прошел границу за 2 дня. Клиент получил полный пакет документов и легально вернул НДС, полностью окупив услуги логистики.",
       review: "«Первый раз работали полностью официально. Удивительно, но по факту с учетом возврата НДС вышло дешевле, чем везти через карго».",
     },
@@ -40,6 +42,7 @@ const reviews = {
       anti: true,
       details: ["Переплата пошлин", "Доначисление НДС", "Штраф от таможни"],
       fullStory: "Импортёр ввозил дробильную линию из Китая. Решили сэкономить и оформить всё единым кодом без чертежей. Таможня не приняла логику «единого комплекса».",
+      decision: "",
       result: "Оборудование разбили на части: дробилка (7%), шкаф (10%), грохот (риск). Итог: корректировка стоимости и огромная переплата.",
       review: "«Думали, проскочим на авось, а в итоге таможня пересчитала всё по самым высоким ставкам. Надо было сразу готовить техдокументацию».",
     },
@@ -50,6 +53,7 @@ const reviews = {
       anti: true,
       details: ["Нарушение тех. регулирования", "Простой на СВХ", "Потеря оборудования"],
       fullStory: "Ввозили б/у медтехнику. Ошибка: не оформили Регистрационное Удостоверение (РУ). Без него выпуск медицинского товара в РФ невозможен.",
+      decision: "",
       result: "Пока шли суды, сроки хранения на СВХ вышли. Груз был передан в реализацию государству. Клиент потерял и деньги, и аппарат.",
       review: "«Не знали, что на б/у медтехнику такие жесткие требования. В итоге остались и без денег, и без товара. Больше не рискуем».",
     },
@@ -60,6 +64,7 @@ const reviews = {
       anti: false,
       details: ["Мультимодальная доставка", "Сборный груз (LCL)", "Контроль QC в КНР"],
       fullStory: "Срочный заказ запчастей. Мы организовали проверку товара на складе в Гуанчжоу и отправили его ускоренным контейнерным поездом.",
+      decision: "",
       result: "Запчасти прибыли на завод точно в срок. Никаких скрытых платежей — стоимость была зафиксирована в момент подписания договора.",
       review: "«Нам обещали доставить за 15 дней, привезли за 12. Прозрачность расчетов и понимание, где груз, — это то, чего нам не хватало раньше».",
     },
@@ -70,6 +75,7 @@ const reviews = {
       anti: true,
       details: ["Повреждение электроники", "Смещение груза", "Отказ страховки"],
       fullStory: "Дорогие станки отправили морем без жесткой фиксации и антикоррозийной упаковки. В шторм груз «поплыл» по контейнеру.",
+      decision: "",
       result: "Электроника повреждена конденсатом, станины погнуты. Страховая отказала, сославшись на ненадлежащую упаковку. Товар списан.",
       review: "«Сэкономили 300$ на обрешетке и силикагеле. Получили кучу ржавого металлолома. Страховка — не панацея, если упаковка слабая».",
     },
@@ -80,6 +86,7 @@ const reviews = {
       anti: false,
       details: ["Получены все ЕАС", "Маркировка Честный Знак", "Прохождение рисков"],
       fullStory: "Клиенту требовалась поставка бытовой электроники для тендера. Мы организовали испытания образцов, получили сертификаты и промаркировали товар в Китае.",
+      decision: "",
       result: "Ни одного вопроса от таможни. Все серийные номера в базе, товар готов к продаже на маркетплейсах в день прибытия.",
       review: "«Для нас было критично успеть к срокам тендера. SAFE DECISION сделали документы идеально — товар «пролетел» таможню без задержек».",
     },
@@ -184,20 +191,25 @@ export default function Reviews() {
                     </p>
                     
                     <div className="grid gap-6 mb-8">
-                    <div className="bg-zinc-800 p-6 rounded-2xl border border-zinc-700">
-                        <h4 className="text-xs uppercase text-gray-400 mb-2 font-bold tracking-widest">Суть проблемы:</h4>
-                        <p className="text-gray-200 leading-relaxed">{selectedCase.fullStory}</p>
-                    </div>
+                      <div className="bg-zinc-800 p-6 rounded-2xl border border-zinc-700">
+                          <h4 className="text-xs uppercase text-gray-400 mb-2 font-bold tracking-widest">Суть задачи:</h4>
+                          <p className="text-gray-200 leading-relaxed">{selectedCase.fullStory}</p>
+                      </div>
 
-                    <div className="bg-red-900/20 p-6 rounded-2xl border border-red-900/50">
-                        <h4 className="text-xs uppercase text-red-400 mb-2 font-bold tracking-widest">Итог:</h4>
-                        <p className="text-red-100 font-bold text-lg">{selectedCase.result}</p>
-                    </div>
+                      <div className="bg-zinc-800/50 p-6 rounded-2xl border-l-4 border-yellow-400 italic">
+                          <h4 className="text-xs uppercase text-yellow-400 mb-2 font-bold not-italic tracking-widest">Решение:</h4>
+                          <p className="text-gray-300">{selectedCase.decision}</p>
+                      </div>
 
-                    <div className="bg-zinc-800/50 p-6 rounded-2xl border-l-4 border-yellow-400 italic">
-                        <h4 className="text-xs uppercase text-yellow-400 mb-2 font-bold not-italic tracking-widest">Отзыв клиента:</h4>
-                        <p className="text-gray-300">"{selectedCase.review}"</p>
-                    </div>
+                      <div className="bg-red-900/20 p-6 rounded-2xl border border-red-900/50">
+                          <h4 className="text-xs uppercase text-red-400 mb-2 font-bold tracking-widest">Итог:</h4>
+                          <p className="text-red-100 font-bold text-lg">{selectedCase.result}</p>
+                      </div>
+
+                      <div className="bg-zinc-800/50 p-6 rounded-2xl border-l-4 border-yellow-400 italic">
+                          <h4 className="text-xs uppercase text-yellow-400 mb-2 font-bold not-italic tracking-widest">Отзыв клиента:</h4>
+                          <p className="text-gray-300">"{selectedCase.review}"</p>
+                      </div>
                     </div>
                     
                     <div className="mt-12 p-6">
