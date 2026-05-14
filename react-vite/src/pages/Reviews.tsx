@@ -201,7 +201,7 @@ export default function Reviews() {
                           <p className="text-gray-300">{selectedCase.decision}</p>
                       </div>
 
-                      <div className="bg-red-900/20 p-6 rounded-2xl border border-red-900/50">
+                      <div className={`bg-${selectedCase.anti? 'red': 'green'}-900/20 p-6 rounded-2xl border border-${selectedCase.anti? 'red': 'green'}-900/50`}>
                           <h4 className="text-xs uppercase text-red-400 mb-2 font-bold tracking-widest">Итог:</h4>
                           <p className="text-red-100 font-bold text-lg">{selectedCase.result}</p>
                       </div>
