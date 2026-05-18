@@ -18,7 +18,7 @@ function App() {
 
   
   return (
-    <>
+    <div className="w-full overflow-hidden">
       <Header />
       <Routes>
         {/* <Route path="/safe-decision" element={<Index />} />
@@ -42,7 +42,7 @@ function App() {
         <Route path="/reviews" element={<Reviews />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   )
 }
 
