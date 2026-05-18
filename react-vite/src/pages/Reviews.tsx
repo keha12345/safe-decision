@@ -138,14 +138,12 @@ export default function Reviews() {
               data-aos-delay={idx * 100}
               className="group cursor-pointer relative flex flex-col border border-gray-200 rounded-3xl p-8 bg-white hover:border-yellow-400 hover:shadow-2xl transition-all duration-300"
             >
-              {item.anti && (
-                <span className="absolute top-6 right-6 bg-yellow-400 text-black text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
-                  Разбор
-                </span>
-              )}
-              <h3 className="text-2xl font-bold text-black mb-2 group-hover:text-yellow-600 transition-colors">{item.title}</h3>
+              <span className={`absolute top-6 right-6 bg-${item.anti?'orange-400':'teal-700'} text-black text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full`}>
+                Разбор
+              </span>
+              <h3 className="text-xl font-black text-black mb-2 group-hover:text-yellow-600 transition-colors">{item.title}</h3>
               <p className="text-sm text-gray-400 mb-4 uppercase tracking-tighter">{item.subtitle}</p>
-              <p className="text-3xl font-black text-black mb-6">{item.price}</p>
+              <p className="text-2xl font-black text-black mb-6">{item.price}</p>
               
               <ul className="space-y-3 mb-8">
                 {item.details.map((detail:any, i:number) => (
@@ -192,22 +190,22 @@ export default function Reviews() {
                     
                     <div className="grid gap-6 mb-8">
                       <div className="bg-zinc-800 p-6 rounded-2xl border border-zinc-700">
-                          <h4 className="text-xs uppercase text-gray-400 mb-2 font-bold tracking-widest">Суть задачи:</h4>
+                          <h4 className="text-xs uppercase text-gray-400 mb-2 font-bold tracking-widest">Ситуация:</h4>
                           <p className="text-gray-200 leading-relaxed">{selectedCase.fullStory}</p>
                       </div>
 
                       <div className="bg-zinc-800/50 p-6 rounded-2xl border-l-4 border-yellow-400 italic">
-                          <h4 className="text-xs uppercase text-yellow-400 mb-2 font-bold not-italic tracking-widest">Решение:</h4>
+                          <h4 className="text-xs uppercase text-yellow-400 mb-2 font-bold not-italic tracking-widest">Риск:</h4>
                           <p className="text-gray-300">{selectedCase.decision}</p>
                       </div>
 
                       <div className={`bg-${selectedCase.anti? 'red': 'green'}-900/20 p-6 rounded-2xl border border-${selectedCase.anti? 'red': 'green'}-900/50`}>
-                          <h4 className="text-xs uppercase text-red-400 mb-2 font-bold tracking-widest">Итог:</h4>
+                          <h4 className="text-xs uppercase text-red-400 mb-2 font-bold tracking-widest">Решение:</h4>
                           <p className="text-red-100 font-bold text-lg">{selectedCase.result}</p>
                       </div>
 
                       <div className="bg-zinc-800/50 p-6 rounded-2xl border-l-4 border-yellow-400 italic">
-                          <h4 className="text-xs uppercase text-yellow-400 mb-2 font-bold not-italic tracking-widest">Отзыв клиента:</h4>
+                          <h4 className="text-xs uppercase text-yellow-400 mb-2 font-bold not-italic tracking-widest">Результат:</h4>
                           <p className="text-gray-300">"{selectedCase.review}"</p>
                       </div>
                     </div>
@@ -217,10 +215,10 @@ export default function Reviews() {
                             {selectedCase.anti? 'Как этого избежать?': 'Хотите так же?'}
                         </h2>
                         <p className="text-white font-bold mb-8 uppercase tracking-widest border-b border-red-500/30 pb-2">
-                            Мы берем на себя аудит документов и упаковки еще до оплаты товара поставщику.
+                            Наша команда берет на себя все заботы, чтобы процесс был максимально прозрачным, выгодным и спокойным для вас.
                         </p>
                         <a href='/delivery#Quiz' className=" block text-center w-full bg-yellow-400 text-black py-4 rounded-xl font-bold hover:bg-yellow-500 transition shadow-xl uppercase tracking-widest">
-                            Работать в белую
+                            Связаться с нами
                         </a>
                     </div>
                     <RoadMap disableAOS />                    

@@ -94,7 +94,7 @@ export default function Cooperation({}){
 
       <div className="relative flex flex-wrap justify-center gap-12">
         {res.columns.map((col, colIndex) => (
-          <div key={colIndex} data-aos="fade-up" className='max-w-[567px]'>
+          <div key={colIndex} data-aos="fade-up" className={`max-w-[${res.columns.length==1?789:567}px]`}>
             <div className="flex items-center gap-2 mb-6">
               <h3 className="ml-12 text-3xl font-semibold">{col.title}</h3>
             </div>
@@ -112,8 +112,8 @@ export default function Cooperation({}){
                     {index + 1}
                   </div>
                   <div className="p-4 rounded-2xl shadow-lg">
-                    <h4 className="text-lg font-semibold mb-1">{step.title}</h4>
-                    <p className="text-gray-300 text-sm">{step.description}</p>
+                    <h4 className="text-lg md:text-xl font-semibold mb-1">{step.title}</h4>
+                    <p className="text-gray-300 text-sm md:text-lg">{step.description}</p>
                   </div>
                 </div>
               ))}
