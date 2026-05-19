@@ -4,6 +4,7 @@ import QuestionBlock from '../elements/QuestionBlock';
 import RoadMap from '../elements/RoadMap'; // Используем ваш компонент
 import AOS from 'aos';
 import useContent from '../hooks/useContent';
+import parse from 'html-react-parser';
 
 
 interface Case {
@@ -138,17 +139,17 @@ export default function Reviews() {
               data-aos-delay={idx * 100}
               className="group cursor-pointer relative flex flex-col border border-gray-200 rounded-3xl p-8 bg-white hover:border-yellow-400 hover:shadow-2xl transition-all duration-300"
             >
-              <span className={`absolute top-6 right-6 bg-${item.anti?'orange-400':'teal-700'} text-black text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full`}>
+              <span className={`absolute top-4 right-5 bg-${item.anti?'orange-400':'teal-700'} text-black text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full`}>
                 Разбор
               </span>
-              <h3 className="text-xl font-black text-black mb-2 group-hover:text-yellow-600 transition-colors">{item.title}</h3>
+              <h3 className="text-xl font-black text-black mb-2 mt-1 group-hover:text-yellow-600 transition-colors">{item.title}</h3>
               <p className="text-sm text-gray-400 mb-4 uppercase tracking-tighter">{item.subtitle}</p>
               <p className="text-2xl font-black text-black mb-6">{item.price}</p>
               
               <ul className="space-y-3 mb-8">
                 {item.details.map((detail:any, i:number) => (
                   <li key={i} className="text-sm text-gray-500 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full"></span> {detail}
+                    <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full"></span> {parse(detail)}
                   </li>
                 ))}
               </ul>
@@ -182,31 +183,31 @@ export default function Reviews() {
             {selectedCase && (
                 <div className="animate-in fade-in slide-in-from-right-10 duration-500 text-white">
                     <h2 className="text-3xl font-black mb-2 uppercase italic text-white leading-tight">
-                        {selectedCase.title}
+                        {parse(selectedCase.title)}
                     </h2>
                     <p className="text-yellow-400 font-bold mb-8 uppercase tracking-widest border-b border-red-500/30 pb-2">
-                        {selectedCase.subtitle}
+                        {parse(selectedCase.subtitle)}
                     </p>
                     
                     <div className="grid gap-6 mb-8">
                       <div className="bg-zinc-800 p-6 rounded-2xl border border-zinc-700">
                           <h4 className="text-xs uppercase text-gray-400 mb-2 font-bold tracking-widest">Ситуация:</h4>
-                          <p className="text-gray-200 leading-relaxed">{selectedCase.fullStory}</p>
+                          <p className="text-gray-200 leading-relaxed">{parse(selectedCase.fullStory)}</p>
                       </div>
 
                       <div className="bg-zinc-800/50 p-6 rounded-2xl border-l-4 border-yellow-400 italic">
                           <h4 className="text-xs uppercase text-yellow-400 mb-2 font-bold not-italic tracking-widest">Риск:</h4>
-                          <p className="text-gray-300">{selectedCase.decision}</p>
+                          <p className="text-gray-300">{parse(selectedCase.decision)}</p>
                       </div>
 
-                      <div className={`bg-${selectedCase.anti? 'red': 'green'}-900/20 p-6 rounded-2xl border border-${selectedCase.anti? 'red': 'green'}-900/50`}>
+                      <div className={`bg-green-900/20 p-6 rounded-2xl border border-${selectedCase.anti? 'red': 'green'}-900/50`}>
                           <h4 className="text-xs uppercase text-red-400 mb-2 font-bold tracking-widest">Решение:</h4>
-                          <p className="text-red-100 font-bold text-lg">{selectedCase.result}</p>
+                          <p className="text-red-100 font-bold text-lg">{parse(selectedCase.result)}</p>
                       </div>
 
                       <div className="bg-zinc-800/50 p-6 rounded-2xl border-l-4 border-yellow-400 italic">
                           <h4 className="text-xs uppercase text-yellow-400 mb-2 font-bold not-italic tracking-widest">Результат:</h4>
-                          <p className="text-gray-300">"{selectedCase.review}"</p>
+                          <p className="text-gray-300">{parse(selectedCase.review)}</p>
                       </div>
                     </div>
                     
