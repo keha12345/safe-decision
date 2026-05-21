@@ -216,7 +216,11 @@ export default function Reviews() {
                             {selectedCase.anti? 'Как этого избежать?': 'Хотите так же?'}
                         </h2>
                         <p className="text-white font-bold mb-8 uppercase tracking-widest border-b border-red-500/30 pb-2">
-                            Наша команда берет на себя все заботы, чтобы процесс был максимально прозрачным, выгодным и спокойным для вас.
+                            {
+                              selectedCase.anti?
+                              'Мы проводим полный аудит поставки ещё до отправки груза и осуществляем контроль на всех этапах сделки.' :
+                              'Наша команда берет на себя все заботы, чтобы процесс был максимально прозрачным, выгодным и спокойным для вас.'
+                            }
                         </p>
                         <a href='/delivery#Quiz' className=" block text-center w-full bg-yellow-400 text-black py-4 rounded-xl font-bold hover:bg-yellow-500 transition shadow-xl uppercase tracking-widest">
                             Связаться с нами

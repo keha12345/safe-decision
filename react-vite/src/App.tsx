@@ -18,7 +18,7 @@ function App() {
 
   
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-x-clip">
       <Header />
       <Routes>
         {/* <Route path="/safe-decision" element={<Index />} />

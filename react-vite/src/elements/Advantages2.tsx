@@ -95,7 +95,7 @@ import parse from 'html-react-parser';
 
     return (
     <section className="text-white py-20 px-6 md:px-12 lg:px-24">
-        <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row gap-12 relative">
+        <div className="max-w-[1440px] mx-auto flex flex-col items-start md:flex-row gap-12 relative">
             
             {/* Левая панель: Липкий заголовок и меняющаяся цифра */}
             <div className="md:sticky md:top-32 h-fit md:w-1/3 z-10 md:p-auto ml-4">
@@ -112,7 +112,7 @@ import parse from 'html-react-parser';
                 {/* Большой номер с плавной сменой */}
                 <div className="mt-20 overflow-hidden h-32 relative hidden md:block">
                     <div 
-                    className="text-[120px] font-black leading-none transition-all duration-500 ease-out  text-yelow-400"
+                    className="text-[120px] font-black leading-none transition-all duration-500 ease-out"
                     >
                     {activeStep}
                     </div>
